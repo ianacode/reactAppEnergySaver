@@ -11,7 +11,7 @@ export default function Routes() {
   return (
     <BaseRoutes>
       <Route path="login" element={<Login />} />
-      <Route path="/loginreg" element={<Loginreg />} />
+      <Route path="loginreg" element={<Loginreg />} />
       <Route path="/" element={<RoutesGuard Component={LandingPage} />} />
       <Route path="ranking" element={<RoutesGuard Component={Ranking} />} />
       <Route path="members" element={<RoutesGuard Component={Members} />} />
