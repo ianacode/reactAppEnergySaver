@@ -1,0 +1,47 @@
+.component-15 {
+  color: #bababa;
+  background-color: #f4f7fb;
+  border: 1px solid #fff;
+  border-radius: 22px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: Montserrat, Arial;
+  font-size: 1.063rem;
+  font-weight: 600;
+  line-height: 20px;
+  display: flex;
+}
+
+.image-2 {
+  width: 155px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.flex-container-6 {
+  width: 100%;
+  flex-direction: column;
+  flex-basis: 24%;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: -179px;
+  display: flex;
+}
+
+.add-room {
+  color: gray;
+  margin-bottom: -18px;
+  line-height: 22px;
+}
+
+.btn-instance-1 {
+  /* width: 100%; */
+  flex-basis: 67%;
+  margin-bottom: -10px;
+}
+
+.and-devices {
+  font-size: .938rem;
+  font-weight: 400;
+}

@@ -1,0 +1,63 @@
+.specific-device {
+  color: #a8a8a8;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 6px;
+  font-family: Montserrat, Arial;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 21px;
+  display: flex;
+}
+
+.flex-container {
+  width: 85%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1px;
+  margin-left: 6px;
+  display: flex;
+}
+
+.component-16 {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.flex-container-1 {
+  height: 65%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 4px;
+  display: flex;
+}
+
+.matthiew {
+  color: #464a63;
+}
+
+.monday-20-jan {
+  font-size: .875rem;
+  font-weight: 400;
+}
+
+.component-11 {
+  width: 28px;
+  height: 32px;
+  object-fit: cover;
+  margin-bottom: 2px;
+  margin-left: 55px;
+}
+
+.header-line {
+  width: 414px;
+  object-fit: cover;
+  margin-bottom: 2px;
+}

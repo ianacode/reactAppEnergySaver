@@ -1,0 +1,28 @@
+.btn-lp {
+  text-align: center;
+  color: #263238;
+  background-color: #0000;
+  border: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  font-family: Montserrat, Arial;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+  width: 327px;
+}
+
+.vector {
+  background-color: #fff;
+  border-radius: 25px;
+  flex-direction: row;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 52px;
+  margin-top: 12px;
+  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,113 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": {
+        "first": "Matthiew",
+        "last": "Romano"
+      },
+      "role": "adult",
+      "email": "mattiew@ua.pt",
+      "password": "12345"
+    },
+    {
+      "id": "2",
+      "name": {
+        "first": "Anna",
+        "last": "Romano"
+      },
+      "role": "child",
+      "email": "anna@ua.pt",
+      "password": "12345"
+    },
+    {
+      "id": "3",
+      "name": {
+        "first": "Silvia",
+        "last": "Romano"
+      },
+      "role": "adult",
+      "email": "silvia@ua.pt",
+      "password": "12345"
+    },
+    {
+      "id": "4",
+      "name": {
+        "first": "Tom",
+        "last": "Romano"
+      },
+      "role": "child",
+      "email": "tom@ua.pt",
+      "password": "12345"
+    }
+  ],
+  "homes": [
+    {
+      "id": "1",
+      "owner_id": "1",
+      "adress": {
+        "street": {
+          "number": 4133,
+          "name": "Dompvloedslaan"
+        },
+        "city": "Remmerden",
+        "state": "Groningen",
+        "country": "Netherlands",
+        "postcode": "5822 EJ"
+      },
+      "rooms": [
+        {
+          "room_name": "Kitchen",
+          "picture": "./images/rooms/kitchen.jpg",
+          "devices": [
+            {
+              "name": "oven",
+              "power": "200"
+            },
+            {
+              "name": "microwave",
+              "power": "150"
+            }
+          ]
+        },
+        {
+          "room_name": "Living Room",
+          "picture": "./images/rooms/living_room.jpg",
+          "devices": [
+            {
+              "name": "lamp",
+              "power": "100"
+            },
+            {
+              "name": "TV",
+              "power": "150"
+            }
+          ]
+        },
+        {
+          "room_name": "Badroom",
+          "picture": "./images/rooms/badroom.jpg",
+          "devices": [
+            {
+              "name": "lamp",
+              "power": "100"
+            },
+            {
+              "name": "lamp 2",
+              "power": "150"
+            }
+          ]
+        }
+      ]
+     }
+    
+  ],
+  "admins": [
+    {
+      
+      "id": "1",
+      "home_id": "1",
+      "user_id": "3"
+    }
+  ]
+}

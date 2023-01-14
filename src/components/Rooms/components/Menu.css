@@ -1,0 +1,19 @@
+.menu-2 {
+  color: #464a63;
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: Montserrat, Arial;
+  font-size: .625rem;
+  font-weight: 600;
+  line-height: 14px;
+  display: flex;
+}
+
+.otherstrend-two {
+  width: 35px;
+  height: 37px;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
