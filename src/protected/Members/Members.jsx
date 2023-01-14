@@ -6,6 +6,7 @@ import loginService from "../../services/LoginService";
 import {useNavigate} from "react-router";
 import userService from "../../services/UserService";
 import {useEffect} from "react";
+import Footer from "../../components/Footer/Footer";
 
 
 function Members(props) {
@@ -25,6 +26,7 @@ function Members(props) {
   }, []);
 
   return (
+    <>
     <div className="members">
       <div className="members-flex-container">
         {members.map((member) => (
@@ -40,7 +42,10 @@ function Members(props) {
               onClick={()=>{logout()}}>
         <div className="members-vector">Logout</div>
       </button>
+      
     </div>
+    <Footer />
+    </>
   );
 };
 export default Members;

@@ -10,6 +10,7 @@ import BtnLp from "./components/BtnLp";
 import Btn from "./components/Btn";
 import Menu from "./components/Menu";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 
 function LandingPage(props) {
@@ -30,24 +31,24 @@ function LandingPage(props) {
       label: "MEMBERS",
       svg: vector
     },
-    btnBack: {
-      label: "Back",
-    },
-    menuRanking: {
-      label: "Ranking",
-      svg: otherstrendTwo,
-      link: '/ranking'
-    },
-    menuHome: {
-      label: "Home",
-      svg: home,
-      link: '/'
-    },
-    menuRooms: {
-      label: "Rooms",
-      svg: document,
-      link: '/rooms'
-    },
+    // btnBack: {
+    //   label: "Back",
+    // },
+    // menuRanking: {
+    //   label: "Ranking",
+    //   svg: otherstrendTwo,
+    //   link: '/ranking'
+    // },
+    // menuHome: {
+    //   label: "Home",
+    //   svg: home,
+    //   link: '/'
+    // },
+    // menuRooms: {
+    //   label: "Rooms",
+    //   svg: document,
+    //   link: '/rooms'
+    // },
   };
   const navigate = useNavigate();
 
@@ -67,13 +68,20 @@ function LandingPage(props) {
         <BtnLp className="btn-lp-1-instance" {...propsData.btnNotification} />
         <BtnLp className="btn-lp-2-instance" {...propsData.btnChallenges} />
         <BtnLp className="btn-lp-3-instance" {...propsData.btnMembers} />
-        <Btn className="btn-instance-1" {...propsData.btnBack} />
+
+
+        {/* <Btn className="btn-instance-1" {...propsData.btnBack} />
         <div className="flex-container-3">
           <Menu className="menu-1-instance-1" {...propsData.menuRanking} />
           <Menu className="menu-instance-1" {...propsData.menuHome} />
           <Menu className="menu-2-instance-1" {...propsData.menuRooms} />
-        </div>
+        </div> */}
+
+
+
       </div>
+      <Footer />
+   
     </>
   );
 };

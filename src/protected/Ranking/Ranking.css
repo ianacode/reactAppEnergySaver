@@ -23,7 +23,7 @@
 
 }
 
-.flex-container {
+/* .flex-container {
   width: 85%;
   flex-direction: row;
   justify-content: space-between;
@@ -31,7 +31,7 @@
   margin-left: 6px;
   font-family: Montserrat, Arial;
   display: flex;
-}
+} */
 
 .avatar {
   width: 60px;
@@ -39,7 +39,7 @@
   object-fit: cover;
 }
 
-.flex-container-1 {
+/* .flex-container-1 {
   height: 65%;
   flex-direction: column;
   justify-content: space-between;
@@ -47,7 +47,7 @@
   margin-top: 4px;
   display: flex;
   padding-right: 70px;
-}
+} */
 
 .data {
   color: #a8a8a8;

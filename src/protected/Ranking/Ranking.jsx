@@ -16,6 +16,7 @@ import icon from "./assets/icon.svg";
 import Menu from "./components/Menu";
 import Btn from "./components/Btn";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 
 function Ranking(props) {
@@ -128,13 +129,16 @@ function Ranking(props) {
         </div>
 
 
-        <Btn className="back-btn-instance-1" {...propsData.backBtn} />
+        {/* <Btn className="back-btn-instance-1" {...propsData.backBtn} />
         <div className="flex-container-4">
           <Menu className="ranking-menu-instance-1" {...propsData.menuRanking} />
           <Menu className="home-menu-instance-1" {...propsData.menuHome} />
           <Menu className="rooms-menu-instance-1" {...propsData.menuRooms} />
-        </div>
+        </div> */}
+
+
       </div>
+      <Footer />
     </>
   );
 };

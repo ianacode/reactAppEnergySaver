@@ -17,6 +17,7 @@ import Menu from "./components/Menu";
 import Component15 from "./components/Component15";
 import Btn from "./components/Btn";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 function Rooms(props) {
 
   function handleGoBack() {
@@ -97,13 +98,14 @@ function Rooms(props) {
             {...propsData.component15}
           />
         </div>
-        <Btn className="btn-instance-1" />
+        {/* <Btn className="btn-instance-1" />
         <div className="rooms-flex-container-5">
           <Menu className="menu-1-instance-1" {...propsData.menuRanking} />
           <Menu className="menu-instance-1" {...propsData.menuHome} />
           <Menu className="menu-2-instance-1" {...propsData.menuRooms} />
-        </div>
+        </div> */}
       </div>
+      <Footer />
     </>
   );
 };
