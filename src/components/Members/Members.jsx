@@ -3,23 +3,11 @@ import "./Members.css";
 import vector from "./assets/vector.svg";
 import MainButtons from "./components/MainButtons";
 import Person from "./components/Person";
-import membersdata from "../../services/membersdata";
+import userService from "../../services/UserService";
 
 
 function Members(props) {
   const propsData = {
-    person1: {
-      mattiew: "Mattiew",
-    },
-    person: {
-      anna: "Anna",
-    },
-    person3: {
-      silvia: "Silvia",
-    },
-    person2: {
-      tom: "Tom",
-    },
     mainButtons: {
       vector: vector,
       mainButton: "Add member",
@@ -30,7 +18,7 @@ function Members(props) {
     },
   };
 
-  membersdata();
+  userService();
 
   return (
     <div className="members">
@@ -52,7 +40,7 @@ function Members(props) {
       />
     </div>
 
-   
+
   );
 };
 export default Members;

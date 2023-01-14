@@ -8,7 +8,8 @@
       },
       "role": "adult",
       "email": "mattiew@ua.pt",
-      "password": "12345"
+      "password": "12345",
+      "home_id": "1"
     },
     {
       "id": "2",
@@ -18,7 +19,8 @@
       },
       "role": "child",
       "email": "anna@ua.pt",
-      "password": "12345"
+      "password": "12345",
+      "home_id": "1"
     },
     {
       "id": "3",
@@ -28,7 +30,8 @@
       },
       "role": "adult",
       "email": "silvia@ua.pt",
-      "password": "12345"
+      "password": "12345",
+      "home_id": "1"
     },
     {
       "id": "4",
@@ -38,14 +41,15 @@
       },
       "role": "child",
       "email": "tom@ua.pt",
-      "password": "12345"
+      "password": "12345",
+      "home_id": "1"
     }
   ],
   "homes": [
     {
       "id": "1",
       "owner_id": "1",
-      "adress": {
+      "address": {
         "street": {
           "number": 4133,
           "name": "Dompvloedslaan"
@@ -100,14 +104,5 @@
         }
       ]
      }
-    
-  ],
-  "admins": [
-    {
-      
-      "id": "1",
-      "home_id": "1",
-      "user_id": "3"
-    }
   ]
 }

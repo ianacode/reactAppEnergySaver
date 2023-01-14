@@ -3,7 +3,6 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import Rooms from "./components/Rooms/Rooms";
 import Ranking from "./components/Ranking/Ranking";
 import Members from "./components/Members/Members";
-import Product from "./pages/Product";
 
 export default function Routes() {
   return (
@@ -13,9 +12,7 @@ export default function Routes() {
       <Route path="members" element={<Members />} />
       <Route path="rooms">
         <Route index element={<Rooms />} />
-        <Route path=":productId" element={<Product />} />
       </Route>
-      
     </BaseRoutes>
   );
 }
