@@ -1,0 +1,27 @@
+.main-buttons {
+  color: #fff;
+  text-align: center;
+  background-color: #0000;
+  border: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  font-family: Montserrat, Arial;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 36px;
+  display: flex;
+}
+
+.vector {
+  height: 100%;
+  background-color: #464a63;
+  border-radius: 25px;
+  flex-direction: row;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1px;
+  padding-right: 1px;
+  display: flex;
+}

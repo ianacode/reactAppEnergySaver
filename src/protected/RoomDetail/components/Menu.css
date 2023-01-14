@@ -1,0 +1,22 @@
+.menu-2 {
+  color: #464a63;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  font-family: Montserrat, Arial;
+  font-size: .625rem;
+  font-weight: 600;
+  line-height: 21px;
+  display: flex;
+}
+
+.home {
+  width: 33px;
+  height: 34px;
+  object-fit: cover;
+  margin-bottom: 6px;
+}
+
+.home-1 {
+  margin-left: 1px;
+}
