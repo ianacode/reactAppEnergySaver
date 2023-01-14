@@ -14,25 +14,25 @@
   display: flex;
 }
 
-.group {
+.loginregistration .group {
   width: 189px;
   height: 189px;
   object-fit: cover;
   margin-top: 21px;
 }
 
-.energy-saver {
+.loginregistration .energy-saver {
   margin-bottom: 36px;
   margin-top: 20px;
 }
 
-.main-buttons-instance-1 {
+.loginregistration .main-buttons-instance-1 {
   width: 80%;
   flex-basis: 7%;
   margin-top: 8px;
 }
 
-.main-buttons-1-instance {
+.loginregistration .main-buttons-1-instance {
   width: 80%;
   flex-basis: 7%;
   margin-bottom: 34px;

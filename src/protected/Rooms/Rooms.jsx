@@ -14,6 +14,8 @@ import AddRoom from "./components/AddRoom";
 import homeService from "../../services/HomeService";
 import loginService from "../../services/LoginService";
 import {useEffect} from "react";
+import EnergySaving from "../../components/EnergySaving/EnergySaving";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 function Rooms(props) {
 
   const [home, setHome] = React.useState({});
@@ -25,11 +27,6 @@ function Rooms(props) {
       })
   }, []);
 
-  function handleGoBack() {
-    navigate(-1);
-  }
-
-
   const propsData = {
     component15: {
       andDevices: "and devices",
@@ -37,24 +34,12 @@ function Rooms(props) {
       addRoom: "Add Room",
     },
   };
-  const navigate = useNavigate();
   return (
     <>
       <Header/>
+      <Breadcrumb label="Rooms"/>
+      <EnergySaving />
       <div className="rooms">
-        <div className="ranking-flex-container-2" >
-        <img className="icon" src={icon} onClick={handleGoBack}/>
-        <span className="rooms-1">Rooms</span>
-        </div>
-
-        <div className="energy-saving">
-          <div className="flex-container-2">
-            <span className="energy-saving-1">Energy Saving</span>
-            <span className="num-35">+35%</span>
-            <span className="num-235-k-wh">23.5 kWh</span>
-          </div>
-          <img className="thunder-illustration" src={thunderIllustration} />
-        </div>
         <div className="rooms-flex-container-3">
           {home.rooms && home.rooms.map((room) => (
             <Room room={room} />

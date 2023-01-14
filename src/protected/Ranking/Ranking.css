@@ -71,26 +71,7 @@
   /* align-self: flex-end; */
 }
 
-.ranking .ranking-flex-container-2 {
-  width: 30%;
-  flex-direction: row;
-  justify-content: space-between;
-  align-self: flex-start;
-  align-items: stretch;
-  margin-left: 36px;
-  display: flex;
-}
 
-.ranking .icon {
-  width: 18px;
-  height: 15px;
-  object-fit: cover;
-  padding-top: 5px;
-}
-
-.ranking .ranking-1 {
-  text-transform: uppercase;
-}
 
 .ranking .num-35-points {
   color: #000;

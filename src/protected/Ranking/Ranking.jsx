@@ -17,44 +17,16 @@ import Menu from "./components/Menu";
 import Btn from "./components/Btn";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 
 
 function Ranking(props) {
 
-
-  function handleGoBack() {
-    navigate(-1);
-  }
-
-  const propsData = {
-    backBtn: {
-      label: "Back",
-    },
-    menuRanking: {
-      label: "Ranking",
-      svg: ranking,
-      link: '/ranking'
-    },
-    menuHome: {
-      label: "Home",
-      svg: home,
-      link: '/'
-    },
-    menuRooms: {
-      label: "Rooms",
-      svg: rooms,
-      link: '/rooms'
-    },
-  };
-  const navigate = useNavigate();
   return (
     <>
       <Header/>
+      <Breadcrumb label="Ranking"/>
       <div className="ranking">
-        <div className="ranking-flex-container-2">
-          <img className="icon" src={icon} onClick={handleGoBack}/>
-          <span className="ranking-1">Ranking</span>
-        </div>
         <span className="num-35-points">35 points</span>
         <div className="ranking-flex-container-3">
           {/* <div className="ranking-vector-conteiner">

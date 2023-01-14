@@ -1,4 +1,4 @@
-.menu-2 {
+.rooms .menu-2 {
   color: #464a63;
   text-align: center;
   flex-direction: column;
@@ -11,7 +11,7 @@
   display: flex;
 }
 
-.otherstrend-two {
+.rooms .otherstrend-two {
   width: 35px;
   height: 37px;
   object-fit: cover;

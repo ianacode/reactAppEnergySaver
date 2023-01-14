@@ -1,4 +1,4 @@
-.component-15 {
+.rooms .component-15 {
   color: #bababa;
   background-color: #f4f7fb;
   border: 1px solid #fff;
@@ -13,13 +13,13 @@
   display: flex;
 }
 
-.image-2 {
+.rooms .image-2 {
   width: 155px;
   height: 120px;
   object-fit: cover;
 }
 
-.flex-container-6 {
+.rooms .flex-container-6 {
   width: 100%;
   flex-direction: column;
   flex-basis: 24%;
@@ -29,19 +29,19 @@
   display: flex;
 }
 
-.add-room {
+.rooms .add-room {
   color: gray;
   margin-bottom: -18px;
   line-height: 22px;
 }
 
-.btn-instance-1 {
+.rooms .btn-instance-1 {
   /* width: 100%; */
   flex-basis: 67%;
   margin-bottom: -10px;
 }
 
-.and-devices {
+.rooms .and-devices {
   font-size: .938rem;
   font-weight: 400;
 }

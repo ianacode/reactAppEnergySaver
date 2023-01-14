@@ -1,4 +1,4 @@
-.component-13 {
+.rooms .component-13 {
   color: gray;
   background-color: #f4f7fb;
   border: 1px solid #fff;
@@ -14,7 +14,7 @@
   display: flex;
 }
 
-.image {
+.rooms .image {
   width: 155px;
   height: 120px;
   object-fit: cover;
@@ -22,12 +22,12 @@
   margin-bottom: 3px;
 }
 
-.room {
+.rooms .room {
   margin-top: 1px;
   margin-left: 7px;
 }
 
-.num-15-devices {
+.rooms .num-15-devices {
   color: #bababa;
   margin-left: 5px;
   font-size: .938rem;

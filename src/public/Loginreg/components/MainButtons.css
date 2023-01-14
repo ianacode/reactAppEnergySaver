@@ -1,4 +1,4 @@
-.main-buttons {
+.loginregistration .main-buttons {
   text-align: center;
   color: #fff;
   background-color: #0000;
@@ -13,7 +13,7 @@
   display: flex;
 }
 
-.vector {
+.loginregistration .vector {
   height: 52px;
   background-color: #464a63;
   border-radius: 25px;
