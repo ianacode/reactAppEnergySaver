@@ -7,6 +7,7 @@ import otherstrendTwo from "./assets/otherstrendTwo.svg";
 import document from "./assets/document.svg";
 
 function Footer(props) {
+
     const propsData = {
 
         btnBack: {

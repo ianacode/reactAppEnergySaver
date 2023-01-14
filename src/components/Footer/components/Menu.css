@@ -1,4 +1,4 @@
-.menu {
+.footer .menu {
   text-align: center;
   color: #464a63;
   flex-direction: column;
@@ -11,9 +11,17 @@
   display: flex;
 }
 
-.imageMenu {
+.footer .imageMenu {
   width: 35px;
   height: 37px;
   object-fit: cover;
   margin-bottom: 5px;
+}
+
+.footer .active {
+  color: #FF8A00;
+}
+
+.footer .active img {
+  filter: invert(52%) sepia(69%) saturate(1472%) hue-rotate(360deg) brightness(102%) contrast(105%);
 }
