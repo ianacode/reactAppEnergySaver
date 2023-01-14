@@ -64,7 +64,7 @@ const RoomDetail = () => {
   return (
     <>
     <Header />
-    <div className="kitchen">
+    <div className="room-detail">
 
       {/* <div className="flex-container">
         <img className="component-16" src={component16} />
