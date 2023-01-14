@@ -1,11 +1,11 @@
 import * as React from "react";
 import "./Person.css";
 import frame21112 from "../assets/frame21112.svg";
-const Person = (props) => {
+const Person = ({ member }) => {
   return (
-    <div className={`person-3 ${props.className || ""}`}>
+    <div className={`person-3 person`}>
       <img className="frame-2111-3" src={frame21112} />
-      <span className="tom">{props.tom || "Tom"}</span>
+      <span className="tom">{member.name.first}</span>
     </div>
   );
 };

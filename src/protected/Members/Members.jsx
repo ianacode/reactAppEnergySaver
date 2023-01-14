@@ -4,6 +4,8 @@ import vector from "./assets/vector.svg";
 import Person from "./components/Person";
 import loginService from "../../services/LoginService";
 import {useNavigate} from "react-router";
+import userService from "../../services/UserService";
+import {useEffect} from "react";
 
 
 function Members(props) {
@@ -14,10 +16,20 @@ function Members(props) {
     navigate("/loginreg");
   }
 
+  const user = loginService.userAuthenticated();
+  const [members, setMembers] = React.useState([]);
+  useEffect(() => {
+    userService.getMembers(user.home_id).then((data) => {
+      setMembers(data);
+    });
+  }, []);
+
   return (
     <div className="members">
       <div className="members-flex-container">
-        <Person className="person-1-instance-1" />
+        {members.map((member) => (
+          <Person key={member.email} member={member} />
+        ))}
       </div>
       {loginService.isAdult() && (
         <button className={`main-buttons main-buttons-instance-1`}>

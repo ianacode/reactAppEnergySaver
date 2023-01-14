@@ -18,10 +18,13 @@
   margin-top: 3px;
   margin-left: 1px;
   display: flex;
+  flex-wrap: wrap;
 }
 
-.person-1-instance-1, .person-instance-1 {
+.person {
   height: 100%;
+  width: 100%;
+  flex: 50%;
 }
 
 .members-flex-container-1 {
@@ -33,10 +36,6 @@
   margin-top: 3px;
   margin-left: 1px;
   display: flex;
-}
-
-.person-3-instance-1, .person-2-instance-1 {
-  height: 100%;
 }
 
 .main-buttons-instance-1 {

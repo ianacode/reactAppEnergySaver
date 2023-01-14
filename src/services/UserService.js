@@ -9,6 +9,16 @@ class UserService {
       })
   };
 
+  getMembers(homeId) {
+    return fetch(`http://localhost:3001/users?home_id=${homeId}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        return data;
+      })
+  };
+
   getUser(id) {
     return fetch(`http://localhost:3001/users/${id}`)
       .then((response) => {
