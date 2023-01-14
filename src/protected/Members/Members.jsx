@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./Members.css";
-import vector from "./assets/vector.svg";
 import Person from "./components/Person";
 import loginService from "../../services/LoginService";
 import {useNavigate} from "react-router";
@@ -42,7 +41,7 @@ function Members(props) {
               onClick={()=>{logout()}}>
         <div className="members-vector">Logout</div>
       </button>
-      
+
     </div>
     <Footer />
     </>

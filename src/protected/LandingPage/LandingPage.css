@@ -15,31 +15,11 @@
   display: flex;
 }
 
-/* .flex-container {
-  width: 85%;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 6px;
-  font-family: Montserrat, Arial;
-  display: flex;
-} */
-
 .landing-page .component-16 {
   width: 60px;
   height: 60px;
   object-fit: cover;
 }
-
-/* .flex-container-1 {
-  height: 65%;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
-  margin-top: 4px;
-  display: flex;
-  padding-right: 70px;
-} */
 
 .landing-page .monday-20-jan {
   color: #a8a8a8;

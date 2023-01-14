@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useNavigate } from "react-router";
 import "./LandingPage.css";
 import vector from "./assets/vector.svg";
 import BtnLp from "./components/BtnLp";
@@ -26,26 +25,7 @@ function LandingPage(props) {
       label: "MEMBERS",
       svg: vector
     },
-    // btnBack: {
-    //   label: "Back",
-    // },
-    // menuRanking: {
-    //   label: "Ranking",
-    //   svg: otherstrendTwo,
-    //   link: '/ranking'
-    // },
-    // menuHome: {
-    //   label: "Home",
-    //   svg: home,
-    //   link: '/'
-    // },
-    // menuRooms: {
-    //   label: "Rooms",
-    //   svg: document,
-    //   link: '/rooms'
-    // },
   };
-  const navigate = useNavigate();
 
   return (
     <>

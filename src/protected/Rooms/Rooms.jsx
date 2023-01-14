@@ -1,12 +1,6 @@
 import * as React from "react";
-import { useNavigate } from "react-router";
 import "./Rooms.css";
 import image2 from "./assets/image2.svg";
-import otherstrendTwo from "./assets/otherstrendTwo.svg";
-import thunderIllustration from "./assets/thunderIllustration.png";
-import home from "./assets/home.svg";
-import document from "./assets/document.svg";
-import icon from "./assets/icon.svg";
 import Room from "./components/Room";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -49,12 +43,6 @@ function Rooms(props) {
             {...propsData.component15}
           />
         </div>
-        {/* <Btn className="btn-instance-1" />
-        <div className="rooms-flex-container-5">
-          <Menu className="menu-1-instance-1" {...propsData.menuRanking} />
-          <Menu className="menu-instance-1" {...propsData.menuHome} />
-          <Menu className="menu-2-instance-1" {...propsData.menuRooms} />
-        </div> */}
       </div>
       <Footer />
     </>

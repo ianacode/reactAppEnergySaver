@@ -1,13 +1,10 @@
 import * as React from "react";
-import { useNavigate } from "react-router";
 import "./Footer.css";
 import Btn from "./components/Btn";
 import Menu from "./components/Menu";
 import home from "./assets/home.svg";
 import otherstrendTwo from "./assets/otherstrendTwo.svg";
 import document from "./assets/document.svg";
-
-
 
 function Footer(props) {
     const propsData = {
@@ -31,8 +28,6 @@ function Footer(props) {
             link: '/rooms'
         },
     };
-    const navigate = useNavigate();
-
     return (
         <div className="footer">
             <Btn className="footer-btn-instance-1" {...propsData.btnBack} />

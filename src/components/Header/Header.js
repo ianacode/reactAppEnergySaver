@@ -2,7 +2,6 @@ import * as React from "react";
 import './Header.css';
 import {useNavigate} from "react-router";
 import component11 from "./assets/component11.svg";
-import component16 from "./assets/component16.svg";
 import headerLine from "./assets/headerLine.svg";
 import loginService from "../../services/LoginService";
 function Header(props) {

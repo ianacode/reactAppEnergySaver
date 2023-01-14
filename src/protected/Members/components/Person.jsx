@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./Person.css";
-import frame21112 from "../assets/frame21112.svg";
 const Person = ({ member }) => {
   return (
     <div className={`person-3 person`}>
