@@ -1,5 +1,9 @@
+import userService from "./UserService";
+import loginService from "./LoginService";
+
 class HomeService {
-  getHome(homeId) {
+  getHome() {
+    const homeId = loginService.userAuthenticated().home_id
     return fetch(`http://localhost:3001/homes/${homeId}`)
       .then((response) => {
         return response.json();

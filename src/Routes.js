@@ -1,11 +1,11 @@
 import { Route, Routes as BaseRoutes } from "react-router-dom";
-import LandingPage from "./components/LandingPage/LandingPage";
-import Rooms from "./components/Rooms/Rooms";
-import Ranking from "./components/Ranking/Ranking";
-import Members from "./components/Members/Members";
-import Loginreg from "./components/Loginreg/Loginreg";
+import LandingPage from "./Protected/LandingPage/LandingPage";
+import Rooms from "./Protected/Rooms/Rooms";
+import Ranking from "./Protected/Ranking/Ranking";
+import Members from "./Protected/Members/Members";
+import Loginreg from "./Public/Loginreg/Loginreg";
 import Guard from "./guard/Guard";
-import Login from "./components/Login/Login";
+import Login from "./Public/Login/Login";
 
 export default function Routes() {
   return (

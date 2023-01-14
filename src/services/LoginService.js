@@ -2,8 +2,6 @@ import userService from "./UserService";
 
 
 class LoginService {
-  user = null;
-
   constructor() {
     this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
@@ -15,7 +13,8 @@ class LoginService {
     return userService.getUsers().then((users) => {
       for (const user of users) {
         if (user.email === email && user.password === password) {
-          this.user = user;
+          user.password = ''; // never save pwd in local storage
+          localStorage.setItem('user', JSON.stringify(user));
           return true;
         }
       }
@@ -24,19 +23,19 @@ class LoginService {
   }
 
   logout() {
-    this.user = null;
+    localStorage.removeItem('user');
   }
 
   isAuthenticated() {
-    return this.user !== null;
+    return localStorage.getItem('user') !== null;
   }
 
   userAuthenticated() {
-    return this.user;
+    return JSON.parse(localStorage.getItem('user'));
   }
 
   isAdult() {
-    return this.user.role === 'adult';
+    return this.userAuthenticated().role === 'adult';
   }
 }
 
