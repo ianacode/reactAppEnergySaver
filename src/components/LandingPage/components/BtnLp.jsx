@@ -7,7 +7,7 @@ const BtnLp = (props) => {
     <button className={`btn-lp ${props.className || ""}`} style={{
       backgroundImage: props.svg
     }} onClick={()=>navigate(props.link || '/')}>
-      <div className="vector">
+      <div className="lp-vector">
         {props.label}
       </div>
     </button>
