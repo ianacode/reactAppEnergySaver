@@ -33,7 +33,7 @@
   display: flex;
 } */
 
-.avatar {
+.ranking .avatar {
   width: 60px;
   height: 60px;
   object-fit: cover;
@@ -49,13 +49,13 @@
   padding-right: 70px;
 } */
 
-.data {
+.ranking .data {
   color: #a8a8a8;
   font-size: .875rem;
   font-weight: 400;
 }
 
-.alarm {
+.ranking .alarm {
   width: 28px;
   height: 32px;
   object-fit: cover;
@@ -63,7 +63,7 @@
   margin-left: 55px;
 }
 
-.header-line {
+.ranking .header-line {
   width: 414px;
   object-fit: cover;
   margin-top: 7px;
@@ -71,7 +71,7 @@
   /* align-self: flex-end; */
 }
 
-.ranking-flex-container-2 {
+.ranking .ranking-flex-container-2 {
   width: 30%;
   flex-direction: row;
   justify-content: space-between;
@@ -81,18 +81,18 @@
   display: flex;
 }
 
-.icon {
+.ranking .icon {
   width: 18px;
   height: 15px;
   object-fit: cover;
   padding-top: 5px;
 }
 
-.ranking-1 {
+.ranking .ranking-1 {
   text-transform: uppercase;
 }
 
-.num-35-points {
+.ranking .num-35-points {
   color: #000;
   align-self: flex-end;
   font-size: 1rem;
@@ -101,7 +101,7 @@
   padding-right: 50px;
 }
 
-.ranking-flex-container-3 {
+.ranking .ranking-flex-container-3 {
   width: 60%;
   flex-direction: column;
   flex-basis: 26%;
@@ -124,11 +124,11 @@
 /* .ranking-vector-conteiner {
   width: 100%;
 
- 
+
 } */
 
 
-.group-2085 {
+.ranking .group-2085 {
   z-index: 1;
   width: 100%;
   flex-direction: row;
@@ -138,7 +138,7 @@
   display: flex;
 }
 
-.ranking-vector-1 {
+.ranking .ranking-vector-1 {
   height: 100%;
   background-color: #dcfbd9;
   border-radius: 25px;
@@ -151,20 +151,20 @@
   display: flex;
 }
 
-.jrnbbpupzsuzo {
+.ranking .jrnbbpupzsuzo {
   text-transform: uppercase;
   padding-top: 136px;
   margin-bottom: 18px;
 }
 
-.opgklbcikbbig {
+.ranking .opgklbcikbbig {
   text-transform: uppercase;
   margin-bottom: 18px;
   margin-left: 2px;
   padding-top: 194px;
 }
 
-.ranking-vector-2 {
+.ranking .ranking-vector-2 {
   height: 100%;
   background-color: #fdf2b8;
   border-radius: 25px;
@@ -179,7 +179,7 @@
 }
 
 
-.ranking-vector-3 {
+.ranking .ranking-vector-3 {
   height: 100%;
   background-color: #ECF1FD;
   border-radius: 25px;
@@ -193,13 +193,13 @@
   display: flex;
 }
 
-.xwxtwigvaatox {
+.ranking .xwxtwigvaatox {
   text-transform: uppercase;
   padding-top: 106px;
   margin-bottom: 18px;
 }
 
-.rectangle-412 {
+.ranking .rectangle-412 {
   width: 75%;
   background-color: #fff;
   border: 1px solid #464a63;
@@ -218,7 +218,7 @@
   display: flex;
 }
 
-.cat-absolute-container {
+.ranking .cat-absolute-container {
   z-index: 1;
   width: 40%;
   flex-direction: column;
@@ -231,26 +231,26 @@
   display: flex;
 }
 
-.score {
+.ranking .score {
   font-weight: 600;
   line-height: 20px;
 }
 
-.num-123 {
+.ranking .num-123 {
   margin-bottom: 7px;
 }
 
-.num-78 {
+.ranking .num-78 {
   margin-top: 2px;
   margin-bottom: 9px;
 }
 
-.num-54 {
+.ranking .num-54 {
   margin-top: 2px;
   margin-bottom: 3px;
 }
 
-.line-16 {
+.ranking .line-16 {
   width: 110px;
   height: 166px;
   object-fit: cover;
@@ -259,7 +259,7 @@
   margin-left: 15px;
 }
 
-.rank {
+.ranking .rank {
   align-self: flex-end;
   margin-top: -1px;
   margin-bottom: -9px;
@@ -267,7 +267,7 @@
   line-height: 20px;
 }
 
-.username {
+.ranking .username {
   align-self: flex-start;
   margin-bottom: 6px;
   margin-left: 14px;
@@ -275,7 +275,7 @@
   line-height: 20px;
 }
 
-.line-17 {
+.ranking .line-17 {
   z-index: 1;
   width: 296px;
   height: 1px;
@@ -283,20 +283,20 @@
   border: 1px solid #464a63;
 }
 
-.family-1 {
+.ranking .family-1 {
   align-self: flex-start;
   margin-top: 15px;
   margin-bottom: -13px;
   margin-left: 23px;
 }
 
-.xfmnhlinybjyh {
+.ranking .xfmnhlinybjyh {
   align-self: flex-end;
   margin-top: -1px;
   margin-bottom: 17px;
 }
 
-.line-18 {
+.ranking .line-18 {
   z-index: 1;
   width: 296px;
   height: 1px;
@@ -304,38 +304,38 @@
   border: 1px solid #464a63;
 }
 
-.xxpvaptjtkezd {
+.ranking .xxpvaptjtkezd {
   align-self: flex-end;
   margin-top: 19px;
   margin-bottom: -11px;
 }
 
-.family-2 {
+.ranking .family-2 {
   align-self: flex-start;
   margin-bottom: 14px;
   margin-left: 23px;
 }
 
-.line-19 {
+.ranking .line-19 {
   z-index: 1;
   width: 292px;
   height: 1px;
   object-fit: cover;
 }
 
-.family-3 {
+.ranking .family-3 {
   align-self: flex-start;
   margin-top: 19px;
   margin-bottom: -13px;
   margin-left: 23px;
 }
 
-.droztchtohtat {
+.ranking .droztchtohtat {
   align-self: flex-end;
   margin-bottom: 16px;
 }
 
-.back-btn-instance-1 {
+.ranking .back-btn-instance-1 {
   width: 80%;
   flex-basis: 4%;
   margin-top: 4px;
@@ -345,7 +345,7 @@
   height: 28px;
 }
 
-.flex-container-4 {
+.ranking .flex-container-4 {
   width: 80%;
   flex-direction: row;
   flex-basis: 8%;
@@ -358,18 +358,18 @@
   bottom: 0;
 }
 
-.ranking-menu-instance-1 {
+.ranking .ranking-menu-instance-1 {
   height: 100%;
   flex-basis: 15%;
 }
 
-.home-menu-instance-1 {
+.ranking .home-menu-instance-1 {
   height: 95%;
   margin-top: 1px;
   margin-left: 2px;
 }
 
-.rooms-menu-instance-1 {
+.ranking .rooms-menu-instance-1 {
   height: 100%;
   flex-basis: 15%;
   margin-top: 1px;
@@ -385,12 +385,12 @@ table {
 } */
 
 
-table {
+.ranking table {
   width: 100%; /* Ширина таблицы */
   border-collapse: collapse; /* Убираем двойные линии между ячейками */
   border: 2px solid rgba(255, 255, 255, 0); /* Прячем рамку вокруг таблицы */
  }
- td, th {
+.ranking  td, th {
   padding: 3px; /* Поля вокруг содержимого таблицы */
   border: 1px solid #464A63; /* Параметры рамки */
   text-align: center; /* Выравнивание по левому краю */

@@ -21,7 +21,7 @@ function Header(props) {
    return (
       <div className="header">
         <div className="flex-container">
-          <img className="component-16" src={component16} onClick={()=>navigate('/members')} />
+          <img className="component-16" src={user.img} onClick={()=>navigate('/members')} />
           <div className="flex-container-1">
             <span>{user.name.first} {user.name.last}</span>
             <span className="monday-20-jan">{today()}</span>

@@ -15,7 +15,7 @@
   display: flex;
 }
 
- .flex-container {
+.header .flex-container {
   width: 85%;
   flex-direction: row;
   justify-content: space-between;
@@ -23,18 +23,16 @@
   margin-left: 6px;
   font-family: Montserrat, Arial;
   display: flex;
-
-
-
 }
 
-.header > .component-16 {
+.header .component-16 {
   width: 60px;
   height: 60px;
   object-fit: cover;
+  border-radius: 70px;
 }
 
-.flex-container-1 {
+.header .flex-container-1 {
   height: 65%;
   flex-direction: column;
   justify-content: space-between;
@@ -47,13 +45,13 @@
 
 }
 
-.header > .monday-20-jan {
+.header .monday-20-jan {
   color: #a8a8a8;
   font-size: .875rem;
   font-weight: 400;
 }
 
-.header > .component-11 {
+.header .component-11 {
   width: 28px;
   height: 32px;
   object-fit: cover;
@@ -61,7 +59,7 @@
   margin-left: 55px;
 }
 
-.header > .header-line {
+.header .header-line {
   width: 414px;
   object-fit: cover;
   margin-top: 7px;

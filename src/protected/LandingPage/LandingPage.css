@@ -25,7 +25,7 @@
   display: flex;
 } */
 
-.component-16 {
+.landing-page .component-16 {
   width: 60px;
   height: 60px;
   object-fit: cover;
@@ -41,13 +41,13 @@
   padding-right: 70px;
 } */
 
-.monday-20-jan {
+.landing-page .monday-20-jan {
   color: #a8a8a8;
   font-size: .875rem;
   font-weight: 400;
 }
 
-.component-11 {
+.landing-page .component-11 {
   width: 28px;
   height: 32px;
   object-fit: cover;
@@ -55,14 +55,14 @@
   margin-left: 55px;
 }
 
-.header-line {
+.landing-page .header-line {
   width: 414px;
   object-fit: cover;
   margin-top: 7px;
   margin-bottom: 16px;
 }
 
-.energy-saving {
+.landing-page .energy-saving {
   /* color: #838a8f; */
   width: 85%;
   background-color: #fff;
@@ -83,11 +83,11 @@
               inset 10px 4px 15px rgb(182, 194, 205, 20%),
               0px 20px 25px rgba(0, 0, 0, 0.1);
 
-  
+
 
 }
 
-.flex-container-2 {
+.landing-page .flex-container-2 {
   height: 65%;
   flex-direction: column;
   justify-content: space-between;
@@ -97,24 +97,24 @@
   display: flex;
 }
 
-.energy-saving-1 {
+.landing-page .energy-saving-1 {
   color: #191919;
   font-family: Montserrat, Arial;
   font-size: .875rem;
   font-weight: 500;
 }
 
-.num-35 {
+.landing-page .num-35 {
   color: #525471;
   margin-bottom: 1px;
 }
 
-.num-235-k-wh {
+.landing-page .num-235-k-wh {
   font-size: .75rem;
   font-weight: 400;
 }
 
-.thunder-illustration {
+.landing-page .thunder-illustration {
   width: 107px;
   height: 86px;
   object-fit: cover;
@@ -123,22 +123,22 @@
   margin-left: 25px;
 }
 
-.btn-lp-instance-1,
-.btn-lp-1-instance,
-.btn-lp-2-instance {
+.landing-page .btn-lp-instance-1,
+.landing-page .btn-lp-1-instance,
+.landing-page .btn-lp-2-instance {
   width: 80%;
   flex-basis: 7%;
   margin-left: 3px;
 }
 
-.btn-lp-3-instance {
+.landing-page .btn-lp-3-instance {
   width: 80%;
   flex-basis: 7%;
   margin-bottom: 49px;
   margin-left: 3px;
 }
 
-.btn-instance-1 {
+.landing-page .btn-instance-1 {
   width: 80%;
   flex-basis: 4%;
   margin-top: 4px;
@@ -148,7 +148,7 @@
   height: 28px;
 }
 
-.flex-container-3 {
+.landing-page .flex-container-3 {
   width: 80%;
   flex-direction: row;
   flex-basis: 8%;
@@ -161,19 +161,19 @@
   bottom: 0;
 }
 
-.menu-1-instance-1 {
+.landing-page .menu-1-instance-1 {
   height: 100%;
   flex-basis: 15%;
   /* margin-bottom: 1px; */
 }
 
-.menu-instance-1 {
+.landing-page .menu-instance-1 {
   height: 100%;
   margin-top: 1px;
   margin-left: 2px;
 }
 
-.menu-2-instance-1 {
+.landing-page .menu-2-instance-1 {
   height: 100%;
   flex-basis: 15%;
   margin-top: 2px;

@@ -34,7 +34,7 @@ function Footer(props) {
     const navigate = useNavigate();
 
     return (
-        <div className="footer-landing-page">
+        <div className="footer">
             <Btn className="footer-btn-instance-1" {...propsData.btnBack} />
             <div className="footer-flex-container-3">
                 <Menu className="footer-menu-1-instance-1" {...propsData.menuRanking} />

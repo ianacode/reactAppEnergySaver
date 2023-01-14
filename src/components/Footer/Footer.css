@@ -1,4 +1,4 @@
-.footer-btn-instance-1 {
+.footer .footer-btn-instance-1 {
     width: 80%;
     flex-basis: 4%;
     margin-top: 4px;
@@ -8,7 +8,7 @@
     height: 28px;
   }
 
-  .footer-flex-container-3 {
+.footer .footer-flex-container-3 {
     width: 80%;
     flex-direction: row;
     flex-basis: 8%;
@@ -21,25 +21,25 @@
     bottom: 0;
   }
 
-  .footer-menu-1-instance-1 {
+.footer .footer-menu-1-instance-1 {
     height: 100%;
     flex-basis: 15%;
     /* margin-bottom: 1px; */
   }
 
-  .footer-menu-instance-1 {
+.footer .footer-menu-instance-1 {
     height: 100%;
     margin-top: 1px;
     margin-left: 2px;
   }
 
-  .footer-menu-2-instance-1 {
+.footer  .footer-menu-2-instance-1 {
     height: 100%;
     flex-basis: 15%;
     margin-top: 2px;
   }
 
-  .footer-landing-page {
+  .footer {
     color: #464a63;
     width: 100%;
     height: 100%;

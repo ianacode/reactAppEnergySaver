@@ -13,9 +13,6 @@
   font-weight: 700;
   line-height: 21px;
   display: flex;
-
-
-
 }
 
 /* .flex-container {
@@ -28,7 +25,7 @@
   display: flex;
 } */
 
-.component-16 {
+.rooms .component-16 {
   width: 60px;
   height: 60px;
   object-fit: cover;
@@ -44,16 +41,16 @@
   padding-right: 70px;
 } */
 
-.matthiew {
+.rooms .matthiew {
   font-size: 1.25rem;
 }
 
-.monday-20-jan {
+.rooms .monday-20-jan {
   color: #a8a8a8;
   font-weight: 400;
 }
 
-.component-11 {
+.rooms .component-11 {
   width: 28px;
   height: 32px;
   object-fit: cover;
@@ -61,14 +58,14 @@
   margin-left: 55px;
 }
 
-.header-line {
+.rooms .header-line {
   width: 414px;
   object-fit: cover;
   margin-top: 7px;
   margin-bottom: 16px;
 }
 
-.rooms-1 {
+.rooms .rooms-1 {
   /* text-transform: uppercase;
   align-self: flex-start;
   margin-left: 42px;
@@ -78,7 +75,7 @@
   text-transform: uppercase;
 }
 
-.energy-saving {
+.rooms .energy-saving {
   /* color: #525471; */
   width: 85%;
   background-color: #fff;
@@ -101,7 +98,7 @@
 
 }
 
-.flex-container-2 {
+.rooms .flex-container-2 {
   height: 65%;
   flex-direction: column;
   justify-content: space-between;
@@ -111,24 +108,24 @@
   display: flex;
 }
 
-.energy-saving-1 {
+.rooms .energy-saving-1 {
   color: #191919;
   font-family: Montserrat, Arial;
 }
 
-.num-35 {
+.rooms .num-35 {
   margin-bottom: 1px;
   font-size: 1.563rem;
   font-weight: 600;
 }
 
-.num-235-k-wh {
+.rooms .num-235-k-wh {
   color: #838a8f;
   font-size: .75rem;
   font-weight: 400;
 }
 
-.thunder-illustration {
+.rooms .thunder-illustration {
   width: 107px;
   height: 86px;
   object-fit: cover;
@@ -137,7 +134,7 @@
   margin-left: 25px;
 }
 
-.rooms-flex-container-3 {
+.rooms .rooms-flex-container-3 {
   width: 85%;
   flex-direction: row;
   flex-basis: 26%;
@@ -150,11 +147,11 @@
   margin-top: 15px;
 }
 
-.component-13-instance-1, .component-17-instance-1 {
+.rooms .component-13-instance-1, .rooms .component-17-instance-1 {
   height: 100%;
 }
 
-.rooms-flex-container-4 {
+.rooms .rooms-flex-container-4 {
   width: 85%;
   flex-direction: row;
   flex-basis: 23%;
@@ -165,11 +162,11 @@
   display: flex;
 }
 
-.component-12-instance-1, .component-15-instance-1 {
+.rooms .component-12-instance-1, .rooms .component-15-instance-1 {
   height: 100%;
 }
 
-.rooms-flex-container-5 {
+.rooms .rooms-flex-container-5 {
   width: 80%;
   flex-direction: row;
   flex-basis: 8%;
@@ -182,19 +179,19 @@
   bottom: 0;
 }
 
-.menu-1-instance-1 {
+.rooms .menu-1-instance-1 {
   height: 100%;
   flex-basis: 15%;
   /* margin-bottom: 1px; */
 }
 
-.menu-instance-1 {
+.rooms .menu-instance-1 {
   height: 95%;
   margin-top: 1px;
   margin-left: 2px;
 }
 
-.menu-2-instance-1 {
+.rooms .menu-2-instance-1 {
   height: 100%;
   flex-basis: 15%;
   margin-top: 2px;

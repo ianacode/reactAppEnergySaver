@@ -9,7 +9,7 @@
   display: flex;
 }
 
-.members-flex-container {
+.members .members-flex-container {
   width: 90%;
   flex-direction: row;
   flex-basis: 28%;
@@ -19,7 +19,7 @@
   flex-wrap: wrap;
 }
 
-.person {
+.members .person {
   height: 100%;
   width: 100%;
   flex: 50%;
