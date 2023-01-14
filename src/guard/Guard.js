@@ -1,9 +1,9 @@
 import React from 'react';
-import {Route, Navigate} from "react-router-dom";
+import {Navigate} from "react-router-dom";
 import loginService from "../services/LoginService";
 
 const Guard = ({ Component: Component, ...props }) => (
-  loginService.isAuthenticated() === false
+  loginService.isAuthenticated() === true
     ? <Component {...props} />
     : <Navigate to='/loginreg' replace />
 )

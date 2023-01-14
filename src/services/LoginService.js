@@ -2,7 +2,7 @@ import userService from "./UserService";
 
 
 class LoginService {
-  useAuthenticated = null;
+  user = null;
 
   constructor() {
     this.login = this.login.bind(this);
@@ -11,26 +11,28 @@ class LoginService {
     this.userAuthenticated = this.userAuthenticated.bind(this);
   }
 
-  login(username, password) {
-    userService.getUsers().then((users) => {
-      users.forEach((user) => {
-        if (user.username === username && user.password === password) {
-          this.useAuthenticated = user;
+  login(email, password) {
+    return userService.getUsers().then((users) => {
+      for (const user of users) {
+        if (user.email === email && user.password === password) {
+          this.user = user;
+          return true;
         }
-      });
+      }
+      return false;
     })
   }
 
   logout() {
-    this.useAuthenticated = null;
+    this.user = null;
   }
 
   isAuthenticated() {
-    return this.useAuthenticated !== null;
+    return this.user !== null;
   }
 
   userAuthenticated() {
-    return this.useAuthenticated;
+    return this.user;
   }
 }
 

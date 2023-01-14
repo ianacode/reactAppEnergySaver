@@ -1,45 +1,45 @@
 import * as React from "react";
-import { useNavigate } from "react-router";
 import "./Login.css";
 import imagesLogin from "./assets/imagesLogin.svg";
-import vector from "./assets/vector.svg";
-import MainButtons from "./components/MainButtons";
-import FormStroke from "./components/FormStroke";
+import loginService from "../../services/LoginService";
+import {useNavigate} from "react-router";
 function Login(props) {
 
-  const navigate = useNavigate();
+  let navigate = useNavigate();
+  const [email, setEmail] = React.useState("mattiew@ua.pt");
+  const [password, setPassword] = React.useState("");
 
-  const propsData = {
-    formStroke1: {
-      username: "Email",
-    },
-    formStroke: {
-      username: "Password",
-    },
-    mainButtons: {
-      mainButton: "Login",
-      vector: vector,
-      link: "/members",
-    },
-  };
+  function handleLogin() {
+    loginService.login(email, password).then((authenticated) => {
+      if (authenticated) {
+        navigate("/");
+      }
+    })
+  }
+
   return (
     <div className="login">
       <img className="images-login" src={imagesLogin} />
       <span className="energy-saver-can-cha">
         Energy saver can change way you live in the future
       </span>
-      <FormStroke
-        className="form-stroke-1-instance"
-        {...propsData.formStroke1}
+      <input
+        className="login-form-stroke"
+        placeholder="Email"
+        type="text"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
-      <FormStroke
-        className="form-stroke-instance-1"
-        {...propsData.formStroke}
+      <input
+        className="login-form-stroke"
+        placeholder="Password"
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
       />
-      <MainButtons
-        className="main-buttons-instance-1"
-        {...propsData.mainButtons}
-      />
+      <button className={`main-buttons main-buttons-instance-1`} onClick={()=>handleLogin()}>
+        <div className="vector">Login</div>
+      </button>
       <span className="dont-have-an-account">
         Don’t have an account? Sign up
       </span>

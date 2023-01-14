@@ -10,8 +10,6 @@ import Login from "./components/Login/Login";
 export default function Routes() {
   return (
     <BaseRoutes>
-   
- 
       <Route path="login" element={<Login />} />
       <Route path="/loginreg" element={<Loginreg />} />
       <Route path="/" element={<Guard Component={LandingPage} />} />
