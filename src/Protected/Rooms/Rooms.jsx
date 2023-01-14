@@ -16,7 +16,7 @@ import Component17 from "./components/Component17";
 import Menu from "./components/Menu";
 import Component15 from "./components/Component15";
 import Btn from "./components/Btn";
-import Header from "../components/Header/Header";
+import Header from "../../components/Header/Header";
 function Rooms(props) {
 
   function handleGoBack() {

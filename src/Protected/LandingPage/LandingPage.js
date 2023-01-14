@@ -9,7 +9,7 @@ import thunderIllustration from "./assets/thunderIllustration.png";
 import BtnLp from "./components/BtnLp";
 import Btn from "./components/Btn";
 import Menu from "./components/Menu";
-import Header from "../components/Header/Header";
+import Header from "../../components/Header/Header";
 
 
 function LandingPage(props) {

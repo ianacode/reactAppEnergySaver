@@ -15,7 +15,7 @@ import alarm from "./assets/alarm.svg";
 import icon from "./assets/icon.svg";
 import Menu from "./components/Menu";
 import Btn from "./components/Btn";
-import Header from "../components/Header/Header";
+import Header from "../../components/Header/Header";
 
 
 function Ranking(props) {
