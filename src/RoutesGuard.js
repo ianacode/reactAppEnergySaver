@@ -3,7 +3,7 @@ import {Navigate} from "react-router-dom";
 import loginService from "./services/LoginService";
 
 const RoutesGuard = ({ Component: Component, ...props }) => (
-  loginService.isAuthenticated() === true
+  loginService.isAuthenticated()
     ? <Component {...props} />
     : <Navigate to='/loginreg' replace />
 )
