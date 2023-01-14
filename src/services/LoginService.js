@@ -34,6 +34,10 @@ class LoginService {
   userAuthenticated() {
     return this.user;
   }
+
+  isAdult() {
+    return this.user.role === 'adult';
+  }
 }
 
 export default new LoginService();
