@@ -3,7 +3,6 @@ import "./Members.css";
 import vector from "./assets/vector.svg";
 import MainButtons from "./components/MainButtons";
 import Person from "./components/Person";
-import userService from "../../services/UserService";
 
 
 function Members(props) {
@@ -17,8 +16,6 @@ function Members(props) {
       mainButton: "Log out",
     },
   };
-
-  userService();
 
   return (
     <div className="members">
