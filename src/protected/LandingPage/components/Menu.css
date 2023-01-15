@@ -1,4 +1,4 @@
-.menu {
+.landing-page .menu {
   text-align: center;
   color: #464a63;
   flex-direction: column;
@@ -11,7 +11,7 @@
   display: flex;
 }
 
-.imageMenu {
+.landing-page .imageMenu {
   width: 35px;
   height: 37px;
   object-fit: cover;
