@@ -11,6 +11,8 @@
   font-weight: 400;
   line-height: 24px;
   display: flex;
+  margin-top: 25px;
+
 }
 
 .consumption .flex-container {
@@ -94,8 +96,7 @@
   width: 47px;
   height: 47px;
   object-fit: cover;
-  border: 2px solid #464a63;
-  margin-left: 39px;
+  margin-bottom: 5px;
 }
 
 .consumption .flex-container-3 {
@@ -114,7 +115,7 @@
   width: 10px;
   height: 40px;
   object-fit: cover;
-  margin-bottom: -32px;
+  margin-bottom: -25px;
 }
 
 .consumption .group-1 {
@@ -135,8 +136,7 @@
   width: 29px;
   height: 36px;
   object-fit: cover;
-  border: .3px solid #464a63;
-  margin-left: 49px;
+  margin-bottom: 5px;
 }
 
 .consumption .flex-container-4 {
@@ -155,7 +155,7 @@
   width: 10px;
   height: 40px;
   object-fit: cover;
-  margin-bottom: -33px;
+  margin-bottom: -25px;
 }
 
 .consumption .group {

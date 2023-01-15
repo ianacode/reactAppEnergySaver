@@ -1,0 +1,312 @@
+.room-detail {
+  color: #464a63;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 3px;
+  padding-bottom: 7px;
+  font-family: Montserrat, Arial;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 45px;
+  display: flex;
+}
+
+.room-detail .flex-container {
+  color: #a8a8a8;
+  width: 85%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1px;
+  margin-left: 6px;
+  line-height: 21px;
+  display: flex;
+}
+
+.room-detail .component-16 {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.room-detail .flex-container-1 {
+  height: 65%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 4px;
+  display: flex;
+}
+
+.room-detail .matthiew {
+  color: #464a63;
+  font-weight: 700;
+}
+
+.room-detail .monday-20-jan {
+  font-size: .875rem;
+}
+
+.room-detail .component-11 {
+  width: 28px;
+  height: 32px;
+  object-fit: cover;
+  margin-bottom: 2px;
+  margin-left: 55px;
+}
+
+.room-detail .header-line {
+  width: 414px;
+  object-fit: cover;
+  margin-top: 1px;
+  margin-bottom: 3px;
+}
+
+.room-detail .flex-container-2 {
+  width: 30%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-start;
+  align-items: stretch;
+  margin-top: 1px;
+  margin-left: 37px;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+}
+
+.room-detail .icon {
+  width: 18px;
+  height: 15px;
+  object-fit: cover;
+}
+
+.room-detail .kitchen-1 {
+  text-transform: uppercase;
+}
+
+.room-detail .flex-container-3 {
+  color: #3c3c432e;
+  width: 100%;
+  padding-left: 25%;
+  display: flex;
+  overflow-x: auto;
+  /* display: flex; */
+}
+
+.room-detail .flex-container-4 {
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 360px;
+  display: flex;
+}
+
+.room-detail .flex-container-5 {
+  width: 75%;
+  flex-direction: row;
+  flex-basis: 80%;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-left: 3px;
+  margin-right: 286px;
+  display: flex;
+}
+
+.room-detail .ellipse-16 {
+  z-index: 1;
+  width: 240px;
+  height: 120px;
+  object-fit: cover;
+  border: 10px solid #bac4cf;
+  margin-right: -22px;
+}
+
+.room-detail .ellipse-11 {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  background: linear-gradient(#dee2e7 0%, #dbe0e7 96.8749%);
+  border: 1px solid;
+  align-self: flex-end;
+  margin-left: -11px;
+  margin-right: -45px;
+}
+
+.room-detail .cat-absolute-container {
+  z-index: 1;
+  height: 100%;
+  flex-direction: column;
+  flex-basis: 92%;
+  justify-content: space-between;
+  align-self: flex-end;
+  align-items: center;
+  margin-left: -7px;
+  padding-top: 11px;
+  padding-bottom: 20px;
+  padding-right: 2px;
+  display: flex;
+}
+
+.room-detail .progress {
+  width: 193px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: -171px;
+}
+
+.room-detail .cat-absolute-container-1 {
+  z-index: 1;
+  width: 85%;
+  flex-direction: column;
+  flex-basis: 82%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -180px;
+  margin-right: 1px;
+  padding: 13px 3px 12px 4px;
+  display: flex;
+}
+
+.room-detail .cat-absolute-container-2 {
+  z-index: 1;
+  width: 90%;
+  flex-direction: column;
+  flex-basis: 86%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: -155px;
+  padding-bottom: 4px;
+  padding-right: 5px;
+  display: flex;
+}
+
+.room-detail .ellipse-15 {
+  width: 14px;
+  height: 14px;
+  object-fit: cover;
+  background: linear-gradient(#dde1e7 0%, #fafbfc 100%);
+  margin-left: 22px;
+}
+
+.room-detail .kitchen-2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #3c3c4399;
+  z-index: 1;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.room-detail .num-0-1-2-3-4-5-6-7-8 {
+  text-align: center;
+  margin-left: 4px;
+  font-size: 2.25rem;
+}
+
+.room-detail .electricity-expense {
+  color: #464a63;
+  margin-bottom: 8px;
+  font-size: .875rem;
+  line-height: 17px;
+}
+
+.room-detail .ltnvrkvyhfuyn {
+  text-align: center;
+  color: #92e3a9;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  margin-left: 5px;
+  font-family: SF Pro Display, Arial;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.room-detail .ellipse-14 {
+  width: 155px;
+  height: 155px;
+  object-fit: cover;
+  background: linear-gradient(#dde1e7 0%, #fafbfc 100%);
+  margin-top: -21px;
+}
+
+.room-detail .ellipse-13 {
+  z-index: 1;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  background: linear-gradient(#f5f5f9 0%, #e4e8ee 98.9583%);
+  border: 1px solid;
+  margin-top: -13px;
+}
+
+/* .room-detail .main-buttons-instance-1 {
+  width: 100%;
+  flex-basis: 18%;
+} */
+/*
+.room-detail .thermometer {
+  width: -19px;
+  height: 234px;
+  object-fit: cover;
+
+
+} */
+
+.room-detail .main-buttons-1-instance, .main-buttons-2-instance {
+  width: 80%;
+  flex-basis: 7%;
+  margin-left: 3px;
+}
+
+.room-detail .main-buttons-3-instance {
+  width: 80%;
+  flex-basis: 7%;
+  margin-bottom: 11px;
+  margin-left: 3px;
+}
+
+.room-detail .btn-instance-1 {
+  width: 80%;
+  flex-basis: 4%;
+  margin-top: 2px;
+  margin-bottom: 11px;
+  margin-left: 3px;
+}
+
+.room-detail .flex-container-6 {
+  width: 80%;
+  flex-direction: row;
+  flex-basis: 8%;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  margin-left: 3px;
+  display: flex;
+}
+
+.room-detail .menu-1-instance-1 {
+  height: 100%;
+  flex-basis: 15%;
+  margin-bottom: 1px;
+}
+
+.room-detail .menu-instance-1 {
+  height: 95%;
+  margin-top: 1px;
+  margin-left: 2px;
+}
+
+.room-detail .menu-2-instance-1 {
+  height: 100%;
+  flex-basis: 15%;
+  margin-top: 2px;
+}
+

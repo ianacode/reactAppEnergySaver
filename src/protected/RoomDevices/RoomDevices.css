@@ -1,0 +1,174 @@
+.RoomDevices {
+  color: #464a63;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: Montserrat, Arial;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+}
+
+.RoomDevices .flex-container {
+  color: #a8a8a8;
+  width: 85%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 6px;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 21px;
+  display: flex;
+}
+
+.RoomDevices .component-16 {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.RoomDevices .flex-container-1 {
+  height: 65%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 4px;
+  display: flex;
+}
+
+.RoomDevices .matthiew {
+  color: #464a63;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.RoomDevices .component-11 {
+  width: 28px;
+  height: 32px;
+  object-fit: cover;
+  margin-bottom: 2px;
+  margin-left: 55px;
+}
+
+.RoomDevices .header-line {
+  width: 414px;
+  object-fit: cover;
+}
+
+.RoomDevices .flex-container-2 {
+  width: 55%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-start;
+  align-items: stretch;
+  margin-bottom: 10px;
+  margin-left: 37px;
+  display: flex;
+}
+
+.RoomDevices .icon {
+  width: 18px;
+  height: 15px;
+  object-fit: cover;
+}
+
+.RoomDevices .kitchen-devices-1 {
+  text-transform: uppercase;
+}
+
+.RoomDevices .img {
+  width: 327px;
+  height: 138px;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  border-radius: 24px;
+  margin-bottom: 13px;
+}
+
+.RoomDevices .flex-container-3 {
+  flex-direction: column;
+  flex-basis: 28%;
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+}
+
+.RoomDevices .rooms-an-ddevices-instance-1, .rooms-an-ddevices-1-instance {
+  width: 100%;
+  flex-basis: 41%;
+  margin-bottom: -17px;
+}
+
+.RoomDevices .rooms-an-ddevices-2-instance {
+  width: 100%;
+  flex-basis: 35%;
+  margin-bottom: -73px;
+}
+
+.RoomDevices .cat-absolute-container {
+  z-index: 1;
+  width: 100%;
+  flex-direction: row;
+  flex-basis: 35%;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-top: 35px;
+  display: flex;
+}
+
+.RoomDevices .rooms-an-ddevices-3-instance {
+  height: 55%;
+  margin-top: 16px;
+  margin-bottom: -35px;
+}
+
+.RoomDevices .main-buttons-instance-1 {
+  width: 80%;
+  flex-basis: 7%;
+  margin-bottom: 5px;
+  margin-left: 3px;
+}
+
+.RoomDevices .btn-instance-1 {
+  width: 80%;
+  flex-basis: 4%;
+  margin-top: 1px;
+  margin-bottom: 5px;
+  margin-left: 3px;
+}
+
+.RoomDevices .flex-container-4 {
+  width: 80%;
+  flex-direction: row;
+  flex-basis: 8%;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  margin-left: 3px;
+  display: flex;
+}
+
+.RoomDevices .menu-1-instance-1 {
+  height: 100%;
+  flex-basis: 15%;
+  margin-bottom: 1px;
+}
+
+.RoomDevices .menu-instance-1 {
+  height: 95%;
+  margin-top: 1px;
+  margin-left: 2px;
+}
+
+.RoomDevices .menu-2-instance-1 {
+  height: 100%;
+  flex-basis: 15%;
+  margin-top: 2px;
+}

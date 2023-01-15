@@ -2,11 +2,15 @@ import { Route, Routes as BaseRoutes } from "react-router-dom";
 import LandingPage from "./protected/LandingPage/LandingPage";
 import Rooms from "./protected/Rooms/Rooms";
 import RoomDetail from "./protected/RoomDetail/RoomDetail";
+import DeviceDetail from "./protected/DeviceDetail/DeviceDetail";
 import Ranking from "./protected/Ranking/Ranking";
 import Members from "./protected/Members/Members";
 import Consumption from "./protected/Consumption/Consumption";
+import RoomDevices from "./protected/RoomDevices/RoomDevices";
 import Loginreg from "./public/Loginreg/Loginreg";
 import Login from "./public/Login/Login";
+import NotFoundPage from "./public/NotFoundPage/NotFoundPage";
+
 import {
   LoggedGuard,
   NotLoggedGuard,
@@ -24,7 +28,10 @@ export default function Routes() {
       <Route path="rooms" >
         <Route index element={<LoggedGuard Component={Rooms} />} />
         <Route path=":roomId" element={<LoggedGuard Component={RoomDetail} />} />
+        <Route path=":roomId/devices" element={<LoggedGuard Component={RoomDevices} />} />
+        <Route path=":roomId/devices/:deviceId" element={<LoggedGuard Component={DeviceDetail} />} />
       </Route>
+      <Route path="*" element={<NotFoundPage/>} />
     </BaseRoutes>
   );
 }
