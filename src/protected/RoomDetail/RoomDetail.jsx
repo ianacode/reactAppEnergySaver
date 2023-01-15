@@ -24,11 +24,24 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import SvgInfo from "./components/SvgInfo";
+import loginService from "../../services/LoginService";
+import homeService from "../../services/HomeService";
+import {useEffect, useState} from "react";
 
 
 const RoomDetail = () => {
 
   const { roomId } = useParams();
+  const [home, setHome] = useState({});
+  const [room, setRoom] = useState({});
+
+  useEffect(() => {
+    homeService.getHome(loginService.userAuthenticated().home_id)
+      .then((home) => {
+        setHome(home);
+        setRoom(home.rooms.find((room) => room.room_id === roomId));
+      })
+  }, []);
 
   const propsData = {
     mainButtons: {
@@ -51,7 +64,7 @@ const RoomDetail = () => {
   return (
     <>
       <Header />
-      <Breadcrumb label="Kitchen"/>
+      <Breadcrumb label={room.room_name}/>
       <div className="room-detail">
         <div className="flex-container-3">
           <SvgInfo value="20°C" title="Electricity Expense" />
