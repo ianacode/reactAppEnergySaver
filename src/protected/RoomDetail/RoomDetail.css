@@ -91,12 +91,10 @@
 
 .room-detail .flex-container-3 {
   color: #3c3c432e;
-  width: 90%;
-  flex-direction: row;
-  flex-basis: 39%;
-  justify-content: space-between;
-  align-self: flex-end;
-  align-items: stretch;
+  width: 100%;
+  padding-left: 25%;
+  display: flex;
+  overflow-x: auto;
   /* display: flex; */
 }
 
@@ -252,7 +250,7 @@
   width: 100%;
   flex-basis: 18%;
 } */
-/* 
+/*
 .room-detail .thermometer {
   width: -19px;
   height: 234px;
@@ -312,9 +310,3 @@
   margin-top: 2px;
 }
 
-.room-detail .svg-title {
-  fill: red;
-}
-/* .room-detail-block-buttons {
-  margin-top: 2px;
-} */
