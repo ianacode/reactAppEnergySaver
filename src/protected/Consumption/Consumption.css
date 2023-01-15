@@ -1,0 +1,219 @@
+.consumption {
+  color: #464a63;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: Montserrat, Arial;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 24px;
+  display: flex;
+}
+
+.consumption .flex-container {
+  width: 85%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 6px;
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 21px;
+  display: flex;
+}
+
+.consumption .component-16 {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.consumption .flex-container-1 {
+  height: 65%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 4px;
+  display: flex;
+}
+
+.consumption .matthiew {
+  font-size: 1.25rem;
+}
+
+.consumption .monday-20-jan {
+  color: #a8a8a8;
+  font-weight: 400;
+}
+
+.consumption .component-11 {
+  width: 28px;
+  height: 32px;
+  object-fit: cover;
+  margin-bottom: 2px;
+  margin-left: 55px;
+}
+
+.consumption .header-line {
+  width: 414px;
+  object-fit: cover;
+}
+
+.consumption .flex-container-2 {
+  width: 45%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-start;
+  align-items: stretch;
+  margin-bottom: 12px;
+  margin-left: 37px;
+  font-weight: 600;
+  display: flex;
+}
+
+.consumption .icon {
+  width: 18px;
+  height: 15px;
+  object-fit: cover;
+}
+
+.consumption .consumption-1 {
+  text-transform: uppercase;
+}
+
+.consumption .electricity {
+  align-self: flex-start;
+  margin-top: 1px;
+  margin-left: 43px;
+}
+
+.consumption .vector-3 {
+  width: 47px;
+  height: 47px;
+  object-fit: cover;
+  border: 2px solid #464a63;
+  margin-left: 39px;
+}
+
+.consumption .flex-container-3 {
+  width: 80%;
+  flex-direction: column;
+  flex-basis: 5%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3px;
+  margin-left: 2px;
+  display: flex;
+}
+
+.consumption .rectangle-22 {
+  z-index: 1;
+  width: 10px;
+  height: 40px;
+  object-fit: cover;
+  margin-bottom: -32px;
+}
+
+.consumption .group-1 {
+  width: 316px;
+  height: 25px;
+  object-fit: cover;
+  margin-top: -7px;
+  margin-bottom: 7px;
+}
+
+.consumption .water {
+  align-self: flex-start;
+  margin-top: 1px;
+  margin-left: 42px;
+}
+
+.consumption .vector-2 {
+  width: 29px;
+  height: 36px;
+  object-fit: cover;
+  border: .3px solid #464a63;
+  margin-left: 49px;
+}
+
+.consumption .flex-container-4 {
+  width: 80%;
+  flex-direction: column;
+  flex-basis: 5%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+  margin-left: 2px;
+  display: flex;
+}
+
+.consumption .rectangle-21 {
+  z-index: 1;
+  width: 10px;
+  height: 40px;
+  object-fit: cover;
+  margin-bottom: -33px;
+}
+
+.consumption .group {
+  width: 316px;
+  height: 25px;
+  object-fit: cover;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.consumption .main-buttons-1-instance {
+  width: 80%;
+  flex-basis: 7%;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.consumption .main-buttons-instance-1 {
+  width: 80%;
+  flex-basis: 7%;
+  margin-bottom: 17px;
+  margin-left: 3px;
+}
+
+.consumption .btn-instance-1 {
+  width: 80%;
+  flex-basis: 4%;
+  margin-top: 1px;
+  margin-bottom: 7px;
+  margin-left: 3px;
+}
+
+.consumption .flex-container-5 {
+  width: 80%;
+  flex-direction: row;
+  flex-basis: 8%;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  margin-left: 3px;
+  display: flex;
+}
+
+.consumption .menu-1-instance-1 {
+  height: 100%;
+  flex-basis: 15%;
+  margin-bottom: 1px;
+}
+
+.consumption .menu-instance-1 {
+  height: 95%;
+  margin-top: 1px;
+  margin-left: 2px;
+}
+
+.consumption .menu-2-instance-1 {
+  height: 100%;
+  flex-basis: 15%;
+  margin-top: 2px;
+}

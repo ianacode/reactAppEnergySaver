@@ -1,4 +1,5 @@
 import * as React from "react";
+import {useNavigate} from "react-router";
 import "./LandingPage.css";
 import vector from "./assets/vector.svg";
 import BtnLp from "./components/BtnLp";
@@ -8,22 +9,27 @@ import EnergySaving from "../../components/EnergySaving/EnergySaving";
 
 
 function LandingPage(props) {
+  const navigate = useNavigate();
   const propsData = {
     btnConsumtion: {
       label: "CONSUMPTION",
-      svg: vector
+      svg: vector,
+      link: "/consumption",
     },
     btnNotification: {
       label: "NOTIFICATIONS",
-      svg: vector
+      svg: vector,
+      link: "/notifications"
     },
     btnChallenges: {
       label: "CHALLENGES",
-      svg: vector
+      svg: vector,
+      link: "/challenges"
     },
     btnMembers: {
       label: "MEMBERS",
-      svg: vector
+      svg: vector,
+      link: "/members"
     },
   };
 

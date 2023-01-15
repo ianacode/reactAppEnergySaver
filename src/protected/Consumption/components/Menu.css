@@ -1,0 +1,19 @@
+.consumption .menu-2 {
+  color: #464a63;
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: Montserrat, Arial;
+  font-size: .625rem;
+  font-weight: 600;
+  line-height: 14px;
+  display: flex;
+}
+
+.consumption .otherstrend-two {
+  width: 37px;
+  height: 37px;
+  object-fit: cover;
+  margin-bottom: 4px;
+}

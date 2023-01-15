@@ -10,7 +10,8 @@ const BtnLp = (props) => {
          onMouseEnter={() => setHover('active')}
          onMouseLeave={() => setHover('')}
          onTouchStart={() => setHover('active')}
-         onTouchEnd={() => setHover('')}>
+         onTouchEnd={() => setHover('')}
+           onClick={()=>navigate(props.link)}>
       <div className="lp-vector">
         {props.label}
       </div>
