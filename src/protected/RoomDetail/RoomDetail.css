@@ -97,9 +97,7 @@
   justify-content: space-between;
   align-self: flex-end;
   align-items: stretch;
-  margin-left: 3px;
-  margin-right: 1145px;
-  display: flex;
+  /* display: flex; */
 }
 
 .room-detail .flex-container-4 {
@@ -250,18 +248,18 @@
   margin-top: -13px;
 }
 
-.room-detail .main-buttons-instance-1 {
+/* .room-detail .main-buttons-instance-1 {
   width: 100%;
   flex-basis: 18%;
-}
-
+} */
+/* 
 .room-detail .thermometer {
   width: -19px;
   height: 234px;
   object-fit: cover;
-  margin-top: 11px;
-  margin-left: 360px;
-}
+
+
+} */
 
 .room-detail .main-buttons-1-instance, .main-buttons-2-instance {
   width: 80%;
@@ -313,3 +311,10 @@
   flex-basis: 15%;
   margin-top: 2px;
 }
+
+.room-detail .svg-title {
+  fill: red;
+}
+/* .room-detail-block-buttons {
+  margin-top: 2px;
+} */

@@ -25,7 +25,7 @@
   flex: 50%;
 }
 
-.members-flex-container-1 {
+.members .members-flex-container-1 {
   width: 90%;
   flex-direction: row;
   flex-basis: 28%;
@@ -36,18 +36,18 @@
   display: flex;
 }
 
-.main-buttons-instance-1 {
+.members .main-buttons-instance-1 {
   width: 80%;
   flex-basis: 7%;
 }
 
-.main-buttons-1-instance {
+.members .main-buttons-1-instance {
   width: 80%;
   flex-basis: 7%;
   margin-bottom: 4px;
 }
 
-.main-buttons {
+.members .main-buttons {
   color: #fff;
   text-align: center;
   background-color: #0000;
@@ -62,7 +62,7 @@
   display: flex;
 }
 
-.members-vector {
+.members .members-vector {
   height: 52px;
   background-color: #464a63;
   border-radius: 25px;

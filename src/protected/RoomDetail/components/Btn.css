@@ -1,4 +1,4 @@
-.btn {
+.room-detail .btn {
   text-align: center;
   color: #464a63;
   background-color: #f4f7fb;
@@ -15,6 +15,6 @@
   display: flex;
 }
 
-.label {
+.room-detail .label {
   margin-left: 1px;
 }
