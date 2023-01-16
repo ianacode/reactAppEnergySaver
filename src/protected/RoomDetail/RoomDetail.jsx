@@ -67,16 +67,21 @@ const RoomDetail = () => {
       vector: vector,
       mainButton: "Delete room",
     },
+    metrics: [
+      {
+        title: "Electricity Expense", value: "20°C"
+      },
+      {
+        title: "Water Expense", value: "27L"
+      }
+    ]
   };
   return (
     <>
       <Header />
       <Breadcrumb label={room.room_name}/>
       <div className="room-detail">
-        <div className="flex-container-3">
-          <SvgInfo value="20°C" title="Electricity Expense" />
-          <SvgInfo value="23L" title="Water Expense" />
-        </div>
+        <SvgInfo metrics={propsData.metrics} />
         <MainButtons
           className="main-buttons-instance-1"
           {...propsData.mainButtons}
