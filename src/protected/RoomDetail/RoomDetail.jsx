@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useParams } from "react-router";
+import {useNavigate, useParams} from "react-router";
 import "./RoomDetail.css";
 // import ellipse14 from "./assets/ellipse14.svg";
 // import ellipse15 from "./assets/ellipse15.svg";
@@ -32,6 +32,7 @@ import {useEffect, useState} from "react";
 const RoomDetail = () => {
 
   const { roomId } = useParams();
+  const navigate = useNavigate();
   const [home, setHome] = useState({});
   const [room, setRoom] = useState({});
 
@@ -39,7 +40,12 @@ const RoomDetail = () => {
     homeService.getHome(loginService.userAuthenticated().home_id)
       .then((home) => {
         setHome(home);
-        setRoom(home.rooms.find((room) => room.room_id === roomId));
+        const room = home.rooms.find((room) => room.room_id === roomId);
+        if (room) {
+          setRoom(room);
+        } else {
+          navigate("/page-not-found")
+        }
       })
   }, []);
 
@@ -55,6 +61,7 @@ const RoomDetail = () => {
     mainButtons2: {
       vector: vector,
       mainButton: "Devices",
+      link: `/rooms/${roomId}/devices`,
     },
     mainButtons3: {
       vector: vector,

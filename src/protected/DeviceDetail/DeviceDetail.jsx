@@ -1,25 +1,8 @@
 import * as React from "react";
-import { Navigate, useNavigate, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import "./DeviceDetail.css";
-// import ellipse14 from "./assets/ellipse14.svg";
-// import ellipse15 from "./assets/ellipse15.svg";
 import vector from "./assets/vector.svg";
-
-
-// import ellipse16 from "./assets/ellipse16.svg";
-
-
-
-// import progress from "./assets/progress.svg";
-
-// import ellipse13 from "./assets/ellipse13.svg";
-import thermometer from "./assets/thermometer.svg";
-
-// import ellipse11 from "./assets/ellipse11.svg";
-
 import MainButtons from "./components/MainButtons";
-
-
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
@@ -42,19 +25,14 @@ const DeviceDetail = () => {
     homeService.getHome(loginService.userAuthenticated().home_id)
       .then((home) => {
         setHome(home);
-        if (home.rooms){
-          console.log(home.rooms)
-          setRoom(home.rooms.find((r) => r.room_id === roomId));
-          console.log(room);
-          if (room.devices){
-            setDevice(room.devices.find((device) => device.id === deviceId));
-            console.log(device);
-            if (device){
-              return
-            }
-          }
+        const room = home.rooms.find((room) => room.room_id === roomId);
+        const device = room && room.devices.find((device) => device.id === deviceId)
+        if (device) {
+          setRoom(room);
+          setDevice(device);
+        } else {
+          navigate("/page-not-found")
         }
-        navigate("/404")
       })
   }, []);
 
