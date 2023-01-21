@@ -39,8 +39,8 @@
 }
 
 .login .dont-have-an-account {
-  margin-left: 1px;
   font-size: .625rem;
+  margin-top: 10px;
 }
 
 .login .line-signup {
@@ -53,14 +53,60 @@
 }
 
 .login .login-form-stroke {
+
+  text-align: left;
+  padding-left: 20px;
+  color: #464a63;
+  background-color: #0000;
+  border: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  font-family: Montserrat, Arial;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+  width: 327px;
+
+
   background-color: #fff;
+  border-radius: 25px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 52px;
+  margin-top: 12px;
+  box-shadow: 0px 20px 25px rgb(0 0 0 / 10%);
+
+}
+
+
+.login .main-buttons {
+  text-align: center;
+  color: #fff;
+  background-color: #0000;
+  border: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  font-family: Montserrat, Arial;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 36px;
+  display: flex;
+}
+
+
+.login .vector {
+  height: 52px;
+  background-color: #464a63;
   border-radius: 25px;
   flex-direction: row;
   flex-basis: 100%;
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 52px;
   margin-top: 12px;
-  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1);
 }

@@ -1,4 +1,4 @@
-.room-detail .main-buttons {
+.device-detail .main-buttons {
   color: #fff;
   text-align: center;
   background-color: #0000;
@@ -15,7 +15,7 @@
 
 }
 
-.room-detail .vector {
+.device-detail .vector {
   height: 52px;
   background-color: #464a63;
   border-radius: 25px;

@@ -1,11 +1,17 @@
 import { Route, Routes as BaseRoutes } from "react-router-dom";
 import LandingPage from "./protected/LandingPage/LandingPage";
 import Rooms from "./protected/Rooms/Rooms";
+import AddRoom from "./protected/AddRoom/AddRoom";
+import AddDevice from "./protected/AddDevice/AddDevice";
 import RoomDetail from "./protected/RoomDetail/RoomDetail";
 import DeviceDetail from "./protected/DeviceDetail/DeviceDetail";
 import Ranking from "./protected/Ranking/Ranking";
 import Members from "./protected/Members/Members";
 import Consumption from "./protected/Consumption/Consumption";
+import Notifications from "./protected/Notifications/Notifications";
+import SendNotification from "./protected/SendNotification/SendNotification";
+import Challenges from "./protected/Challenges/Challenges";
+import ChallengeDetail from "./protected/ChallengeDetail/ChallengeDetail";
 import RoomDevices from "./protected/RoomDevices/RoomDevices";
 import Loginreg from "./public/Loginreg/Loginreg";
 import Login from "./public/Login/Login";
@@ -25,12 +31,25 @@ export default function Routes() {
       <Route path="ranking" element={<LoggedGuard Component={Ranking} />} />
       <Route path="members" element={<LoggedGuard Component={Members} />} />
       <Route path="consumption" element={<LoggedGuard Component={Consumption} />} />
+      <Route path="notifications" element={<LoggedGuard Component={Notifications} />} />
+      <Route path="sendnotification" element={<LoggedGuard Component={SendNotification} />} />
+
+      <Route path="challenges"> 
+        <Route index element={<LoggedGuard Component={Challenges} />} />
+        <Route path=":challengeId" element={<LoggedGuard Component={ChallengeDetail} />} />
+      </Route>
+
       <Route path="rooms" >
         <Route index element={<LoggedGuard Component={Rooms} />} />
         <Route path=":roomId" element={<LoggedGuard Component={RoomDetail} />} />
         <Route path=":roomId/devices" element={<LoggedGuard Component={RoomDevices} />} />
         <Route path=":roomId/devices/:deviceId" element={<LoggedGuard Component={DeviceDetail} />} />
+  
       </Route>
+
+      <Route path="addroom" element={<LoggedGuard Component={AddRoom} />} />
+      <Route path="adddevice" element={<LoggedGuard Component={AddDevice} />} />
+
       <Route path="*" element={<NotFoundPage/>} />
     </BaseRoutes>
   );

@@ -25,7 +25,7 @@ function Header(props) {
             <span>{user.name.first} {user.name.last}</span>
             <span className="monday-20-jan">{today()}</span>
           </div>
-          <img className="component-11" src={component11} />
+          <img className="component-11" src={component11} onClick={()=>navigate('/notifications')} />
         </div>
         <img className="header-line" src={headerLine} />
       </div>

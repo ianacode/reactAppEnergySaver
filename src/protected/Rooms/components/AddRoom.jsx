@@ -1,17 +1,25 @@
 import * as React from "react";
+import { useNavigate } from "react-router";
 import "./AddRoom.css";
 import image2 from "../assets/image2.svg";
 
 const AddRoom = (props) => {
+
+  const navigate = useNavigate();
+
   return (
-    <div className={`component-15 ${props.className || ""}`}>
+    <div className={`component-15 ${props.className || ""}`} onClick={()=>navigate('/addroom')} >
       <img className="image-2" src={props.image2 || image2} />
-      <div className="flex-container-6">
+
+
+
         <span className="add-room">{props.addRoom || "Add Room"}</span>
 
         <span className="and-devices">{props.andDevices || "and devices"}</span>
       </div>
-    </div>
+
+      
+  
   );
 };
 export default AddRoom;

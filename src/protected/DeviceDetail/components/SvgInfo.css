@@ -1,4 +1,4 @@
-.room-detail .sgvinfo .value {
+.device-detail .sgvinfo .value {
   fill: #3C3C43;
   fill-opacity: 0.18;
   dominant-baseline: middle;
@@ -6,7 +6,7 @@
   font-size: 33px;
 }
 
-.room-detail .sgvinfo .title {
+.device-detail .sgvinfo .title {
   fill: #464A63;
   dominant-baseline: middle;
   text-anchor: middle;

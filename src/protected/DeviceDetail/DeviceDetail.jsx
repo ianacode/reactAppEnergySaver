@@ -40,34 +40,33 @@ const DeviceDetail = () => {
     mainButtons: {
       vector: vector,
       mainButton: "Send Notification",
+      link: "/sendnotification",
     },
     mainButtons1: {
       vector: vector,
       mainButton: "Challenges",
+      link: "/challenges",
     },
     mainButtons2: {
       vector: vector,
-      mainButton: "Devices",
+      mainButton: "Delete device",
     },
-    mainButtons3: {
-      vector: vector,
-      mainButton: "Delete room",
-    },
+  
     metrics: [
       {
         title: "Electricity Expense", value: "20°C"
       },
-      {
-        title: "Water Expense", value: "27L"
-      }
+      // {
+      //   title: "Water Expense", value: "27L"
+      // }
     ]
   };
 
   return (
       <>
       <Header />
-      <Breadcrumb label={room?.room_name}/>
-      <div className="room-detail">
+      <Breadcrumb label={device.name}/>
+      <div className="device-detail">
         <SvgInfo metrics={propsData.metrics} />
         <MainButtons
           className="main-buttons-instance-1"
@@ -81,10 +80,7 @@ const DeviceDetail = () => {
           className="main-buttons-2-instance"
           {...propsData.mainButtons2}
         />
-        <MainButtons
-          className="main-buttons-3-instance"
-          {...propsData.mainButtons3}
-        />
+     
       </div>
       <Footer />
       </>

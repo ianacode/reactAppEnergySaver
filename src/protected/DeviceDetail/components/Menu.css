@@ -1,4 +1,4 @@
-.room-detail .menu-2 {
+.device-detail .menu-2 {
   color: #464a63;
   flex-direction: column;
   justify-content: flex-start;
@@ -10,13 +10,13 @@
   display: flex;
 }
 
-.room-detail .home {
+.device-detail .home {
   width: 33px;
   height: 34px;
   object-fit: cover;
   margin-bottom: 6px;
 }
 
-.room-detail .home-1 {
+.device-detail .home-1 {
   margin-left: 1px;
 }

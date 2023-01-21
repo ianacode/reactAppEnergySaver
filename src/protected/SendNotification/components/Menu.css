@@ -1,0 +1,19 @@
+.send-notification .menu-2 {
+  color: #464a63;
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: Montserrat, Arial;
+  font-size: .625rem;
+  font-weight: 600;
+  line-height: 14px;
+  display: flex;
+}
+
+.send-notification .document {
+  width: 33px;
+  height: 36px;
+  object-fit: cover;
+  margin-bottom: 5px;
+}

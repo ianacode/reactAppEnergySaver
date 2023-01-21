@@ -1,0 +1,113 @@
+.addroom {
+  color: #464a63;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 67px;
+  padding-bottom: 37px;
+  font-family: Montserrat, Arial;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 12px;
+  display: flex;
+}
+
+.addroom .images-login {
+  width: 344px;
+  height: 204px;
+  object-fit: cover;
+  margin-top: 10px;
+  margin-bottom: 19px;
+}
+
+.addroom .energy-saver-can-cha {
+  color: #000;
+  margin-top: 3px;
+  line-height: 24px;
+  width: 50%;
+}
+
+.addroom .form-stroke-1-instance,
+.addroom .form-stroke-instance-1,
+.addroom .main-buttons-instance-1 {
+  width: 327px;
+
+}
+
+.addroom .dont-have-an-account {
+  font-size: .625rem;
+  margin-top: 10px;
+}
+
+.addroom .line-signup {
+  width: 39px;
+  height: 1px;
+  object-fit: cover;
+  border: 1px solid #ff8a00;
+  margin-bottom: 14px;
+  margin-left: 61px;
+}
+
+.addroom .login-form-stroke {
+
+  text-align: left;
+  padding-left: 20px;
+  color: #464a63;
+  background-color: #0000;
+  border: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  font-family: Montserrat, Arial;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+  width: 327px;
+
+
+  background-color: #fff;
+  border-radius: 25px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 52px;
+  margin-top: 12px;
+  box-shadow: 0px 20px 25px rgb(0 0 0 / 10%);
+
+}
+
+
+.addroom .main-buttons {
+  text-align: center;
+  color: #fff;
+  background-color: #0000;
+  border: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  font-family: Montserrat, Arial;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 36px;
+  display: flex;
+  margin-top: 30px;
+}
+
+
+.addroom .vector {
+  height: 52px;
+  background-color: #464a63;
+  border-radius: 25px;
+  flex-direction: row;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 12px;
+}

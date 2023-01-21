@@ -53,10 +53,12 @@ const RoomDetail = () => {
     mainButtons: {
       vector: vector,
       mainButton: "Send Notification",
+      link: "/sendnotification",
     },
     mainButtons1: {
       vector: vector,
       mainButton: "Challenges",
+      link: "/challenges",
     },
     mainButtons2: {
       vector: vector,

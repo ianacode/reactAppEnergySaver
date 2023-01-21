@@ -23,7 +23,7 @@ function Rooms(props) {
 
   const propsData = {
     component15: {
-      andDevices: "and devices",
+      andDevices: "and devices then",
       image2: image2,
       addRoom: "Add Room",
     },

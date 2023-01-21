@@ -1,0 +1,217 @@
+.challenges {
+  color: #464a63;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 1px;
+  padding-bottom: 5px;
+  font-family: Montserrat, Arial;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 24px;
+  display: flex;
+  margin-top: 30px;
+}
+
+.challenges .flex-container {
+  color: #a8a8a8;
+  width: 85%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 6px;
+  line-height: 21px;
+  display: flex;
+}
+
+.challenges .component-16 {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.challenges .flex-container-1 {
+  height: 65%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 4px;
+  display: flex;
+}
+
+.challenges .matthiew {
+  color: #464a63;
+  font-weight: 700;
+}
+
+.challenges .monday-20-jan {
+  font-size: .875rem;
+}
+
+.challenges .component-11 {
+  width: 28px;
+  height: 32px;
+  object-fit: cover;
+  margin-bottom: 2px;
+  margin-left: 55px;
+}
+
+.challenges .header-line {
+  width: 414px;
+  object-fit: cover;
+}
+
+.challenges .flex-container-2 {
+  width: 40%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-start;
+  align-items: stretch;
+  margin-bottom: 21px;
+  margin-left: 37px;
+  font-weight: 600;
+  display: flex;
+}
+
+.challenges .icon {
+  width: 18px;
+  height: 15px;
+  object-fit: cover;
+}
+
+.challenges .challenges-1 {
+  text-transform: uppercase;
+}
+
+.challenges .not-completed-yet {
+  align-self: flex-start;
+  margin-left: 46px;
+}
+
+.challenges .field {
+  text-transform: uppercase;
+  color: #464a63;
+  width: 80%;
+  background-color: #fff;
+  border: 1px solid #464a63;
+  border-radius: 25px;
+  flex-direction: row;
+  height: 52px;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-top: 10px;
+  font-family: Montserrat, Arial;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+}
+
+.challenges .field-1 {
+  text-transform: uppercase;
+  color: #464a63;
+  width: 80%;
+  background-color: #f4f7fb;
+  border: 1px solid #464a63;
+  border-radius: 25px;
+  flex-direction: row;
+  height: 52px;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-top: 10px;
+  font-family: Montserrat, Arial;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+}
+
+.challenges .field-2 {
+  width: 80%;
+  background-color: #fff;
+  border: 1px solid #464a63;
+  border-radius: 25px;
+  flex-direction: row;
+  flex-basis: 7%;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-top: 10px;
+  font-weight: 600;
+  display: flex;
+}
+
+.challenges .percentage {
+  background-color: #f4f7fb;
+  border-radius: 25px;
+  flex-direction: row;
+  flex-basis: 85%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 18px;
+  display: flex;
+  height: 52px;
+}
+
+.challenges .challenge-3 {
+  text-transform: uppercase;
+}
+
+.challenges .completed {
+  align-self: flex-start;
+  margin-top: 30px;
+  margin-left: 45px;
+}
+
+.challenges .percentage-ful {
+
+  background-color: #f4f7fb;
+  border-radius: 25px;
+  flex-direction: row;
+  flex-basis: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 18px;
+  display: flex;
+  height: 52px;
+}
+
+.challenges .btn-instance-1 {
+  width: 80%;
+  flex-basis: 4%;
+  margin-top: 6px;
+  margin-bottom: 3px;
+  margin-left: 3px;
+}
+
+.challenges .flex-container-3 {
+  width: 80%;
+  flex-direction: row;
+  flex-basis: 8%;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 1px;
+  margin-bottom: 6px;
+  margin-left: 3px;
+  display: flex;
+}
+
+.challenges .menu-1-instance-1 {
+  height: 100%;
+  flex-basis: 15%;
+  margin-bottom: 1px;
+}
+
+.challenges .menu-instance-1 {
+  height: 95%;
+  margin-top: 1px;
+  margin-left: 2px;
+}
+
+.challenges .menu-2-instance-1 {
+  height: 100%;
+  flex-basis: 15%;
+  margin-top: 2px;
+}

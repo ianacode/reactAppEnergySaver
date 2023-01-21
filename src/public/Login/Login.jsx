@@ -43,7 +43,7 @@ function Login(props) {
       <span className="dont-have-an-account">
         Don’t have an account? Sign up
       </span>
-      <hr className="line-signup" />
+      {/* <hr className="line-signup" /> */}
     </div>
   );
 };

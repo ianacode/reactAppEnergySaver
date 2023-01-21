@@ -72,12 +72,17 @@
             {
               "id": "1",
               "name": "oven",
-              "power": "200"
+              "power": "250"
             },
             { 
               "id": "2",
               "name": "microwave",
               "power": "150"
+            },
+            { 
+              "id": "3",
+              "name": "teapot",
+              "power": "200"
             }
           ]
         },

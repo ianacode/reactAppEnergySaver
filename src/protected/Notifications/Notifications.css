@@ -1,0 +1,237 @@
+.notifications {
+  color: #464a63;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: Montserrat, Arial;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 24px;
+  display: flex;
+}
+
+.notifications .flex-container {
+  color: #a8a8a8;
+  width: 85%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 6px;
+  font-size: .875rem;
+  line-height: 21px;
+  display: flex;
+}
+
+.notifications .component-16 {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.notifications .flex-container-1 {
+  height: 65%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 4px;
+  display: flex;
+}
+
+.notifications .matthiew {
+  color: #464a63;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.notifications .component-11 {
+  width: 28px;
+  height: 32px;
+  object-fit: cover;
+  margin-bottom: 2px;
+  margin-left: 55px;
+}
+
+.notifications .header-line {
+  width: 414px;
+  object-fit: cover;
+}
+
+.notifications .flex-container-2 {
+  width: 45%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-start;
+  align-items: stretch;
+  margin-bottom: 13px;
+  margin-left: 37px;
+  font-weight: 600;
+  display: flex;
+}
+
+.notifications .icon {
+  width: 18px;
+  height: 15px;
+  object-fit: cover;
+}
+
+.notifications .notifications-1 {
+  text-transform: uppercase;
+}
+
+.notifications .vector {
+  color: #263238;
+  width: 80%;
+  background-color: #ff8a00;
+  border: 1px solid #263238;
+  border-radius: 25px;
+  flex-direction: row;
+  flex-basis: 10%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 15px;
+  font-family: Montserrat, Arial;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+}
+
+.notifications .vector-1 {
+  width: 33px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.notifications .kitchen-heating {
+  margin-left: 5px;
+}
+
+.notifications .viewed-notifications {
+  align-self: flex-start;
+  margin-left: 30px;
+}
+
+.notifications .vector-2 {
+  width: 80%;
+  background-color: #fff;
+  border: 1px solid #464a63;
+  border-radius: 25px;
+  flex-direction: row;
+  flex-basis: 18%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px;
+  display: flex;
+  margin-top: 15px;
+}
+
+.notifications .frame-2114 {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid #464a63;
+  border-radius: 60px;
+  align-self: flex-start;
+  margin: 15px;
+}
+
+.notifications .flex-container-3 {
+  height: 55%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 6px;
+  display: flex;
+}
+
+.notifications .some-notification-ab {
+  font-size: .875rem;
+  line-height: 17px;
+}
+
+.notifications .vector-3 {
+  width: 80%;
+  background-color: #fff;
+  border: 1px solid #464a63;
+  border-radius: 25px;
+  flex-direction: row;
+  flex-basis: 18%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 19px;
+  padding: 15px;
+  font-size: .875rem;
+  display: flex;
+  margin-top: 15px;
+}
+
+.notifications .frame-2115 {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid #464a63;
+  border-radius: 60px;
+  margin: 15px;
+}
+
+.notifications .flex-container-4 {
+  height: 55%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 2px;
+  display: flex;
+}
+
+.notifications .anna {
+  font-size: 1.25rem;
+}
+
+.notifications .some-notification-ab-1 {
+  margin-bottom: -1px;
+  line-height: 17px;
+}
+
+.notifications .btn-instance-1 {
+  width: 80%;
+  flex-basis: 4%;
+  margin-top: 1px;
+  margin-bottom: 4px;
+  margin-left: 3px;
+}
+
+.notifications .flex-container-5 {
+  width: 80%;
+  flex-direction: row;
+  flex-basis: 8%;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2px;
+  margin-left: 3px;
+  display: flex;
+}
+
+.notifications .menu-1-instance-1 {
+  height: 100%;
+  flex-basis: 15%;
+  margin-bottom: 1px;
+}
+
+.notifications .menu-instance-1 {
+  height: 95%;
+  margin-top: 1px;
+  margin-left: 2px;
+}
+
+.notifications .menu-2-instance-1 {
+  height: 100%;
+  flex-basis: 15%;
+  margin-top: 2px;
+}
