@@ -2,7 +2,7 @@ import * as React from "react";
 import "./Login.css";
 import imagesLogin from "./assets/imagesLogin.svg";
 import loginService from "../../services/LoginService";
-import {useNavigate} from "react-router";
+import { useNavigate } from "react-router";
 function Login(props) {
 
   let navigate = useNavigate();
@@ -37,13 +37,16 @@ function Login(props) {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button className={`main-buttons main-buttons-instance-1`} onClick={()=>handleLogin()}>
+      <button className={`main-buttons main-buttons-instance-1`} onClick={() => handleLogin()}>
         <div className="vector">Login</div>
       </button>
+      
       <span className="dont-have-an-account">
-        Don’t have an account? Sign up
+        Don’t have an account? <a className="dont-have-an-account-sign-up" onClick={()=>navigate('/registration')}>Sign up</a>
       </span>
-      {/* <hr className="line-signup" /> */}
+
+
+ 
     </div>
   );
 };

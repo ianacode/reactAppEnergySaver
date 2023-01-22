@@ -22,8 +22,8 @@ function AddDevice(props) {
       />
       <input
         className="login-form-stroke"
-        placeholder="Power"
-        type="text"
+        placeholder="Power / Watts"
+        type="number"
         // value={password}
         // onChange={(e) => setPassword(e.target.value)}
       />

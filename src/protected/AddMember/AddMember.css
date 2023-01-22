@@ -1,4 +1,4 @@
-.login {
+.addmember {
   color: #464a63;
   text-align: center;
   width: 100%;
@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding-top: 67px;
+  padding-top: 40px;
   padding-bottom: 37px;
   font-family: Montserrat, Arial;
   font-size: 1rem;
@@ -16,7 +16,7 @@
   display: flex;
 }
 
-.login .images-login {
+.addmember .images-login {
   width: 344px;
   height: 204px;
   object-fit: cover;
@@ -24,33 +24,26 @@
   margin-bottom: 19px;
 }
 
-.login .energy-saver-can-cha {
+.addmember .energy-saver-can-cha {
   color: #000;
   margin-top: 3px;
   line-height: 24px;
   width: 50%;
 }
 
-.login .form-stroke-1-instance,
-.login .form-stroke-instance-1,
-.login .main-buttons-instance-1 {
-  width: 80%;
+.addmember .form-stroke-1-instance,
+.addmember .form-stroke-instance-1,
+.addmember .main-buttons-instance-1 {
+  width: 327px;
 
 }
 
-.login .dont-have-an-account {
+.addmember .dont-have-an-account {
   font-size: .625rem;
   margin-top: 10px;
 }
 
-.login .dont-have-an-account-sign-up {
-  /* font-size: .625rem;
-  margin-top: 10px; */
-  color: #ff8a00;
-  text-decoration: underline;
-}
-
-.login .line-signup {
+.addmember .line-signup {
   width: 39px;
   height: 1px;
   object-fit: cover;
@@ -59,7 +52,7 @@
   margin-left: 61px;
 }
 
-.login .login-form-stroke {
+.addmember .login-form-stroke {
 
   text-align: left;
   padding-left: 20px;
@@ -90,7 +83,7 @@
 }
 
 
-.login .main-buttons {
+.addmember .main-buttons {
   text-align: center;
   color: #fff;
   background-color: #0000;
@@ -103,10 +96,11 @@
   font-weight: 700;
   line-height: 36px;
   display: flex;
+  margin-top: 30px;
 }
 
 
-.login .vector {
+.addmember .vector {
   height: 52px;
   background-color: #464a63;
   border-radius: 25px;
@@ -117,5 +111,3 @@
   display: flex;
   margin-top: 12px;
 }
-
-

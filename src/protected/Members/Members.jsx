@@ -33,7 +33,7 @@ function Members(props) {
         ))}
       </div>
       {loginService.isAdult() && (
-        <button className={`main-buttons main-buttons-instance-1`}>
+        <button className={`main-buttons main-buttons-instance-1`} onClick={()=>navigate('/addmember')} >
           <div className="members-vector">Add member</div>
         </button>
       )}

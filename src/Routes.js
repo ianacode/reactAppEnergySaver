@@ -3,6 +3,7 @@ import LandingPage from "./protected/LandingPage/LandingPage";
 import Rooms from "./protected/Rooms/Rooms";
 import AddRoom from "./protected/AddRoom/AddRoom";
 import AddDevice from "./protected/AddDevice/AddDevice";
+import AddMember from "./protected/AddMember/AddMember";
 import RoomDetail from "./protected/RoomDetail/RoomDetail";
 import DeviceDetail from "./protected/DeviceDetail/DeviceDetail";
 import Ranking from "./protected/Ranking/Ranking";
@@ -15,6 +16,7 @@ import ChallengeDetail from "./protected/ChallengeDetail/ChallengeDetail";
 import RoomDevices from "./protected/RoomDevices/RoomDevices";
 import Loginreg from "./public/Loginreg/Loginreg";
 import Login from "./public/Login/Login";
+import Registration from "./public/Registration/Registration";
 import NotFoundPage from "./public/NotFoundPage/NotFoundPage";
 
 import {
@@ -26,6 +28,7 @@ export default function Routes() {
   return (
     <BaseRoutes>
       <Route path="login" element={<NotLoggedGuard Component={Login} />} />
+      <Route path="registration" element={<NotLoggedGuard Component={Registration} />} />
       <Route path="loginreg" element={<NotLoggedGuard Component={Loginreg} />} />
       <Route path="/" element={<LoggedGuard Component={LandingPage} />} />
       <Route path="ranking" element={<LoggedGuard Component={Ranking} />} />
@@ -44,11 +47,11 @@ export default function Routes() {
         <Route path=":roomId" element={<LoggedGuard Component={RoomDetail} />} />
         <Route path=":roomId/devices" element={<LoggedGuard Component={RoomDevices} />} />
         <Route path=":roomId/devices/:deviceId" element={<LoggedGuard Component={DeviceDetail} />} />
-  
       </Route>
 
       <Route path="addroom" element={<LoggedGuard Component={AddRoom} />} />
       <Route path="adddevice" element={<LoggedGuard Component={AddDevice} />} />
+      <Route path="addmember" element={<LoggedGuard Component={AddMember} />} />
 
       <Route path="*" element={<NotFoundPage/>} />
     </BaseRoutes>

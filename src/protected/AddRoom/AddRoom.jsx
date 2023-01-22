@@ -23,7 +23,7 @@ function AddRoom(props) {
       <input
         className="login-form-stroke"
         placeholder="Image"
-        type="img"
+        type="file"
         // value={password}
         // onChange={(e) => setPassword(e.target.value)}
       />
