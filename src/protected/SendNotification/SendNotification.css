@@ -5,7 +5,7 @@
   background-color: #fff;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: stretch;
+  align-items: center;
   padding-bottom: 3px;
   font-family: Montserrat, Arial;
   font-size: .938rem;
@@ -88,7 +88,7 @@
 }
 
 .send-notification .vector {
-  width: 80%;
+  width: 327px;
   background-color: #fff;
   border: 1px solid #464a63;
   border-radius: 25px;
@@ -98,20 +98,22 @@
   align-self: center;
   align-items: stretch;
   margin: 20px;
-  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 1.25rem;
   line-height: 24px;
   display: flex;
 }
 
 .send-notification .message {
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .send-notification .if-turn-off-the-heat {
   margin-bottom: 7px;
   font-size: 1rem;
   line-height: 20px;
+  margin: 0px 20px 20px 20px;
 }
 
 .send-notification .send-to {
@@ -120,6 +122,7 @@
   margin-left: 64px;
   font-size: 1.25rem;
   line-height: 24px;
+  align-self: flex-start;
 }
 
 .send-notification .flex-container-3 {
@@ -132,6 +135,7 @@
   display: flex;
   margin-left: 50px;
   margin-top: 15px;
+  align-self: flex-start;
 }
 
 .send-notification .checkbox {
@@ -153,6 +157,7 @@
   display: flex;
   margin-left: 50px;
   margin-top: 15px;
+  align-self: flex-start;
 }
 
 .send-notification .checkbox-1 {
@@ -170,6 +175,7 @@
   display: flex;
   margin-left: 50px;
   margin-top: 15px;
+  align-self: flex-start;
 }
 
 .send-notification .checkbox-2 {
@@ -187,6 +193,7 @@
   display: flex;
   margin-left: 50px;
   margin-top: 15px;
+  align-self: flex-start;
 }
 
 .send-notification .checkbox-3 {
@@ -199,8 +206,6 @@
 .send-notification .main-buttons-instance-1 {
   /* width: 80%; */
   flex-basis: 7%;
-  margin-bottom: 1px;
-  margin-left: 3px;
 }
 
 .send-notification .btn-instance-1 {

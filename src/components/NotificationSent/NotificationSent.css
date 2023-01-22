@@ -1,0 +1,26 @@
+
+.notificationsent {
+  text-align: center;
+  color: #fff;
+  width: 90%;
+  background-color: #464a63;
+  border: 1px solid #464a63;
+  border-radius: 25px;
+  flex-direction: row;
+  flex-basis: 24%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  display: flex;
+
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: Montserrat, Arial;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 24px;
+  width: 327px;
+
+}

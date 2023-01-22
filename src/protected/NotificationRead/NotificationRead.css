@@ -1,4 +1,4 @@
-.notifications {
+.notificationread {
   color: #464a63;
   width: 100%;
   height: 100%;
@@ -13,7 +13,7 @@
   display: flex;
 }
 
-.notifications .flex-container {
+.notificationread .flex-container {
   color: #a8a8a8;
   width: 85%;
   flex-direction: row;
@@ -25,13 +25,13 @@
   display: flex;
 }
 
-.notifications .component-16 {
+.notificationread .component-16 {
   width: 60px;
   height: 60px;
   object-fit: cover;
 }
 
-.notifications .flex-container-1 {
+.notificationread .flex-container-1 {
   height: 65%;
   flex-direction: column;
   justify-content: space-between;
@@ -40,13 +40,13 @@
   display: flex;
 }
 
-.notifications .matthiew {
+.notificationread .matthiew {
   color: #464a63;
   font-size: 1.25rem;
   font-weight: 700;
 }
 
-.notifications .component-11 {
+.notificationread .component-11 {
   width: 28px;
   height: 32px;
   object-fit: cover;
@@ -54,12 +54,12 @@
   margin-left: 55px;
 }
 
-.notifications .header-line {
+.notificationread .header-line {
   width: 414px;
   object-fit: cover;
 }
 
-.notifications .flex-container-2 {
+.notificationread .flex-container-2 {
   width: 45%;
   flex-direction: row;
   justify-content: space-between;
@@ -71,19 +71,19 @@
   display: flex;
 }
 
-.notifications .icon {
+.notificationread .icon {
   width: 18px;
   height: 15px;
   object-fit: cover;
 }
 
-.notifications .notifications-1 {
+.notificationread .notifications-1 {
   text-transform: uppercase;
 }
 
-.notifications .vector {
+.notificationread .vector {
   color: #263238;
-  width: 327px;
+  width: 80%;
   background-color: #ff8a00;
   border: 1px solid #263238;
   border-radius: 25px;
@@ -101,7 +101,7 @@
   display: flex;
 }
 
-.notifications .vector-1 {
+.notificationread .vector-1 {
   width: 33px;
   height: 42px;
   object-fit: cover;
@@ -109,16 +109,16 @@
   margin-right: 10px;
 }
 
-.notifications .kitchen-heating {
+.notificationread .kitchen-heating {
   margin-left: 5px;
 }
 
-.notifications .viewed-notifications {
+.notificationread .viewed-notifications {
   align-self: flex-start;
   margin-left: 30px;
 }
 
-.notifications .vector-2 {
+.notificationread .vector-2 {
   width: 327px;
   background-color: #fff;
   border: 1px solid #464a63;
@@ -129,11 +129,11 @@
   align-items: center;
   display: flex;
   margin-top: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.notifications .frame-2114 {
+.notificationread .frame-2114 {
   width: 60px;
   height: 60px;
   object-fit: cover;
@@ -143,24 +143,25 @@
   margin: 15px;
 }
 
-.notifications .flex-container-3 {
+.notificationread .flex-container-3 {
   height: 55%;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   margin-bottom: 6px;
   display: flex;
-  margin-right: 10px;
+  margin-right: 20px;
+
 }
 
-.notifications .some-notification-ab {
+.notificationread .some-notification-ab {
   font-size: .875rem;
   line-height: 17px;
   margin-top: 10px;
 }
 
-.notifications .vector-3 {
-  width: 327px;
+.notificationread .vector-3 {
+  width: 80%;
   background-color: #fff;
   border: 1px solid #464a63;
   border-radius: 25px;
@@ -169,15 +170,13 @@
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 19px;
+  padding: 15px;
   font-size: .875rem;
   display: flex;
   margin-top: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-
 }
 
-.notifications .frame-2115 {
+.notificationread .frame-2115 {
   width: 60px;
   height: 60px;
   object-fit: cover;
@@ -186,26 +185,25 @@
   margin: 15px;
 }
 
-.notifications .flex-container-4 {
+.notificationread .flex-container-4 {
   height: 55%;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   margin-bottom: 2px;
   display: flex;
-  margin-right: 10px;
 }
 
-.notifications .anna {
+.notificationread .anna {
   font-size: 1.25rem;
 }
 
-.notifications .some-notification-ab-1 {
+.notificationread .some-notification-ab-1 {
+  margin-bottom: -1px;
   line-height: 17px;
-  margin-top: 10px;
 }
 
-.notifications .btn-instance-1 {
+.notificationread .btn-instance-1 {
   width: 80%;
   flex-basis: 4%;
   margin-top: 1px;
@@ -213,7 +211,7 @@
   margin-left: 3px;
 }
 
-.notifications .flex-container-5 {
+.notificationread .flex-container-5 {
   width: 80%;
   flex-direction: row;
   flex-basis: 8%;
@@ -224,19 +222,19 @@
   display: flex;
 }
 
-.notifications .menu-1-instance-1 {
+.notificationread .menu-1-instance-1 {
   height: 100%;
   flex-basis: 15%;
   margin-bottom: 1px;
 }
 
-.notifications .menu-instance-1 {
+.notificationread .menu-instance-1 {
   height: 95%;
   margin-top: 1px;
   margin-left: 2px;
 }
 
-.notifications .menu-2-instance-1 {
+.notificationread .menu-2-instance-1 {
   height: 100%;
   flex-basis: 15%;
   margin-top: 2px;

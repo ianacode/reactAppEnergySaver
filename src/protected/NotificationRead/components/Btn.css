@@ -1,0 +1,20 @@
+.notificationread .btn {
+  color: #464a63;
+  text-align: center;
+  background-color: #f4f7fb;
+  border: 0 solid #000;
+  border-radius: 7px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1px;
+  font-family: Montserrat, Arial;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 17px;
+  display: flex;
+}
+
+.notificationread .label {
+  margin-left: 1px;
+}

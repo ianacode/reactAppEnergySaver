@@ -15,6 +15,7 @@ import MainButtons from "./components/MainButtons";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
+import NotificationSent from "../../components/NotificationSent/NotificationSent";
 const SendNotification = () => {
   const propsData = {
     mainButtons: {
@@ -55,6 +56,8 @@ const SendNotification = () => {
         className="main-buttons-instance-1"
         {...propsData.mainButtons}
       />
+  
+  {/* <NotificationSent /> */}
   
     </div>
     <Footer />

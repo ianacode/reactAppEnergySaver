@@ -10,6 +10,7 @@ import Ranking from "./protected/Ranking/Ranking";
 import Members from "./protected/Members/Members";
 import Consumption from "./protected/Consumption/Consumption";
 import Notifications from "./protected/Notifications/Notifications";
+import NotificationRead from "./protected/NotificationRead/NotificationRead";
 import SendNotification from "./protected/SendNotification/SendNotification";
 import Challenges from "./protected/Challenges/Challenges";
 import ChallengeDetail from "./protected/ChallengeDetail/ChallengeDetail";
@@ -35,6 +36,7 @@ export default function Routes() {
       <Route path="members" element={<LoggedGuard Component={Members} />} />
       <Route path="consumption" element={<LoggedGuard Component={Consumption} />} />
       <Route path="notifications" element={<LoggedGuard Component={Notifications} />} />
+      <Route path="notificationread" element={<LoggedGuard Component={NotificationRead} />} />
       <Route path="sendnotification" element={<LoggedGuard Component={SendNotification} />} />
 
       <Route path="challenges"> 
