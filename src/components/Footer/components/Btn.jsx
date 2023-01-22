@@ -14,10 +14,11 @@ const Btn = (props) => {
   return (
     <div className={`btn ${props.className || ""} ${hover}`}
          onClick={handleGoBack}
-         onMouseEnter={() => setHover('hover')}
-         onMouseLeave={() => setHover('')}
-         onTouchStart={() => setHover('hover')}
-         onTouchEnd={() => setHover('')}>
+        onMouseEnter={() => setHover('hover')}
+        onMouseLeave={() => setHover('')}
+        onTouchStart={() => setHover('hover')}
+        onTouchEnd={() => setHover('')} 
+          >
       <span className="label">{props.label || "Back"}</span>
     </div>
   );

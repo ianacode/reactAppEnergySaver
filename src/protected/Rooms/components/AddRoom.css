@@ -8,7 +8,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
     font-family: Montserrat, Arial;
     font-size: 1.063rem;
     font-weight: 600;
@@ -22,6 +23,7 @@
   width: 155px;
   height: 120px;
   object-fit: cover;
+  border-radius: 22px 22px 0px 0px;
 }
 
 .rooms .flex-container-6 {

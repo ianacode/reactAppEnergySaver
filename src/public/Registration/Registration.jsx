@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 import "./Registration.css";
 import Footer from "../../components/Footer/Footer";
@@ -7,6 +8,7 @@ import Footer from "../../components/Footer/Footer";
 function Registration(props) {
 
   const navigate = useNavigate();
+  const [hover, setHover] = useState('');
 
   return (
 
@@ -67,12 +69,17 @@ function Registration(props) {
         type="password"
       />
 
-      <button className="main-buttons main-buttons-instance-1" >
-        <div className="vector">Registration</div>
+      <button className={`main-buttons main-buttons-instance-1 ${hover}`}>
+        <div className="vector"
+          onMouseEnter={() => setHover('active')}
+          onMouseLeave={() => setHover('')}
+          onTouchStart={() => setHover('active')}
+          onTouchEnd={() => setHover('')}>
+          Registration</div>
       </button>
 
       <span className="warning">
-      By clicking the "Registration" button, you consent to the processing of personal data
+        By clicking the "Registration" button, you consent to the processing of personal data
       </span>
 
       <span className="dont-have-an-account">

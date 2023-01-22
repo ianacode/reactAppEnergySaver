@@ -26,3 +26,10 @@
   display: flex;
   margin-top: 3px;
 }
+
+.RoomDevices .active .vector {
+  background-color: #ffffff;
+  color: #464a63;
+  outline: solid 2px #464a63;
+  outline-offset: -2px;
+}

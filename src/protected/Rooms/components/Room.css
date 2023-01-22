@@ -6,7 +6,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
   font-family: Montserrat, Arial;
   font-size: 1.063rem;
   font-weight: 600;
@@ -20,6 +21,7 @@
   object-fit: cover;
   background: linear-gradient(#c53aeb 0%, #0000 100%) center / cover;
   margin-bottom: 3px;
+  border-radius: 22px 22px 0px 0px;
 }
 
 .rooms .room {

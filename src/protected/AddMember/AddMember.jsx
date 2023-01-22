@@ -1,11 +1,11 @@
 import * as React from "react";
+import { useState } from "react";
 import "./AddMember.css";
 import Footer from "../../components/Footer/Footer";
 
 
 function AddMember(props) {
-
-
+  const [hover, setHover] = useState('');
 
   return (
     <>
@@ -54,8 +54,13 @@ function AddMember(props) {
           type="password"
         />
 
-        <button className="main-buttons main-buttons-instance-1" >
-          <div className="vector">Add member</div>
+        <button className={`main-buttons main-buttons-instance-1 ${hover}`}>
+          <div className="vector"
+            onMouseEnter={() => setHover('active')}
+            onMouseLeave={() => setHover('')}
+            onTouchStart={() => setHover('active')}
+            onTouchEnd={() => setHover('')}>
+            Add member</div>
         </button>
 
       </div>

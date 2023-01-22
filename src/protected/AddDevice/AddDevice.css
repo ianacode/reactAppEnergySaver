@@ -111,3 +111,10 @@
   display: flex;
   margin-top: 12px;
 }
+
+.adddevice .active .vector {
+  background-color: #ffffff;
+  color: #464a63;
+  outline: solid 2px #464a63;
+  outline-offset: -2px;
+}

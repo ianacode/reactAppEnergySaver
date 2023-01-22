@@ -1,10 +1,11 @@
 import * as React from "react";
+import { useState } from "react";
 import "./Members.css";
 import Person from "./components/Person";
 import loginService from "../../services/LoginService";
-import {useNavigate} from "react-router";
+import { useNavigate } from "react-router";
 import userService from "../../services/UserService";
-import {useEffect} from "react";
+import { useEffect } from "react";
 import Footer from "../../components/Footer/Footer";
 
 
@@ -24,26 +25,42 @@ function Members(props) {
     });
   }, []);
 
+  const [hover, setHover] = useState('');
+  const [hover2, setHover2] = useState('');
+
   return (
     <>
-    <div className="members">
-      <div className="members-flex-container">
-        {members.map((member) => (
-          <Person key={member.email} member={member} />
-        ))}
-      </div>
-      {loginService.isAdult() && (
-        <button className={`main-buttons main-buttons-instance-1`} onClick={()=>navigate('/addmember')} >
-          <div className="members-vector">Add member</div>
-        </button>
-      )}
-      <button className={`main-buttons main-buttons-1-instance`}
-              onClick={()=>{logout()}}>
-        <div className="members-vector">Logout</div>
-      </button>
+      <div className="members">
+        <div className="members-flex-container">
+          {members.map((member) => (
+            <Person key={member.email} member={member} />
+          ))}
+        </div>
 
-    </div>
-    <Footer />
+        {loginService.isAdult() && (
+          <button className={`main-buttons main-buttons-instance-1 ${hover}`}
+            onClick={() => navigate('/addmember')} >
+            <div className="members-vector"
+              onMouseEnter={() => setHover('active')}
+              onMouseLeave={() => setHover('')}
+              onTouchStart={() => setHover('active')}
+              onTouchEnd={() => setHover('')}>
+              Add member</div>
+          </button>
+        )}
+
+        <button className={`main-buttons main-buttons-1-instance ${hover2}`}
+          onClick={() => { logout() }}>
+          <div className="members-vector"
+            onMouseEnter={() => setHover2('active2')}
+            onMouseLeave={() => setHover2('')}
+            onTouchStart={() => setHover2('active2')}
+            onTouchEnd={() => setHover2('')}>
+            Logout</div>
+        </button>
+
+      </div>
+      <Footer />
     </>
   );
 };
