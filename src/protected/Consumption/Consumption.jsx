@@ -23,29 +23,17 @@ import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 
 
 const Consumption = () => {
+
   const propsData = {
     mainButtons1: {
       mainButton: "Send Notification",
       vector: vector,
+      link: "/sendnotification",
     },
     mainButtons: {
       mainButton: "All devices",
       vector: vector,
-    },
-    btn: {
-      label: "Back",
-    },
-    menu1: {
-      ranking: "Ranking",
-      otherstrendTwo: otherstrendTwo,
-    },
-    menu: {
-      home: home,
-      home: "Home",
-    },
-    menu2: {
-      document: document,
-      rooms: "Rooms",
+      link: "/alldevices",
     },
   };
   return (
