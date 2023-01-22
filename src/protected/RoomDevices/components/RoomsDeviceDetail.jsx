@@ -11,7 +11,7 @@ const RoomsDeviceDetail = ({device}) => {
          onClick={()=>navigate(`/rooms/${roomId}/devices/${device.id}`)}>
       <div className="vector-1">
         <span>{device.name}</span>
-        <img className="icon-edit" src={iconEdit} />
+        {/* <img className="icon-edit" src={iconEdit} /> */}
         <img className="icon-trash" src={iconTrash} />
       </div>
     </div>

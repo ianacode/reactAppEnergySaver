@@ -25,43 +25,57 @@ const SendNotification = () => {
   };
   return (
     <>
-    <Header />
-    <Breadcrumb label="Send Notification" />
-    <div className="send-notification">
+      <Header />
+      <Breadcrumb label="Send Notification" />
+      <div className="send-notification">
 
-      <div className="vector">
-        <span className="message">Message:</span>
-        <span className="if-turn-off-the-heat">
-          If turn off the heater, you will save 250 points!
-        </span>
+        <div className="vector">
+          <span className="message">Message:</span>
+          <span className="if-turn-off-the-heat">
+            If turn off the heater, you will save 250 points!
+          </span>
+        </div>
+        <span className="send-to">Send to:</span>
+
+
+    
+
+        <label class="checkbox style-d">
+          <input type="checkbox" />
+          <div class="checkbox__checkmark"></div>
+          <div class="checkbox__body">All members of the family</div>
+        </label>
+
+        <label class="checkbox style-d">
+          <input type="checkbox" />
+          <div class="checkbox__checkmark"></div>
+          <div class="checkbox__body">Tom</div>
+        </label>
+
+        <label class="checkbox style-d">
+          <input type="checkbox" />
+          <div class="checkbox__checkmark"></div>
+          <div class="checkbox__body">Anna</div>
+        </label>
+
+        <label class="checkbox style-d">
+          <input type="checkbox" />
+          <div class="checkbox__checkmark"></div>
+          <div class="checkbox__body">Silvia</div>
+        </label>
+
+
+
+        <MainButtons
+          className="main-buttons-instance-1"
+          {...propsData.mainButtons}
+        />
+
+        {/* <NotificationSent /> */}
+
       </div>
-      <span className="send-to">Send to:</span>
-      <div className="flex-container-3">
-        <img className="checkbox" src={checkbox} />
-        <span className="all-members-of-the-f">All members of the family</span>
-      </div>
-      <div className="flex-container-4">
-        <img className="checkbox-1" src={checkbox} />
-        <span>Tom</span>
-      </div>
-      <div className="flex-container-5">
-        <img className="checkbox-2" src={checkbox} />
-        <span>Anna</span>
-      </div>
-      <div className="flex-container-6">
-        <img className="checkbox-3" src={checkbox} />
-        <span>Silvia</span>
-      </div>
-      <MainButtons
-        className="main-buttons-instance-1"
-        {...propsData.mainButtons}
-      />
-  
-  {/* <NotificationSent /> */}
-  
-    </div>
-    <Footer />
-     </>
+      <Footer />
+    </>
   );
 };
 export default SendNotification;

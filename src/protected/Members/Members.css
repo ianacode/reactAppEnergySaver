@@ -41,11 +41,11 @@
   flex-basis: 7%;
 }
 
-.members .main-buttons-1-instance {
+/* .members .main-buttons-1-instance {
   width: 80%;
   flex-basis: 7%;
   margin-bottom: 4px;
-}
+} */
 
 .members .main-buttons {
   color: #fff;
@@ -60,6 +60,7 @@
   font-weight: 700;
   line-height: 36px;
   display: flex;
+  width: 327px;
 }
 
 .members .members-vector {

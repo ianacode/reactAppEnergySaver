@@ -37,20 +37,44 @@ const ChallengeDetail = () => {
 
 
         <span className="objectives">Objectives:</span>
-        <div className="flex-container-3">
+
+
+        {/* <div className="flex-container-3">
           <img className="checkbox-2" src={checkbox1} />
           <span>Disconnect the heating 3 times when it consumes too much</span>
         </div>
+
         <div className="flex-container-4">
           <img className="checkbox-1" src={checkbox1} />
           <span>Turn off the lights 10 times in case of notification</span>
         </div>
+
         <div className="flex-container-5">
           <img className="checkbox" src={checkbox1} />
           <span>
             Save 3 times water and send a notification
           </span>
-        </div>
+        </div> */}
+
+        <label class="checkbox style-d">
+          <input type="checkbox" />
+          <div class="checkbox__checkmark"></div>
+          <div class="checkbox__body">Disconnect the heating 3 times when it consumes too much</div>
+        </label>
+
+        <label class="checkbox style-d">
+          <input type="checkbox" />
+          <div class="checkbox__checkmark"></div>
+          <div class="checkbox__body">Turn off the lights 10 times in case of notification</div>
+        </label>
+
+        <label class="checkbox style-d">
+          <input type="checkbox" />
+          <div class="checkbox__checkmark"></div>
+          <div class="checkbox__body">Save 3 times water and send a notification</div>
+        </label>
+
+
         <MainButtons
           className="main-buttons-instance-1"
           {...propsData.mainButtons}

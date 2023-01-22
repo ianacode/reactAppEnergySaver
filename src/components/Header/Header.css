@@ -32,6 +32,20 @@
   border-radius: 70px;
 }
 
+.header .hover {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 70px;
+  outline: solid 2px #FF8A00;
+    outline-offset: -2px;
+}
+
+.header .hover2 {
+
+  filter: invert(52%) sepia(69%) saturate(1472%) hue-rotate(360deg) brightness(102%) contrast(105%);
+}
+
 .header .flex-container-1 {
   height: 65%;
   flex-direction: column;
@@ -52,8 +66,7 @@
 }
 
 .header .component-11 {
-  width: 33px;
-  height: 42px;
+  height: 37px;
   object-fit: cover;
   margin-bottom: 2px;
   margin-left: 55px;
