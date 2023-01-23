@@ -14,7 +14,7 @@ const Menu = (props) => {
          onMouseLeave={() => setHover('')}
          onTouchStart={() => setHover('active')}
          onTouchEnd={() => setHover('')}>
-      <img className="imageMenu" src={props.svg} />
+      <img className="imageMenu" src={props.svg} alt={props.label} />
       <span>{props.label}</span>
     </div>
   );

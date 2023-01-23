@@ -1,76 +1,33 @@
+import UserServiceIDB from "./ldb/UserServiceIDB";
+
 class UserService {
-  getUsers() {
-    return fetch('http://localhost:3001/users')
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        return data;
-      })
+
+  constructor() {
+    this.service = UserServiceIDB
+  }
+
+  getUserByEmail(email) {
+    return this.service.getUserByEmail(email);
   };
 
   getMembers(homeId) {
-    return fetch(`http://localhost:3001/users?home_id=${homeId}`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        return data;
-      })
+    return this.service.getMembers(homeId);
   };
 
   getUser(id) {
-    return fetch(`http://localhost:3001/users/${id}`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        return data;
-      })
+    return this.service.getUser(id);
   }
 
   addUser(user) {
-    return fetch('http://localhost:3001/users', {
-      method: 'POST',
-      body: JSON.stringify(user),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        return data;
-      })
+    return this.service.addUser(user);
   }
 
   updateUser(user) {
-    return fetch(`http://localhost:3001/users/${user.id}`, {
-      method: 'PUT',
-      body: JSON.stringify(user),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        return data;
-      })
+    return this.service.updateUser(user);
   }
 
   deleteUser(id) {
-    return fetch(`http://localhost:3001/users/${id}`, {
-      method: 'DELETE'
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        return data;
-      })
+    return this.service.deleteUser(id);
   }
 }
 

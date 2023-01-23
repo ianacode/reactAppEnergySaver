@@ -1,6 +1,5 @@
 import * as React from "react";
 import './NotificationSent.css';
-import icon from "../../protected/Ranking/assets/icon.svg";
 
 function NotificationSent(props) {
 

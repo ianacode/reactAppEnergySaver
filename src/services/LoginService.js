@@ -10,13 +10,11 @@ class LoginService {
   }
 
   login(email, password) {
-    return userService.getUsers().then((users) => {
-      for (const user of users) {
-        if (user.email === email && user.password === password) {
-          user.password = ''; // never save pwd in local storage
-          localStorage.setItem('user', JSON.stringify(user));
-          return true;
-        }
+    return userService.getUserByEmail(email).then(user => {
+      if (user.password === password) {
+        user.password = ''; // never save pwd in local storage
+        localStorage.setItem('user', JSON.stringify(user));
+        return true;
       }
       return false;
     })

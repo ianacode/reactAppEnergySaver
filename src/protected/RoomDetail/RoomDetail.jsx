@@ -1,25 +1,8 @@
 import * as React from "react";
 import { useNavigate, useParams } from "react-router";
 import "./RoomDetail.css";
-// import ellipse14 from "./assets/ellipse14.svg";
-// import ellipse15 from "./assets/ellipse15.svg";
 import vector from "./assets/vector.svg";
-
-
-// import ellipse16 from "./assets/ellipse16.svg";
-
-
-
-// import progress from "./assets/progress.svg";
-
-// import ellipse13 from "./assets/ellipse13.svg";
-import thermometer from "./assets/thermometer.svg";
-
-// import ellipse11 from "./assets/ellipse11.svg";
-
 import MainButtons from "./components/MainButtons";
-
-
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
@@ -40,10 +23,9 @@ const RoomDetail = () => {
     homeService.getHome(loginService.userAuthenticated().home_id)
       .then((home) => {
         setHome(home);
-
         const room = home.rooms.find((room) => {
           console.log(room)
-          return room.id == roomId
+          return room.id === roomId
         });
         if (room) {
           setRoom(room);

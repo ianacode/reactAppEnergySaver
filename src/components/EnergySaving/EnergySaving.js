@@ -10,7 +10,7 @@ function EnergySaving(props) {
            <span className="num-35">+35%</span>
            <span className="num-235-k-wh">23.5 kWh</span>
          </div>
-         <img className="thunder-illustration" src={thunderIllustration} />
+         <img className="thunder-illustration" src={thunderIllustration} alt="energy saver" />
        </div>
      </div>
    );

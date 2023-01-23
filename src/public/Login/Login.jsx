@@ -21,7 +21,7 @@ function Login(props) {
 
   return (
     <div className="login">
-      <img className="images-login" src={imagesLogin} />
+      <img className="images-login" src={imagesLogin} alt="login" />
       <span className="energy-saver-can-cha">
         Energy saver can change way you live in the future
       </span>
