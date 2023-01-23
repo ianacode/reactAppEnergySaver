@@ -40,28 +40,28 @@ const SendNotification = () => {
 
 
 
-        <label class="checkbox style-d">
+        <label className="checkbox style-d">
           <input type="checkbox" />
-          <div class="checkbox__checkmark"></div>
-          <div class="checkbox__body">All members of the family</div>
+          <div className="checkbox__checkmark"></div>
+          <div className="checkbox__body">All members of the family</div>
         </label>
 
-        <label class="checkbox style-d">
+        <label className="checkbox style-d">
           <input type="checkbox" />
-          <div class="checkbox__checkmark"></div>
-          <div class="checkbox__body">Tom</div>
+          <div className="checkbox__checkmark"></div>
+          <div className="checkbox__body">Tom</div>
         </label>
 
-        <label class="checkbox style-d">
+        <label className="checkbox style-d">
           <input type="checkbox" />
-          <div class="checkbox__checkmark"></div>
-          <div class="checkbox__body">Anna</div>
+          <div className="checkbox__checkmark"></div>
+          <div className="checkbox__body">Anna</div>
         </label>
 
-        <label class="checkbox style-d">
+        <label className="checkbox style-d">
           <input type="checkbox" />
-          <div class="checkbox__checkmark"></div>
-          <div class="checkbox__body">Silvia</div>
+          <div className="checkbox__checkmark"></div>
+          <div className="checkbox__body">Silvia</div>
         </label>
 
 

@@ -56,22 +56,22 @@ const ChallengeDetail = () => {
           </span>
         </div> */}
 
-        <label class="checkbox style-d">
+        <label className="checkbox style-d">
           <input type="checkbox" />
-          <div class="checkbox__checkmark"></div>
-          <div class="checkbox__body">Disconnect the heating 3 times when it consumes too much</div>
+          <div className="checkbox__checkmark"></div>
+          <div className="checkbox__body">Disconnect the heating 3 times when it consumes too much</div>
         </label>
 
-        <label class="checkbox style-d">
+        <label className="checkbox style-d">
           <input type="checkbox" />
-          <div class="checkbox__checkmark"></div>
-          <div class="checkbox__body">Turn off the lights 10 times in case of notification</div>
+          <div className="checkbox__checkmark"></div>
+          <div className="checkbox__body">Turn off the lights 10 times in case of notification</div>
         </label>
 
-        <label class="checkbox style-d">
+        <label className="checkbox style-d">
           <input type="checkbox" />
-          <div class="checkbox__checkmark"></div>
-          <div class="checkbox__body">Save 3 times water and send a notification</div>
+          <div className="checkbox__checkmark"></div>
+          <div className="checkbox__body">Save 3 times water and send a notification</div>
         </label>
 
 

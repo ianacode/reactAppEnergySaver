@@ -49,6 +49,7 @@ const RoomDevices = () => {
         <div className="flex-container-3">
           {room.devices && room.devices.map((device) => (
             <RoomsDeviceDetail
+            key={device.id} 
               className="rooms-an-ddevices-instance-1"
               device={device}
             />

@@ -36,7 +36,7 @@ function Rooms(props) {
       <div className="rooms">
         <div className="rooms-flex-container-3">
           {home.rooms && home.rooms.map((room) => (
-            <Room room={room} />
+            <Room   key={room.id}  room={room} />
           ))}
 
 
