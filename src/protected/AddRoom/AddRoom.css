@@ -16,6 +16,11 @@
   display: flex;
 }
 
+.addroom .imageRoom {
+  width: 30%;
+  height: 30%;
+}
+
 .addroom .images-login {
   width: 344px;
   height: 204px;

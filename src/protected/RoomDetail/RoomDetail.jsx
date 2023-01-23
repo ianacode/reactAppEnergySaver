@@ -25,7 +25,7 @@ const RoomDetail = () => {
         setHome(home);
         const room = home.rooms.find((room) => {
           console.log(room)
-          return room.id === +roomId
+          return +room.id === +roomId
         });
         if (room) {
           setRoom(room);
