@@ -12,11 +12,10 @@ function AddMember(props) {
 
       <div className="addmember">
 
-        <input
-          className="login-form-stroke"
-          placeholder="Photo"
-          type="file"
-        />
+      <label className="select-image">
+        <input type="file" />
+        <span>Select image</span>
+      </label>
 
         <input
           className="login-form-stroke"

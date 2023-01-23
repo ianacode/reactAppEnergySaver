@@ -38,7 +38,7 @@ const SendNotification = () => {
         <span className="send-to">Send to:</span>
 
 
-    
+
 
         <label class="checkbox style-d">
           <input type="checkbox" />
@@ -63,6 +63,8 @@ const SendNotification = () => {
           <div class="checkbox__checkmark"></div>
           <div class="checkbox__body">Silvia</div>
         </label>
+
+
 
 
 

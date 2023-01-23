@@ -15,6 +15,15 @@ function AddRoom(props) {
       <Header />
       <Breadcrumb label="Rooms" />
       <div className="addroom">
+
+
+
+      <label className="select-image">
+          <input type="file" />
+          <span>Select image</span>
+        </label>
+
+        
         <input
           className="login-form-stroke"
           placeholder="Room name"
@@ -22,13 +31,12 @@ function AddRoom(props) {
         // value={email}
         // onChange={(e) => setEmail(e.target.value)}
         />
-        <input
-          className="login-form-stroke"
-          placeholder="Image"
-          type="file"
-        // value={password}
-        // onChange={(e) => setPassword(e.target.value)}
-        />
+
+
+ 
+
+
+
         <button className={`main-buttons main-buttons-instance-1 ${hover}`}>
           <div className="vector"
             onMouseEnter={() => setHover('active')}

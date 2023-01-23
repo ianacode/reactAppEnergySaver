@@ -15,11 +15,16 @@ function Registration(props) {
 
     <div className="registration">
 
-      <input
+      <label className="select-image">
+        <input type="file" />
+        <span>Select image</span>
+      </label>
+
+      {/* <input
         className="login-form-stroke"
         placeholder="Photo"
         type="file"
-      />
+      /> */}
 
       <input
         className="login-form-stroke"
