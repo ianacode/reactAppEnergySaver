@@ -1,4 +1,4 @@
-.addmember {
+.changemember {
   color: #464a63;
   text-align: center;
   width: 100%;
@@ -16,23 +16,23 @@
   display: flex;
 }
 
-.addmember .select-image {
+.changemember .select-image {
   display: flex;
   flex-direction: row;
   align-items: stretch;
 }
 
-.addmember .imageProfile {
+.changemember .imageProfile {
   width: 40px;
   height: 40px;
   flex: 0;
 }
 
-.addmember .labelProfile {
+.changemember .labelProfile {
   flex: 1;
 }
 
-.addmember .images-login {
+.changemember .images-login {
   width: 344px;
   height: 204px;
   object-fit: cover;
@@ -40,26 +40,26 @@
   margin-bottom: 19px;
 }
 
-.addmember .energy-saver-can-cha {
+.changemember .energy-saver-can-cha {
   color: #000;
   margin-top: 3px;
   line-height: 24px;
   width: 50%;
 }
 
-.addmember .form-stroke-1-instance,
-.addmember .form-stroke-instance-1,
-.addmember .main-buttons-instance-1 {
+.changemember .form-stroke-1-instance,
+.changemember .form-stroke-instance-1,
+.changemember .main-buttons-instance-1 {
   width: 327px;
 
 }
 
-.addmember .dont-have-an-account {
+.changemember .dont-have-an-account {
   font-size: .625rem;
   margin-top: 10px;
 }
 
-.addmember .line-signup {
+.changemember .line-signup {
   width: 39px;
   height: 1px;
   object-fit: cover;
@@ -68,7 +68,7 @@
   margin-left: 61px;
 }
 
-.addmember .login-form-stroke {
+.changemember .login-form-stroke {
 
   text-align: left;
   padding-left: 20px;
@@ -99,7 +99,7 @@
 }
 
 
-.addmember .main-buttons {
+.changemember .main-buttons {
   text-align: center;
   color: #fff;
   background-color: #0000;
@@ -116,7 +116,7 @@
 }
 
 
-.addmember .vector {
+.changemember .vector {
   height: 52px;
   background-color: #464a63;
   border-radius: 25px;
@@ -128,7 +128,7 @@
   margin-top: 12px;
 }
 
-.addmember .active .vector {
+.changemember .active .vector {
   background-color: #ffffff;
   color: #464a63;
   outline: solid 2px #464a63;

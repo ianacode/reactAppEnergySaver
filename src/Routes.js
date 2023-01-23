@@ -24,6 +24,7 @@ import {
   LoggedGuard,
   NotLoggedGuard,
 } from "./RoutesGuards";
+import ChangeMember from "./protected/ChangeMember/ChangeMember";
 
 export default function Routes() {
   return (
@@ -39,7 +40,7 @@ export default function Routes() {
       <Route path="notificationread" element={<LoggedGuard Component={NotificationRead} />} />
       <Route path="sendnotification" element={<LoggedGuard Component={SendNotification} />} />
 
-      <Route path="challenges"> 
+      <Route path="challenges">
         <Route index element={<LoggedGuard Component={Challenges} />} />
         <Route path=":challengeId" element={<LoggedGuard Component={ChallengeDetail} />} />
       </Route>
@@ -54,6 +55,7 @@ export default function Routes() {
       <Route path="addroom" element={<LoggedGuard Component={AddRoom} />} />
       <Route path="adddevice" element={<LoggedGuard Component={AddDevice} />} />
       <Route path="addmember" element={<LoggedGuard Component={AddMember} />} />
+      <Route path="changemember/:memberId" element={<LoggedGuard Component={ChangeMember} />} />
 
       <Route path="*" element={<NotFoundPage/>} />
     </BaseRoutes>

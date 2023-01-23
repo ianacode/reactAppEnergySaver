@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import "./Registration.css";
 
-
 function Registration(props) {
 
   const navigate = useNavigate();
@@ -87,7 +86,7 @@ function Registration(props) {
       </span>
 
       <span className="dont-have-an-account">
-        Do you have an account? <a className="dont-have-an-account-sign-up" href="#" onClick={() => navigate('/login')}>Log in</a>
+        Do you have an account? <a className="dont-have-an-account-sign-up" onClick={() => navigate('/login')}>Log in</a>
       </span>
 
     </div>

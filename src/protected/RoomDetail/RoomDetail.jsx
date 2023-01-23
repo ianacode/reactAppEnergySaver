@@ -67,7 +67,7 @@ const RoomDetail = () => {
   return (
     <>
       <Header />
-      <Breadcrumb label={room.room_name} />
+      <Breadcrumb label={room.name} />
       <div className="room-detail">
         <SvgInfo metrics={propsData.metrics} />
         <MainButtons

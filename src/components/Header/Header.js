@@ -34,7 +34,7 @@ function Header(props) {
           onClick={() => navigate('/members')} />
 
         <div className="flex-container-1">
-          <span>{user.name.first} {user.name.last}</span>
+          <span>{user.first_name} {user.last_name}</span>
           <span className="monday-20-jan">{today()}</span>
         </div>
 

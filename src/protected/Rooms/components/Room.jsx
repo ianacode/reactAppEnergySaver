@@ -6,7 +6,7 @@ const Room = ({room}) => {
   return (
     <div className={`component-13 component-13-instance-1`} onClick={() => {navigate(`/rooms/${room.id}`)}}>
       <img className="image" src={room.img} />
-      <span className="room">{room.room_name}</span>
+      <span className="room">{room.name}</span>
       <span className="num-15-devices">
         {room.devices && room.devices.length}
       </span>
