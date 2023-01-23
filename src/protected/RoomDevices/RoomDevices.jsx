@@ -53,11 +53,20 @@ const RoomDevices = () => {
             />
           ))}
         </div>
+
+
+        {loginService.isAdult() && (
         <MainButtons
           className="main-buttons-instance-1"
           {...propsData.mainButtons}
         />
+        )}
+
+
+
       </div>
+
+
       <Footer />
     </>
   );

@@ -1,5 +1,5 @@
 import * as React from "react";
-import {useNavigate, useParams} from "react-router";
+import { useNavigate, useParams } from "react-router";
 import "./RoomDetail.css";
 // import ellipse14 from "./assets/ellipse14.svg";
 // import ellipse15 from "./assets/ellipse15.svg";
@@ -26,7 +26,7 @@ import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import SvgInfo from "./components/SvgInfo";
 import loginService from "../../services/LoginService";
 import homeService from "../../services/HomeService";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 
 const RoomDetail = () => {
@@ -81,7 +81,7 @@ const RoomDetail = () => {
   return (
     <>
       <Header />
-      <Breadcrumb label={room.room_name}/>
+      <Breadcrumb label={room.room_name} />
       <div className="room-detail">
         <SvgInfo metrics={propsData.metrics} />
         <MainButtons
@@ -96,10 +96,16 @@ const RoomDetail = () => {
           className="main-buttons-2-instance"
           {...propsData.mainButtons2}
         />
-        <MainButtons
-          className="main-buttons-3-instance"
-          {...propsData.mainButtons3}
-        />
+
+        {loginService.isAdult() && (
+          <MainButtons
+            className="main-buttons-3-instance"
+            {...propsData.mainButtons3}
+          />
+        )}
+
+
+
       </div>
       <Footer />
     </>

@@ -9,7 +9,7 @@ import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import SvgInfo from "./components/SvgInfo";
 import loginService from "../../services/LoginService";
 import homeService from "../../services/HomeService";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 
 const DeviceDetail = () => {
@@ -51,7 +51,7 @@ const DeviceDetail = () => {
       vector: vector,
       mainButton: "Delete device",
     },
-  
+
     metrics: [
       {
         title: "Electricity Expense", value: "20°C"
@@ -63,9 +63,9 @@ const DeviceDetail = () => {
   };
 
   return (
-      <>
+    <>
       <Header />
-      <Breadcrumb label={device.name}/>
+      <Breadcrumb label={device.name} />
       <div className="device-detail">
         <SvgInfo metrics={propsData.metrics} />
         <MainButtons
@@ -76,14 +76,19 @@ const DeviceDetail = () => {
           className="main-buttons-1-instance"
           {...propsData.mainButtons1}
         />
-        <MainButtons
-          className="main-buttons-2-instance"
-          {...propsData.mainButtons2}
-        />
-     
+
+
+        {loginService.isAdult() && (
+          <MainButtons
+            className="main-buttons-2-instance"
+            {...propsData.mainButtons2}
+          />
+        )}
+
+
       </div>
       <Footer />
-      </>
-      )
+    </>
+  )
 };
 export default DeviceDetail;

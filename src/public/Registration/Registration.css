@@ -151,9 +151,9 @@ input[type="file"] {
 }
 
 
- label {
+ /* label {
   text-transform: uppercase;
-}
+} */
 
 
  .select-image {
