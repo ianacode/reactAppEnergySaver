@@ -171,6 +171,12 @@
       "room_name": "Kitchen",
       "img": "http://localhost:3001/img/rooms/kitchen.jpg",
       "home_id": 1
+    },
+    {
+      "room_name": "NextTestRoom",
+      "img": "http://localhost:3001/img/rooms/kitchen.jpg",
+      "home_id": 1,
+      "id": 4
     }
   ],
   "devices": [
@@ -191,6 +197,12 @@
       "name": "teapot",
       "power": 200,
       "room_id": 1
+    },
+    {
+      "name": "oven",
+      "power": 250,
+      "room_id": 1,
+      "id": 4
     }
   ]
 }
