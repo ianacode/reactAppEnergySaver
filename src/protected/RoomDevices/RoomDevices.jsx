@@ -24,7 +24,8 @@ const RoomDevices = () => {
     homeService.getHome(loginService.userAuthenticated().home_id)
       .then((home) => {
         setHome(home);
-        const room = home.rooms.find((room) => room.room_id === roomId);
+   
+        const room = home.rooms.find((room) => room.id == roomId);
         if (room) {
           setRoom(room);
         } else {
