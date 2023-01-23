@@ -10,7 +10,7 @@ import loginService from "../../services/LoginService";
 function ChangeMember(props) {
   const { memberId } = useParams();
   useEffect(() => {
-    userService.getUser(memberId).then((member) => {
+    userService.getUser(+memberId).then((member) => {
       setMember(member);
     });
   }, []);

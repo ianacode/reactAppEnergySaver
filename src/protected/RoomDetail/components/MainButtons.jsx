@@ -7,7 +7,15 @@ const MainButtons = (props) => {
   const [hover, setHover] = useState('');
   return (
     <button className={`main-buttons ${hover}`}
-      onClick={() => navigate(props.link)}>
+      onClick={() => {
+        if (props.link) {
+          navigate(props.link)
+        }
+        if (props.onClick) {
+          props.onClick()
+        }
+      }
+    }>
 
       <div className="vector"
         onMouseEnter={() => setHover('active')}

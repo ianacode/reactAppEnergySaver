@@ -25,7 +25,7 @@ const RoomDetail = () => {
         setHome(home);
         const room = home.rooms.find((room) => {
           console.log(room)
-          return room.id === roomId
+          return room.id === +roomId
         });
         if (room) {
           setRoom(room);
@@ -34,6 +34,14 @@ const RoomDetail = () => {
         }
       })
   }, []);
+
+  function deleteRoom() {
+    home.rooms.splice(home.rooms.indexOf(room), 1);
+    homeService.updateHome(home)
+      .then(() => {
+        navigate("/rooms")
+      });
+  }
 
   const propsData = {
     mainButtons: {
@@ -54,6 +62,7 @@ const RoomDetail = () => {
     mainButtons3: {
       vector: vector,
       mainButton: "Delete room",
+      onClick: deleteRoom,
     },
     metrics: [
       {

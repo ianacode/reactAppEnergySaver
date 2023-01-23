@@ -24,8 +24,8 @@ const RoomDevices = () => {
     homeService.getHome(loginService.userAuthenticated().home_id)
       .then((home) => {
         setHome(home);
-   
-        const room = home.rooms.find((room) => room.id == roomId);
+
+        const room = home.rooms.find((room) => room.id === +roomId);
         if (room) {
           setRoom(room);
         } else {
@@ -49,7 +49,7 @@ const RoomDevices = () => {
         <div className="flex-container-3">
           {room.devices && room.devices.map((device) => (
             <RoomsDeviceDetail
-            key={device.id} 
+            key={device.id}
               className="rooms-an-ddevices-instance-1"
               device={device}
             />

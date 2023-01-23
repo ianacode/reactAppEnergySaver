@@ -1,6 +1,16 @@
 import * as React from "react";
 import "./NotFoundPage.css";
+import {useEffect} from "react";
+import {useNavigate} from "react-router";
 function NotFoundPage(props) {
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    setTimeout(() => {
+      navigate('/');
+    }, 500);
+  }, []);
+
   return (
     <div id="notfound">
       <div className="notfound">
