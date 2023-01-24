@@ -36,6 +36,14 @@ const DeviceDetail = () => {
       })
   }, []);
 
+  function deleteDevice() {
+    room.devices.splice(room.devices.indexOf(device), 1);
+    homeService.updateHome(home)
+      .then(() => {
+        navigate(`/rooms/${roomId}/devices`)
+      });
+  }
+
   const propsData = {
     mainButtons: {
       vector: vector,
@@ -50,6 +58,7 @@ const DeviceDetail = () => {
     mainButtons2: {
       vector: vector,
       mainButton: "Delete device",
+      onClick: deleteDevice,
     },
 
     metrics: [
@@ -65,7 +74,7 @@ const DeviceDetail = () => {
   return (
     <>
       <Header />
-      <Breadcrumb label={device.name} />
+      <Breadcrumb label={device.name} link={`/rooms/${roomId}/devices`} />
       <div className="device-detail">
         <SvgInfo metrics={propsData.metrics} />
         <MainButtons

@@ -6,7 +6,11 @@ function Breadcrumb(props) {
 
   const navigate = useNavigate();
   function handleGoBack() {
-    navigate(-1);
+    if (props.link) {
+      navigate(props.link);
+    } else {
+      navigate(-1);
+    }
   }
    return (
      <div className="breadcrumb">

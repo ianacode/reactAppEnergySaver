@@ -34,6 +34,12 @@ const RoomDevices = () => {
       })
   }, []);
 
+  function deleteDevice(device) {
+    room.devices.splice(room.devices.indexOf(device), 1);
+    setRoom({...room});
+    homeService.updateHome(home)
+  }
+
   const propsData = {
     mainButtons: {
       mainButton: "Add device",
@@ -43,15 +49,16 @@ const RoomDevices = () => {
   return (
     <>
       <Header />
-      <Breadcrumb label="Devices" />
+      <Breadcrumb label="Devices" link={`/rooms/${roomId}`} />
       <div className="RoomDevices">
-        <img className="img" src={img} />
+        <img className="img" src={room.img} />
         <div className="flex-container-3">
           {room.devices && room.devices.map((device) => (
             <RoomsDeviceDetail
-            key={device.id}
+              key={device.id}
               className="rooms-an-ddevices-instance-1"
               device={device}
+              deleteDevice={deleteDevice}
             />
           ))}
         </div>

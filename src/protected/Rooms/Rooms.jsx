@@ -31,7 +31,7 @@ function Rooms(props) {
   return (
     <>
       <Header />
-      <Breadcrumb label="Rooms" />
+      <Breadcrumb label="Rooms" link="/" />
       <EnergySaving />
       <div className="rooms">
         <div className="rooms-flex-container-3">

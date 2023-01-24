@@ -62,7 +62,7 @@ function AddRoom(props) {
   return (
     <>
       <Header />
-      <Breadcrumb label="Rooms" />
+      <Breadcrumb label="Rooms" link={"/rooms"} />
       <div className="addroom">
 
         <img src={room.img} className="imageRoom" />

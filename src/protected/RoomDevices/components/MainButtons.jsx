@@ -1,14 +1,15 @@
 import * as React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import {useNavigate, useParams} from "react-router";
 import "./MainButtons.css";
 const MainButtons = (props) => {
 
+  const { roomId } = useParams();
   const navigate = useNavigate();
   const [hover, setHover] = useState('');
 
   return (
-    <button className={`main-buttons ${props.className || ""} ${hover}`} onClick={() => navigate('/adddevice')} >
+    <button className={`main-buttons ${props.className || ""} ${hover}`} onClick={() => navigate('/rooms/'+roomId+'/adddevice')} >
       <div className="vector"
         onMouseEnter={() => setHover('active')}
         onMouseLeave={() => setHover('')}

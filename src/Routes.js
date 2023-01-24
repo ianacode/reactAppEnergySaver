@@ -50,10 +50,10 @@ export default function Routes() {
         <Route path=":roomId" element={<LoggedGuard Component={RoomDetail} />} />
         <Route path=":roomId/devices" element={<LoggedGuard Component={RoomDevices} />} />
         <Route path=":roomId/devices/:deviceId" element={<LoggedGuard Component={DeviceDetail} />} />
+        <Route path=":roomId/adddevice" element={<LoggedGuard Component={AddDevice} />} />
       </Route>
 
       <Route path="addroom" element={<LoggedGuard Component={AddRoom} />} />
-      <Route path="adddevice" element={<LoggedGuard Component={AddDevice} />} />
       <Route path="addmember" element={<LoggedGuard Component={AddMember} />} />
       <Route path="changemember/:memberId" element={<LoggedGuard Component={ChangeMember} />} />
 
