@@ -1,7 +1,11 @@
+.rooms-scroll-area {
+  overflow-y: scroll;
+  height: calc(100vh - 250px);
+}
+
 .rooms {
   color: #464a63;
   width: 100%;
-  height: 100%;
   background-color: #fff;
   flex-direction: column;
   justify-content: space-evenly;
@@ -88,10 +92,6 @@
   margin-top: 15px;
 }
 
-.rooms .component-13-instance-1, .rooms .component-17-instance-1 {
-  height: 100%;
-}
-
 .rooms .rooms-flex-container-4 {
   width: 85%;
   flex-direction: row;
@@ -101,10 +101,6 @@
   margin-top: 1px;
   margin-left: 6px;
   display: flex;
-}
-
-.rooms .component-12-instance-1, .rooms .component-15-instance-1 {
-  height: 100%;
 }
 
 .rooms .rooms-flex-container-5 {

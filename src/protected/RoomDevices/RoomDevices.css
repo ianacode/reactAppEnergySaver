@@ -13,6 +13,11 @@
   display: flex;
 }
 
+.RoomDevices .scroll-area {
+  overflow-y: scroll;
+  height: calc(100vh - 320px);
+}
+
 .RoomDevices .flex-container {
   color: #a8a8a8;
   width: 85%;

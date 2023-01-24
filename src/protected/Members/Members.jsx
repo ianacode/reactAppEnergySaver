@@ -31,12 +31,13 @@ function Members(props) {
   return (
     <>
       <div className="members">
-        <div className="members-flex-container">
-          {members.map((member) => (
-            <Person key={member.email} member={member} />
-          ))}
+        <div className="scroll-area">
+          <div className="members-flex-container">
+            {members.map((member) => (
+              <Person key={member.email} member={member} />
+            ))}
+          </div>
         </div>
-
         {loginService.isAdult() && (
           <button className={`main-buttons main-buttons-instance-1 ${hover}`}
             onClick={() => navigate('/addmember')} >

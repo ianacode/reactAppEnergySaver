@@ -32,18 +32,20 @@ function Rooms(props) {
     <>
       <Header />
       <Breadcrumb label="Rooms" link="/" />
-      <EnergySaving />
-      <div className="rooms">
-        <div className="rooms-flex-container-3">
-          {home.rooms && home.rooms.map((room) => (
-            <Room key={room.id} room={room} />
-          ))}
-          {loginService.isAdult() && (
-            <AddRoom
-              className="component-15-instance-1"
-              {...propsData.component15}
-            />
-          )}
+      <div className={"rooms-scroll-area"}>
+        <EnergySaving />
+        <div className="rooms">
+            <div className="rooms-flex-container-3">
+                {home.rooms && home.rooms.map((room) => (
+                  <Room key={room.id} room={room} />
+                ))}
+              {loginService.isAdult() && (
+                <AddRoom
+                  className="component-15-instance-1"
+                  {...propsData.component15}
+                />
+              )}
+          </div>
         </div>
       </div>
       <Footer />

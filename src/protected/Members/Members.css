@@ -9,6 +9,11 @@
   display: flex;
 }
 
+.members .scroll-area {
+  overflow-y: scroll;
+  height: calc(100vh - 300px);
+}
+
 .members .members-flex-container {
   width: 90%;
   flex-direction: row;

@@ -51,18 +51,19 @@ const RoomDevices = () => {
       <Header />
       <Breadcrumb label="Devices" link={`/rooms/${roomId}`} />
       <div className="RoomDevices">
-        <img className="img" src={room.img} />
-        <div className="flex-container-3">
-          {room.devices && room.devices.map((device) => (
-            <RoomsDeviceDetail
-              key={device.id}
-              className="rooms-an-ddevices-instance-1"
-              device={device}
-              deleteDevice={deleteDevice}
-            />
-          ))}
+        <div className="scroll-area">
+          <img className="img" src={room.img} />
+          <div className="flex-container-3">
+            {room.devices && room.devices.map((device) => (
+              <RoomsDeviceDetail
+                key={device.id}
+                className="rooms-an-ddevices-instance-1"
+                device={device}
+                deleteDevice={deleteDevice}
+              />
+            ))}
+          </div>
         </div>
-
 
         {loginService.isAdult() && (
         <MainButtons
