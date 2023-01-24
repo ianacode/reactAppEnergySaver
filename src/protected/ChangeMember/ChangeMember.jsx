@@ -17,6 +17,7 @@ function ChangeMember(props) {
 
   const navigate = useNavigate()
   const [hover, setHover] = useState('');
+  const [hover2, setHover2] = useState('');
 
   const [member, setMember] = useState({
     first_name: "",
@@ -51,6 +52,16 @@ function ChangeMember(props) {
       navigate("/members");
     });
   }
+
+
+
+  function deleteMember(){
+    userService.deleteUser(member.id).then(() => {
+      navigate("/members");
+    })
+  }
+
+
 
   return (
     <>
@@ -109,6 +120,20 @@ function ChangeMember(props) {
             onTouchEnd={() => setHover('')}>
             Change member</div>
         </button>
+
+
+        <button className={`main-buttons main-buttons-instance-1 ${hover2}`}
+            onClick={deleteMember}
+        >
+          <div className="vector"
+            onMouseEnter={() => setHover2('active')}
+            onMouseLeave={() => setHover2('')}
+            onTouchStart={() => setHover2('active')}
+            onTouchEnd={() => setHover2('')}>
+            Delete member</div>
+        </button>
+
+
 
       </div>
       <Footer />
