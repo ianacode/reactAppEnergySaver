@@ -15,7 +15,7 @@
 }
 
 .members .members-flex-container {
-  width: 90%;
+  /* width: 90%; */
   flex-direction: row;
   flex-basis: 28%;
   justify-content: space-between;
