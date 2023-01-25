@@ -72,6 +72,12 @@ class UserServiceJSS {
         return data;
       })
   }
+
+  getUserByEmail(email) {
+    return fetch(`http://localhost:3001/users?email=${email}`).then((response) => {
+      return response.json();
+    });
+  }
 }
 
 export default new UserServiceJSS();
