@@ -13,6 +13,8 @@
   display: flex;
   width: 327px;
   margin-top: 30px;
+  position: fixed;
+  bottom: 115px;
 }
 
 .RoomDevices .vector {

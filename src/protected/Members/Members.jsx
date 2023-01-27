@@ -38,6 +38,8 @@ function Members(props) {
             ))}
           </div>
         </div>
+
+<div className="blockbtns">
         {loginService.isAdult() && (
           <button className={`main-buttons main-buttons-instance-1 ${hover}`}
             onClick={() => navigate('/addmember')} >
@@ -45,10 +47,12 @@ function Members(props) {
               onMouseEnter={() => setHover('active')}
               onMouseLeave={() => setHover('')}
               onTouchStart={() => setHover('active')}
-              onTouchEnd={() => setHover('')}>
+              onTouchEnd={() => setHover('')}
+              >
               Add member</div>
           </button>
         )}
+
 
         <button className={`main-buttons main-buttons-1-instance ${hover2}`}
           onClick={() => { logout() }}>
@@ -60,6 +64,7 @@ function Members(props) {
             Logout</div>
         </button>
 
+        </div>
       </div>
       <Footer />
     </>

@@ -19,12 +19,12 @@ import Loginreg from "./public/Loginreg/Loginreg";
 import Login from "./public/Login/Login";
 import Registration from "./public/Registration/Registration";
 import NotFoundPage from "./public/NotFoundPage/NotFoundPage";
+import ChangeMember from "./protected/ChangeMember/ChangeMember";
 
 import {
   LoggedGuard,
   NotLoggedGuard,
 } from "./RoutesGuards";
-import ChangeMember from "./protected/ChangeMember/ChangeMember";
 
 export default function Routes() {
   return (
@@ -57,7 +57,7 @@ export default function Routes() {
       <Route path="addmember" element={<LoggedGuard Component={AddMember} />} />
       <Route path="changemember/:memberId" element={<LoggedGuard Component={ChangeMember} />} />
 
-      <Route path="*" element={<NotFoundPage/>} />
+      <Route path="*" element={<NotFoundPage />} />
     </BaseRoutes>
   );
 }

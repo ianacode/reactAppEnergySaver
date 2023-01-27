@@ -10,8 +10,9 @@
 }
 
 .members .scroll-area {
-  overflow-y: scroll;
-  height: calc(100vh - 300px);
+  /* overflow-y: scroll; */
+  /* height: calc(100vh - 300px); */
+  /* height: calc(100% - 180px); */
 }
 
 .members .members-flex-container {
@@ -22,6 +23,7 @@
   align-items: stretch;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 220px;
 }
 
 .members .person {
@@ -44,13 +46,18 @@
 .members .main-buttons-instance-1 {
   width: 80%;
   flex-basis: 7%;
+
+  
 }
 
-/* .members .main-buttons-1-instance {
-  width: 80%;
+.members .main-buttons-1-instance {
+  /* width: 80%;
   flex-basis: 7%;
-  margin-bottom: 4px;
-} */
+  margin-bottom: 4px; */
+
+      /* position: fixed;
+    margin-top: 140px; */
+} 
 
 .members .main-buttons {
   color: #fff;
@@ -86,6 +93,7 @@
   color: #464a63;
   outline: solid 2px #464a63;
   outline-offset: -2px;
+
 }
 
 .members .active2 .members-vector {
@@ -93,4 +101,13 @@
   color: #464a63;
   outline: solid 2px #464a63;
   outline-offset: -2px;
+}
+
+.blockbtns {
+  position: fixed;
+  bottom: 120px;
+  /* background-color: #ffffff; */
+  /* padding-bottom: 50px; */
+  /* padding-right: 30px; */
+  /* padding-left: 30px;*/
 }

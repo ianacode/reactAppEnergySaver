@@ -77,31 +77,34 @@ const RoomDetail = () => {
     <>
       <Header />
       <Breadcrumb label={room.name} link={"/rooms"} />
-      <div className="room-detail">
-        <SvgInfo metrics={propsData.metrics} />
-        <MainButtons
-          className="main-buttons-instance-1"
-          {...propsData.mainButtons}
-        />
-        <MainButtons
-          className="main-buttons-1-instance"
-          {...propsData.mainButtons1}
-        />
-        <MainButtons
-          className="main-buttons-2-instance"
-          {...propsData.mainButtons2}
-        />
 
-        {loginService.isAdult() && (
+     
+        <div className="room-detail">
+          <SvgInfo metrics={propsData.metrics} />
           <MainButtons
-            className="main-buttons-3-instance"
-            {...propsData.mainButtons3}
+            className="main-buttons-instance-1"
+            {...propsData.mainButtons}
           />
-        )}
+          <MainButtons
+            className="main-buttons-1-instance"
+            {...propsData.mainButtons1}
+          />
+          <MainButtons
+            className="main-buttons-2-instance"
+            {...propsData.mainButtons2}
+          />
 
+          {loginService.isAdult() && (
+            <MainButtons
+              className="main-buttons-3-instance"
+              {...propsData.mainButtons3}
+            />
+          )}
 
 
       </div>
+
+
       <Footer />
     </>
   );

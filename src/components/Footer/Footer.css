@@ -14,11 +14,12 @@
     flex-basis: 8%;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 4px;
-    margin-left: 3px;
+    /* margin-bottom: 4px;
+    margin-left: 3px; */
     display: flex;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
+    /* margin-top: 60px; */
   }
 
 .footer .footer-menu-1-instance-1 {
@@ -47,11 +48,18 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding-top: 1px;
     padding-bottom: 5px;
     font-family: Lexend, Arial;
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 21px;
     display: flex;
+   
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* width: 100vw; */
+    height: 80px;
+    background-color: #fff;
+    z-index: 1;
   }

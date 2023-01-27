@@ -1,9 +1,9 @@
 import * as React from "react";
-import {useState} from "react";
+import { useState } from "react";
 import "./AddMember.css";
 import Footer from "../../components/Footer/Footer";
 import userService from "../../services/UserService";
-import {useNavigate} from "react-router";
+import { useNavigate } from "react-router";
 import loginService from "../../services/LoginService";
 
 
@@ -116,7 +116,7 @@ function AddMember(props) {
         />
 
         <button className={`main-buttons main-buttons-instance-1 ${hover}`}
-            onClick={submitForm}
+          onClick={submitForm}
         >
           <div className="vector"
             onMouseEnter={() => setHover('active')}

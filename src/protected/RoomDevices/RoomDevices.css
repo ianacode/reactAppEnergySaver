@@ -15,7 +15,8 @@
 
 .RoomDevices .scroll-area {
   overflow-y: scroll;
-  height: calc(100vh - 320px);
+  height: calc(100vh - 45vh);
+  /* margin-bottom: 150px; */
 }
 
 .RoomDevices .flex-container {
@@ -93,7 +94,8 @@
   background-position: center;
   background-size: cover;
   border-radius: 24px;
-  margin-bottom: 13px;
+  /* margin-bottom: 13px; */
+  margin-left: 30px;
 }
 
 .RoomDevices .flex-container-3 {
@@ -102,6 +104,7 @@
   justify-content: space-between;
   align-items: flex-end;
   display: flex;
+  padding: 0px 30px 30px 30px;
 }
 
 .RoomDevices .rooms-an-ddevices-instance-1, .rooms-an-ddevices-1-instance {
