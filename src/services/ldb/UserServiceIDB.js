@@ -78,11 +78,11 @@ class UserServiceIDB {
   }
   async getUserByEmail(email) {
     return (await this.db()).getFromIndex('users', 'email', email);
-  };
+  }
 
   async getMembers(homeId) {
     return (await this.db()).getAllFromIndex('users', 'home_id', +homeId);
-  };
+  }
 
   async getUser(id) {
     return (await this.db()).get('users', +id);

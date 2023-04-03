@@ -1,4 +1,4 @@
-.footer .btn {
+.btn {
   text-align: center;
   color: #464a63;
   background-color: #f4f7fb;
@@ -15,10 +15,10 @@
   display: flex;
 }
 
-.footer .label {
+.label {
   margin-left: 1px;
 }
 
-.footer .hover {
+.hover {
   background-color: #FF8A00;
 }

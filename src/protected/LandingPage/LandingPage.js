@@ -1,5 +1,4 @@
 import * as React from "react";
-import {useNavigate} from "react-router";
 import "./LandingPage.css";
 import vector from "./assets/vector.svg";
 import BtnLp from "./components/BtnLp";
@@ -8,8 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import EnergySaving from "../../components/EnergySaving/EnergySaving";
 
 
-function LandingPage(props) {
-  const navigate = useNavigate();
+function LandingPage() {
   const propsData = {
     btnConsumtion: {
       label: "CONSUMPTION",
@@ -47,5 +45,5 @@ function LandingPage(props) {
 
     </>
   );
-};
+}
 export default LandingPage;

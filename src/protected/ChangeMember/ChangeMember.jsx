@@ -4,10 +4,9 @@ import "./ChangeMember.css";
 import Footer from "../../components/Footer/Footer";
 import userService from "../../services/UserService";
 import {useNavigate, useParams} from "react-router";
-import loginService from "../../services/LoginService";
 
 
-function ChangeMember(props) {
+function ChangeMember() {
   const { memberId } = useParams();
   useEffect(() => {
     userService.getUser(+memberId).then((member) => {
@@ -139,5 +138,5 @@ function ChangeMember(props) {
       <Footer />
     </>
   );
-};
+}
 export default ChangeMember;

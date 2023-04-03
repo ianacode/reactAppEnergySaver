@@ -1,8 +1,5 @@
 import * as React from "react";
 import "./ChallengeDetail.css";
-import checkbox1 from "./assets/checkbox1.svg";
-import vector from "./assets/vector.svg";
-import checkbox from "./assets/checkbox.svg";
 import MainButtons from "./components/MainButtons";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -10,7 +7,6 @@ import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 const ChallengeDetail = () => {
   const propsData = {
     mainButtons: {
-      vector: vector,
       mainButton: "Save Data",
     },
 

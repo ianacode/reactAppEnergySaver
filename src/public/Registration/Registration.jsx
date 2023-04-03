@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import "./Registration.css";
 
-function Registration(props) {
+function Registration() {
 
   const navigate = useNavigate();
   const [hover, setHover] = useState('');
@@ -82,7 +82,7 @@ function Registration(props) {
       </button>
 
       <span className="warning">
-        By clicking the "Registration" button, you consent to the processing of personal data
+        By clicking the &quot;Registration&quot; button, you consent to the processing of personal data
       </span>
 
       <span className="dont-have-an-account">
@@ -93,5 +93,5 @@ function Registration(props) {
 
 
   );
-};
+}
 export default Registration;

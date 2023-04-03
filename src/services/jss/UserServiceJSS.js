@@ -7,7 +7,7 @@ class UserServiceJSS {
       .then((data) => {
         return data;
       })
-  };
+  }
 
   getMembers(homeId) {
     return fetch(`http://localhost:3001/users?home_id=${homeId}`)
@@ -17,7 +17,7 @@ class UserServiceJSS {
       .then((data) => {
         return data;
       })
-  };
+  }
 
   getUser(id) {
     return fetch(`http://localhost:3001/users/${id}`)

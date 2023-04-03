@@ -1,26 +1,13 @@
 import * as React from "react";
 import "./SendNotification.css";
-import otherstrendTwo from "./assets/otherstrendTwo.svg";
-import checkbox from "./assets/checkbox.svg";
-import component16 from "./assets/component16.svg";
-import vector from "./assets/vector.svg";
-import home from "./assets/home.svg";
-import icon from "./assets/icon.svg";
-import document from "./assets/document.svg";
-import component11 from "./assets/component11.svg";
-import headerLine from "./assets/headerLine.svg";
-import Btn from "./components/Btn";
-import Menu from "./components/Menu";
 import MainButtons from "./components/MainButtons";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
-import NotificationSent from "../../components/NotificationSent/NotificationSent";
 const SendNotification = () => {
   const propsData = {
     mainButtons: {
       mainButton: "Send Notification",
-      vector: vector,
     },
   };
   return (

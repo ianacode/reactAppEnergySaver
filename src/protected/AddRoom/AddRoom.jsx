@@ -6,10 +6,9 @@ import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import {useNavigate} from "react-router";
 import loginService from "../../services/LoginService";
-import userService from "../../services/UserService";
 import homeService from "../../services/HomeService";
 
-function AddRoom(props) {
+function AddRoom() {
 
   const navigate = useNavigate()
   const [hover, setHover] = useState('');
@@ -100,5 +99,5 @@ function AddRoom(props) {
       <Footer />
     </>
   );
-};
+}
 export default AddRoom;

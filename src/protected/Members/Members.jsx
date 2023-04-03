@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import Footer from "../../components/Footer/Footer";
 
 
-function Members(props) {
+function Members() {
 
   let navigate = useNavigate();
   function logout() {
@@ -69,5 +69,5 @@ function Members(props) {
       <Footer />
     </>
   );
-};
+}
 export default Members;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import './EnergySaving.css';
 import thunderIllustration from "./assets/thunderIllustration.png";
-function EnergySaving(props) {
+function EnergySaving() {
    return (
      <div className="energy-saving-wrapper">
        <div className="energy-saving">

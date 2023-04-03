@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 import loginService from "../../services/LoginService";
 
 
-function AddMember(props) {
+function AddMember() {
 
   const navigate = useNavigate()
   const [hover, setHover] = useState('');
@@ -130,5 +130,5 @@ function AddMember(props) {
       <Footer />
     </>
   );
-};
+}
 export default AddMember;

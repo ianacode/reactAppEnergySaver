@@ -1,8 +1,6 @@
 import * as React from "react";
 import "./NotificationRead.css";
-import vector from "./assets/vector.svg";
 import frame2114 from "./assets/frame2114.svg";
-import frame2115 from "./assets/frame2115.svg";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";

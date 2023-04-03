@@ -5,7 +5,7 @@ import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 
 
-function Ranking(props) {
+function Ranking() {
 
   return (
     <>
@@ -58,5 +58,5 @@ function Ranking(props) {
       <Footer />
     </>
   );
-};
+}
 export default Ranking;

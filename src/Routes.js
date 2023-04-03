@@ -20,6 +20,7 @@ import Login from "./public/Login/Login";
 import Registration from "./public/Registration/Registration";
 import NotFoundPage from "./public/NotFoundPage/NotFoundPage";
 import ChangeMember from "./protected/ChangeMember/ChangeMember";
+import React from "react";
 
 import {
   LoggedGuard,

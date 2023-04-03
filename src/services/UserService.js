@@ -8,11 +8,11 @@ class UserService {
 
   getUserByEmail(email) {
     return this.service.getUserByEmail(email);
-  };
+  }
 
   getMembers(homeId) {
     return this.service.getMembers(homeId);
-  };
+  }
 
   getUser(id) {
     return this.service.getUser(id);

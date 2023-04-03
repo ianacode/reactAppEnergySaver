@@ -8,7 +8,7 @@ import {useNavigate, useParams} from "react-router";
 import homeService from "../../services/HomeService";
 import loginService from "../../services/LoginService";
 
-function AddDevice(props) {
+function AddDevice() {
   const { roomId } = useParams();
   const navigate = useNavigate()
   const [hover, setHover] = useState('');
@@ -86,5 +86,5 @@ function AddDevice(props) {
       <Footer />
     </>
   );
-};
+}
 export default AddDevice;

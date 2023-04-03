@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 import component11 from "./assets/component11.svg";
 import headerLine from "./assets/headerLine.svg";
 import loginService from "../../services/LoginService";
-function Header(props) {
+function Header() {
   const user = loginService.userAuthenticated();
   const navigate = useNavigate();
   const [hover, setHover] = useState('');

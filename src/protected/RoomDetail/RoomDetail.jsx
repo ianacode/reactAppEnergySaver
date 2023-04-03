@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useNavigate, useParams } from "react-router";
 import "./RoomDetail.css";
-import vector from "./assets/vector.svg";
 import MainButtons from "./components/MainButtons";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -45,22 +44,18 @@ const RoomDetail = () => {
 
   const propsData = {
     mainButtons: {
-      vector: vector,
       mainButton: "Send Notification",
       link: "/sendnotification",
     },
     mainButtons1: {
-      vector: vector,
       mainButton: "Challenges",
       link: "/challenges",
     },
     mainButtons2: {
-      vector: vector,
       mainButton: "Devices",
       link: `/rooms/${roomId}/devices`,
     },
     mainButtons3: {
-      vector: vector,
       mainButton: "Delete room",
       onClick: deleteRoom,
     },

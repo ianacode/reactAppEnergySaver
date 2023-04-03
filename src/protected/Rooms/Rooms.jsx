@@ -10,7 +10,7 @@ import loginService from "../../services/LoginService";
 import { useEffect } from "react";
 import EnergySaving from "../../components/EnergySaving/EnergySaving";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
-function Rooms(props) {
+function Rooms() {
 
   const [home, setHome] = React.useState({});
 
@@ -51,5 +51,5 @@ function Rooms(props) {
       <Footer />
     </>
   );
-};
+}
 export default Rooms;

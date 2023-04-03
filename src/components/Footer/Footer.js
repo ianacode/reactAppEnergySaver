@@ -6,7 +6,7 @@ import home from "./assets/home.svg";
 import otherstrendTwo from "./assets/otherstrendTwo.svg";
 import document from "./assets/document.svg";
 
-function Footer(props) {
+function Footer() {
 
     const propsData = {
 
@@ -39,7 +39,7 @@ function Footer(props) {
             </div>
         </div>
     );
-};
+}
 
 
 export default Footer;

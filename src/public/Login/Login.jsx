@@ -4,7 +4,7 @@ import "./Login.css";
 import imagesLogin from "./assets/imagesLogin.svg";
 import loginService from "../../services/LoginService";
 import { useNavigate } from "react-router";
-function Login(props) {
+function Login() {
 
   let navigate = useNavigate();
   const [email, setEmail] = React.useState("mattiew@ua.pt");
@@ -56,5 +56,5 @@ function Login(props) {
 
     </div>
   );
-};
+}
 export default Login;
