@@ -57,7 +57,7 @@ class UserServiceFB {
       limitToLast(1)));
     const results = Object.values(snapshot.val())
     if (results.length > 0) {
-      user.id = results[0].id + 1;
+      user.id = +results[0].id + 1;
     } else {
       user.id = 1;
     }

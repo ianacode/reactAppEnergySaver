@@ -33,7 +33,7 @@ class HomeServiceFB {
       limitToLast(1)));
     const results = Object.values(snapshot.val())
     if (results.length > 0) {
-      home.id = results[0].id + 1;
+      home.id = +results[0].id + 1;
     } else {
       home.id = 1;
     }
