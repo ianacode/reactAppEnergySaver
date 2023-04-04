@@ -9,7 +9,7 @@ import {useNavigate, useParams} from "react-router";
 function ChangeMember() {
   const { memberId } = useParams();
   useEffect(() => {
-    userService.getUser(+memberId).then((member) => {
+    userService.getUser(memberId).then((member) => {
       setMember(member);
     });
   }, []);
@@ -47,7 +47,7 @@ function ChangeMember() {
     const dateOfBirth = new Date(member.dateOfBirth);
     const today = new Date();
     member.role = today.getFullYear() - dateOfBirth.getFullYear() > 18 ? "adult" : "child";
-    userService.addUser(member).then(() => {
+    userService.updateUser(member).then(() => {
       navigate("/members");
     });
   }
