@@ -1,18 +1,25 @@
 import { db } from '../../firebase';
-import { ref, child, get } from "firebase/database";
+import {ref, get, child, query, orderByChild, equalTo} from "firebase/database";
 
 class HomeServiceFB {
 
     async getHome(homeId) {
-        console.log("getHome", homeId);
-        const dbRef = ref(db);
-        const snapshot = await get(child(dbRef, `homes`))
-        if (snapshot.exists()) {
-            console.log(snapshot.val());
-            return snapshot.val()
+      // get home from firebase db filtering by name
+      console.log("getHome", homeId);
+      const dbRef = ref(db);
+      const homesRef = child(dbRef, "homes");
+      // filter by name
+      const orderedRef =  query(homesRef, orderByChild("id"), equalTo(""+homeId));
+      const snapshot = await get(orderedRef);
+      if (snapshot.exists()) {
+        const results = snapshot.val()
+        if (results.length > 0) {
+          console.log("getHome", results[0]);
+          return results[0];
         }
-        console.log("No data available");
-        throw Error("No data available")
+      }
+      console.log("No data available");
+      return {};
     }
 
     async addHome(home) {
