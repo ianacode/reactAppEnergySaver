@@ -1,9 +1,9 @@
-import UserServiceIDB from "./ldb/UserServiceIDB";
+import UserServiceFB from "./firebase/UserServiceFB";
 
 class UserService {
 
   constructor() {
-    this.service = UserServiceIDB
+    this.service = UserServiceFB
   }
 
   getUserByEmail(email) {

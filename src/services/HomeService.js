@@ -1,9 +1,9 @@
-import HomeServiceIDB from "./ldb/HomeServiceIDB";
+import HomeServiceFB from "./firebase/HomeServiceFB";
 
 class HomeService {
 
   constructor() {
-    this.service = HomeServiceIDB
+    this.service = HomeServiceFB
   }
   getHome(homeId) {
     return this.service.getHome(homeId);
