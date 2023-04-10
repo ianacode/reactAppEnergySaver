@@ -25,6 +25,9 @@ function AddRoom() {
   useEffect(() => {
     homeService.getHome(loginService.userAuthenticated().home_id)
       .then((home) => {
+        if (!home.rooms) {
+          home.rooms = [];
+        }
         setHome(home);
         setRoom({...room, id: uuidv4()});
       })

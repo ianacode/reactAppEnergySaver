@@ -26,9 +26,12 @@ function AddDevice() {
     homeService.getHome(loginService.userAuthenticated().home_id)
       .then((home) => {
         setHome(home);
-
+        console.log(home)
         const room = home.rooms.find((room) => room.id === roomId);
         if (room) {
+          if (!room.devices) {
+            room.devices = [];
+          }
           setRoom(room);
           setDevice({...device, id: uuidv4()});
 
