@@ -49,7 +49,7 @@ const RoomDetail = () => {
     },
     mainButtons1: {
       mainButton: "Challenges",
-      link: "/challenges",
+      link: "challenges",
     },
     mainButtons2: {
       mainButton: "Devices",

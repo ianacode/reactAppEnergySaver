@@ -90,6 +90,11 @@
   line-height: 24px;
 }
 
+.challenge-detail .completed {
+  align-self: flex-start;
+  margin-top: 30px;
+  margin-left: 45px;
+}
 
 
 .challenge-detail .objectives {
@@ -221,7 +226,6 @@
   background-color: #f4f7fb;
   border-radius: 25px;
   flex-direction: row;
-  flex-basis: 85%;
   justify-content: flex-start;
   align-items: center;
   padding-left: 18px;

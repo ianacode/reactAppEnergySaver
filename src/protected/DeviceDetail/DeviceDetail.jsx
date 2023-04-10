@@ -50,7 +50,7 @@ const DeviceDetail = () => {
     },
     mainButtons1: {
       mainButton: "Challenges",
-      link: "/challenges",
+      link: "challenges",
     },
     mainButtons2: {
       mainButton: "Delete device",

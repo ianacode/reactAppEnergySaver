@@ -9,7 +9,13 @@ const MainButtons = (props) => {
         onMouseEnter={() => setHover('active')}
         onMouseLeave={() => setHover('')}
         onTouchStart={() => setHover('active')}
-        onTouchEnd={() => setHover('')}>
+        onTouchEnd={() => setHover('')}
+      onClick={(event) => {
+        if (props.handle) {
+          event.preventDefault()
+          props.handle();
+        }
+      }}>
         {props.mainButton || "Save Data"}</div>
     </button>
   );

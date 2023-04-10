@@ -40,17 +40,18 @@ export default function Routes() {
       <Route path="notifications" element={<LoggedGuard Component={Notifications} />} />
       <Route path="notificationread" element={<LoggedGuard Component={NotificationRead} />} />
       <Route path="sendnotification" element={<LoggedGuard Component={SendNotification} />} />
-
-      <Route path="challenges">
-        <Route index element={<LoggedGuard Component={Challenges} />} />
-        <Route path=":challengeId" element={<LoggedGuard Component={ChallengeDetail} />} />
-      </Route>
+      <Route path="challenges" element={<LoggedGuard Component={Challenges} />} />
 
       <Route path="rooms" >
         <Route index element={<LoggedGuard Component={Rooms} />} />
         <Route path=":roomId" element={<LoggedGuard Component={RoomDetail} />} />
+        <Route path=":roomId/challenges" element={<LoggedGuard Component={Challenges} />} />
         <Route path=":roomId/devices" element={<LoggedGuard Component={RoomDevices} />} />
         <Route path=":roomId/devices/:deviceId" element={<LoggedGuard Component={DeviceDetail} />} />
+        <Route path=":roomId/devices/:deviceId/challenges">
+          <Route index element={<LoggedGuard Component={Challenges} />} />
+          <Route path=":challengeId" element={<LoggedGuard Component={ChallengeDetail} />} />
+        </Route>
         <Route path=":roomId/adddevice" element={<LoggedGuard Component={AddDevice} />} />
       </Route>
 
