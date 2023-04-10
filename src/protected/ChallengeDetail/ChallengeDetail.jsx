@@ -8,35 +8,47 @@ import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import {useNavigate, useParams} from "react-router";
 import homeService from "../../services/HomeService";
 import loginService from "../../services/LoginService";
+import {useDispatch, useSelector} from "react-redux";
+import {setDevice, setHome, setRoom} from "../../store/home-slice";
 
 const ChallengeDetail = () => {
 
   const { roomId, deviceId, challengeId } = useParams();
-  console.log(roomId, deviceId, challengeId);
-  const [home, setHome] = useState({});
-  const [room, setRoom] = useState({});
-  const [device, setDevice] = useState({});
+  const navigate = useNavigate();
+  const home = useSelector((state) => state.home.home);
   const [challenge, setChallenge] = useState([]);
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    homeService.getHome(loginService.userAuthenticated().home_id)
-      .then((home) => {
-        setHome(home);
-        const room = home.rooms.find((room) => room.id === roomId);
+    if (!home.id) {
+      homeService.getHome(loginService.userAuthenticated().home_id)
+        .then((home) => {
+          dispatch(setHome(home));
+        })
+    } else {
+      dispatch(setHome(home));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (home) {
+      if (home.rooms) {
+        const room = home.rooms.find((room) => {
+          console.log(room)
+          return room.id === roomId
+        });
         const device = room && room.devices.find((device) => device.id === deviceId)
         const challenge = device && device.challenges.find((challenge) => challenge.id === challengeId)
         if (challenge) {
-          setRoom(room);
-          setDevice(device);
+          dispatch(setRoom(room));
+          dispatch(setDevice(device));
           setChallenge(challenge);
-          console.log('challenge', challenge);
-
         } else {
-          navigate("/page-not-found")
+          navigate("/rooms")
         }
-      })
-  }, []);
+      }
+    }
+  }, [home]);
 
   function updateChallenge(event, objective) {
     setChallenge({
@@ -52,20 +64,6 @@ const ChallengeDetail = () => {
       })
     });
   }
-
-
-  useState(() => {
-    console.log('challenge....', challenge);
-  }, [challenge]);
-  useState(() => {
-    console.log('device', device);
-  }, [device]);
-  useState(() => {
-    console.log('room', room);
-  }, [room]);
-  useState(() => {
-    console.log('home', home);
-  }, [home]);
 
   return (
     <>

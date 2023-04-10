@@ -1,4 +1,5 @@
 import * as React from "react";
+import {useEffect} from "react";
 import "./RoomDevices.css";
 import RoomsDeviceDetail from "./components/RoomsDeviceDetail";
 import MainButtons from "./components/MainButtons";
@@ -8,33 +9,46 @@ import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import {useNavigate, useParams} from "react-router";
 import homeService from "../../services/HomeService";
 import loginService from "../../services/LoginService";
-import {useEffect, useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {deleteDevice, setHome, setRoom} from "../../store/home-slice";
+
 const RoomDevices = () => {
 
   const { roomId } = useParams();
   const navigate = useNavigate();
-  const [home, setHome] = useState({});
-  const [room, setRoom] = useState({});
+  const home = useSelector((state) => state.home.home);
+  const room = useSelector((state) => state.home.room);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    homeService.getHome(loginService.userAuthenticated().home_id)
-      .then((home) => {
-        setHome(home);
-
-        const room = home.rooms.find((room) => room.id === roomId);
-        if (room) {
-          setRoom(room);
-        } else {
-          navigate("/404")
-        }
-      })
+    if (!home.id) {
+      homeService.getHome(loginService.userAuthenticated().home_id)
+        .then((home) => {
+          dispatch(setHome(home));
+        })
+    } else {
+      dispatch(setHome(home));
+    }
   }, []);
 
-  function deleteDevice(device) {
-    room.devices.splice(room.devices.indexOf(device), 1);
-    setRoom({...room});
-    homeService.updateHome(home)
-  }
+  useEffect(() => {
+    if (home) {
+      console.log('updateHome', home)
+      homeService.updateHome(home).then(() => {
+        if (home.rooms) {
+          const room = home.rooms.find((room) => {
+            console.log(room)
+            return room.id === roomId
+          });
+          if (room) {
+            dispatch(setRoom(room));
+          } else {
+            navigate("/rooms")
+          }
+        }
+      })
+    }
+  }, [home]);
 
   const propsData = {
     mainButtons: {
@@ -54,7 +68,9 @@ const RoomDevices = () => {
                 key={device.id}
                 className="rooms-an-ddevices-instance-1"
                 device={device}
-                deleteDevice={deleteDevice}
+                deleteDevice={(device) => {
+                  dispatch(deleteDevice(device.id));
+                }}
               />
             ))}
           </div>

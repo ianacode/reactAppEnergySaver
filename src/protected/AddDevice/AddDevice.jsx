@@ -8,6 +8,8 @@ import {useNavigate, useParams} from "react-router";
 import homeService from "../../services/HomeService";
 import loginService from "../../services/LoginService";
 import { v4 as uuidv4 } from 'uuid';
+import {addDevice, setDevice, setHome, setRoom} from "../../store/home-slice";
+import {useDispatch, useSelector} from "react-redux";
 
 
 const NEW_DEVICE_CHALLENGES = [
@@ -84,36 +86,51 @@ const NEW_DEVICE_CHALLENGES = [
 ];
 
 function AddDevice() {
-  const { roomId } = useParams();
-  const navigate = useNavigate()
-  const [hover, setHover] = useState('');
 
-  const [home, setHome] = useState({});
-  const [room, setRoom] = useState({});
-  const [device, setDevice] = useState({
-    id: "",
-    name: "",
-    power: 0,
-  });
+  const { roomId } = useParams();
+  const navigate = useNavigate();
+  const home = useSelector((state) => state.home.home);
+  const device = useSelector((state) => state.home.device);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    homeService.getHome(loginService.userAuthenticated().home_id)
-      .then((home) => {
-        setHome(home);
-        console.log(home)
-        const room = home.rooms.find((room) => room.id === roomId);
-        if (room) {
-          if (!room.devices) {
-            room.devices = [];
-          }
-          setRoom(room);
-          setDevice({...device, id: uuidv4()});
-
-        } else {
-          navigate("/404")
-        }
-      })
+    if (!home.id) {
+      homeService.getHome(loginService.userAuthenticated().home_id)
+        .then((home) => {
+          dispatch(setHome(home));
+        })
+    } else {
+      dispatch(setHome(home));
+    }
   }, []);
+
+  useEffect(() => {
+    if (home) {
+      console.log('updateHome', home)
+      if (home.rooms) {
+        const room = home.rooms.find((room) => {
+          console.log(room)
+          return room.id === roomId
+        });
+        if (room) {
+          dispatch(setRoom(room));
+        } else {
+          navigate("/rooms")
+        }
+      }
+    }
+  }, [home]);
+
+  useEffect(() => {
+    if (device.id) {
+      console.log('updateDevice', device)
+      homeService.updateHome(home).then(() => {
+        navigate(`/rooms/${roomId}/devices`)
+      })
+    }
+  }, [device]);
+
+  const [hover, setHover] = useState('');
 
   function submitForm(event) {
     // react will call this function when the form is submitted
@@ -139,11 +156,7 @@ function AddDevice() {
       })
     }
 
-    device.challenges = new_challenges_for_device(device.name);
-    room.devices.push(device)
-    homeService.updateHome(home).then(() => {
-      navigate(`/rooms/${roomId}/devices`);
-    });
+    dispatch(addDevice({...device, challenges: new_challenges_for_device(device.name)}));
   }
 
 
@@ -157,14 +170,14 @@ function AddDevice() {
           placeholder="Device name"
           type="text"
           value={device.name}
-          onChange={(event) => setDevice({...device, name: event.target.value})}
+          onChange={(event) => dispatch(setDevice({...device, name: event.target.value}))}
         />
         <input
           className="login-form-stroke"
           placeholder="Power / Watts"
           type="number"
           value={device.power}
-          onChange={(event) => setDevice({...device, power: +event.target.value})}
+          onChange={(event) => dispatch(setDevice({...device, power: +event.target.value}))}
         />
         <button className={`main-buttons main-buttons-instance-1 ${hover}`}
                 onClick={submitForm}>
