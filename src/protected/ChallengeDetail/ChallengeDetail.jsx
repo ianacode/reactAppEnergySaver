@@ -1,5 +1,5 @@
 import * as React from "react";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import "./ChallengeDetail.css";
 import MainButtons from "./components/MainButtons";
 import Header from "../../components/Header/Header";
@@ -9,14 +9,14 @@ import {useNavigate, useParams} from "react-router";
 import homeService from "../../services/HomeService";
 import loginService from "../../services/LoginService";
 import {useDispatch, useSelector} from "react-redux";
-import {setDevice, setHome, setRoom} from "../../store/home-slice";
+import {setChallenge, setDevice, setHome, setRoom, updateChallenge} from "../../store/home-slice";
 
 const ChallengeDetail = () => {
 
   const { roomId, deviceId, challengeId } = useParams();
   const navigate = useNavigate();
   const home = useSelector((state) => state.home.home);
-  const [challenge, setChallenge] = useState([]);
+  const challenge = useSelector((state) => state.home.challenge);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const ChallengeDetail = () => {
         if (challenge) {
           dispatch(setRoom(room));
           dispatch(setDevice(device));
-          setChallenge(challenge);
+          dispatch(setChallenge(challenge));
         } else {
           navigate("/rooms")
         }
@@ -50,8 +50,8 @@ const ChallengeDetail = () => {
     }
   }, [home]);
 
-  function updateChallenge(event, objective) {
-    setChallenge({
+  function updateObjective(event, objective) {
+    dispatch(updateChallenge({
       ...challenge,
       objectives: challenge.objectives.map((obj) => {
         if (obj.id === objective.id) {
@@ -62,7 +62,7 @@ const ChallengeDetail = () => {
         }
         return obj;
       })
-    });
+    }));
   }
 
   return (
@@ -93,7 +93,7 @@ const ChallengeDetail = () => {
         {challenge.objectives.map(objective => (
           <label className="checkbox style-d" key={objective.id}>
             <input type="checkbox" defaultChecked={objective.achieved}
-               onChange={(event) => updateChallenge(event, objective)} />
+               onChange={(event) => updateObjective(event, objective)} />
             <div className="checkbox__checkmark"></div>
             <div className="checkbox__body">{objective.description}</div>
           </label>
@@ -126,6 +126,7 @@ const ChallengeDetail = () => {
                 return room;
               })
             }).then(() => {
+              dispatch(setHome(home));
               navigate(-1);
             });
           }}

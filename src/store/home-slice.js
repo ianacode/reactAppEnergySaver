@@ -46,15 +46,6 @@ const homeSlice = createSlice({
             }
             state.home.rooms.push(state.room);
         },
-        updateRoom(state, action){
-            state.room = action.payload;
-            state.home.rooms = state.home.rooms.map(room => {
-                if(room.id === action.payload.id){
-                    return {...action.payload};
-                }
-                return room;
-            });
-        },
         deleteRoom(state, action){
             state.room = {};
             state.home.rooms = state.home.rooms.filter(room => room.id !== action.payload);
@@ -123,7 +114,7 @@ const homeSlice = createSlice({
 
 export const {
   setHome, setRoom, setDevice, setChallenge,
-  addRoom, updateRoom, deleteRoom,
+  addRoom, deleteRoom,
   addDevice, updateDevice, deleteDevice,
   updateChallenge } = homeSlice.actions;
 
