@@ -1,5 +1,6 @@
 import {db} from '../../firebase';
-import {child, equalTo, get, push, update, remove, orderByChild, query, ref, limitToLast} from "firebase/database";
+import {child, equalTo, get, push, update, remove, orderByChild, query, ref} from "firebase/database";
+import { v4 as uuidv4 } from 'uuid';
 
 class HomeServiceFB {
   homes = child(ref(db), "homes");
@@ -7,7 +8,7 @@ class HomeServiceFB {
   async getByID(id) {
     return await get(query(this.homes,
       orderByChild("id"),
-      equalTo("" + id)));
+      equalTo(id)));
   }
 
   async getHome(homeId) {
@@ -28,15 +29,7 @@ class HomeServiceFB {
 
   async addHome(home) {
     console.log("addHome", home);
-    const snapshot = await get(query(this.homes,
-      orderByChild("id"),
-      limitToLast(1)));
-    const results = Object.values(snapshot.val())
-    if (results.length > 0) {
-      home.id = +results[0].id + 1;
-    } else {
-      home.id = 1;
-    }
+    home.id = uuidv4();
     await push(this.homes, home);
   }
 

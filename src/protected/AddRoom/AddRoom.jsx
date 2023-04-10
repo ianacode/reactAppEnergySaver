@@ -7,6 +7,7 @@ import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import {useNavigate} from "react-router";
 import loginService from "../../services/LoginService";
 import homeService from "../../services/HomeService";
+import { v4 as uuidv4 } from 'uuid';
 
 function AddRoom() {
 
@@ -25,11 +26,7 @@ function AddRoom() {
     homeService.getHome(loginService.userAuthenticated().home_id)
       .then((home) => {
         setHome(home);
-        // get max room if from home
-        const maxRoomId = home.rooms.reduce((max, room) => {
-          return +room.id > max ? +room.id : max;
-        }, []);
-        setRoom({...room, id: +maxRoomId + 1});
+        setRoom({...room, id: uuidv4()});
       })
   }, []);
 

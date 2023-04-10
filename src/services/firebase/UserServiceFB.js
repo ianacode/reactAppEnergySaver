@@ -1,5 +1,6 @@
-import {child, equalTo, get, orderByChild, query, ref, remove, push, update, limitToLast} from "firebase/database";
+import {child, equalTo, get, orderByChild, query, ref, remove, push, update} from "firebase/database";
 import {db} from "../../firebase";
+import { v4 as uuidv4 } from 'uuid';
 
 class UserServiceFB {
 
@@ -8,7 +9,7 @@ class UserServiceFB {
   async getByID(id) {
     return await get(query(this.users,
       orderByChild("id"),
-      equalTo("" + id)));
+      equalTo(id)));
   }
 
   async getUserByEmail(email) {
@@ -29,7 +30,7 @@ class UserServiceFB {
     console.log("getMembers", homeId);
     const snapshot = await get(query(this.users,
       orderByChild("home_id"),
-      equalTo(""+homeId)));
+      equalTo(homeId)));
     if (snapshot.exists()) {
       return Object.values(snapshot.val());
     }
@@ -52,15 +53,7 @@ class UserServiceFB {
 
   async addUser(user) {
     console.log("addUser", user);
-    const snapshot = await get(query(this.users,
-      orderByChild("id"),
-      limitToLast(1)));
-    const results = Object.values(snapshot.val())
-    if (results.length > 0) {
-      user.id = +results[0].id + 1;
-    } else {
-      user.id = 1;
-    }
+    user.id = uuidv4();
     await push(this.users, user);
   }
 

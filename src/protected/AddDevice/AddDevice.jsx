@@ -7,6 +7,7 @@ import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import {useNavigate, useParams} from "react-router";
 import homeService from "../../services/HomeService";
 import loginService from "../../services/LoginService";
+import { v4 as uuidv4 } from 'uuid';
 
 function AddDevice() {
   const { roomId } = useParams();
@@ -26,15 +27,10 @@ function AddDevice() {
       .then((home) => {
         setHome(home);
 
-        const room = home.rooms.find((room) => +room.id === +roomId);
+        const room = home.rooms.find((room) => room.id === roomId);
         if (room) {
           setRoom(room);
-
-          // get max room if from home
-          const maxId = room.devices.reduce((max, device) => {
-            return +device.id > max ? +device.id : max;
-          }, []);
-          setDevice({...device, id: +maxId + 1});
+          setDevice({...device, id: uuidv4()});
 
         } else {
           navigate("/404")

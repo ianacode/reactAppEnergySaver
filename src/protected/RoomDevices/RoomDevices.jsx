@@ -21,7 +21,7 @@ const RoomDevices = () => {
       .then((home) => {
         setHome(home);
 
-        const room = home.rooms.find((room) => +room.id === +roomId);
+        const room = home.rooms.find((room) => room.id === roomId);
         if (room) {
           setRoom(room);
         } else {

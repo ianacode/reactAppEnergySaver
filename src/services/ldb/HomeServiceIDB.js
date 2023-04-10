@@ -105,7 +105,7 @@ class HomeServiceIDB {
   }
 
   async getHome(homeId) {
-    return (await this.db()).get('homes', +homeId);
+    return (await this.db()).get('homes', homeId);
   }
 
   async addHome(home) {
