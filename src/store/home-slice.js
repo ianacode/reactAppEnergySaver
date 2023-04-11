@@ -47,7 +47,7 @@ const homeSlice = createSlice({
             state.home.rooms.push(state.room);
         },
         deleteRoom(state, action){
-            state.room = {};
+            state.room = EMPTY_ROOM;
             state.home.rooms = state.home.rooms.filter(room => room.id !== action.payload);
         },
         addDevice(state, action){

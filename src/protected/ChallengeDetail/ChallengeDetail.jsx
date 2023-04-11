@@ -104,29 +104,7 @@ const ChallengeDetail = () => {
           text="Save Data"
           handle={() => {
             console.log('save data');
-            homeService.updateHome({
-              ...home, rooms: home.rooms.map((room) => {
-                if (room.id === roomId) {
-                  return {
-                    ...room, devices: room.devices.map((device) => {
-                      if (device.id === deviceId) {
-                        return {
-                          ...device, challenges: device.challenges.map((c) => {
-                            if (c.id === challengeId) {
-                              return challenge;
-                            }
-                            return c;
-                          })
-                        }
-                      }
-                      return device;
-                    })
-                  }
-                }
-                return room;
-              })
-            }).then(() => {
-              dispatch(setHome(home));
+            homeService.updateHome(home).then(() => {
               navigate(-1);
             });
           }}
