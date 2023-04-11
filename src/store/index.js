@@ -1,13 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import challengeSlice from "./challenge-slice";
+import homeSlice from "./home-slice";
 // import cartSlice from "./cart-slice";
 
 const store = configureStore({
     reducer: {
-        challenge: challengeSlice.reducer,
-        // cart: cartSlice.reducer,
+        home: homeSlice.reducer,
     }
-
 })
 
 export default store;
