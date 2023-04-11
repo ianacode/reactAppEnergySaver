@@ -6,10 +6,10 @@ import "./index.css";
 import App from "./App";
 
 // import { db } from './firebase';
-//
-// import { ref, child, get, set, query, equalTo } from "firebase/database";
-//
-// //get user with specific key
+
+// import { ref, child, get, query, equalTo } from "firebase/database";
+
+// //get user with specific key 
 // const dbRef = ref(db);
 // const userId = 2
 // get(child(dbRef, `users/${userId}`)).then((snapshot) => {
@@ -21,11 +21,11 @@ import App from "./App";
 // }).catch((error) => {
 //   console.error(error);
 // });
-//
-//
+
+
 // const members = query(ref(db, 'homes'), equalTo(1));
 // console.log(members);
-//
+
 
 
 
@@ -52,8 +52,8 @@ import App from "./App";
 
 
 
-//
-//
+
+
 // // get list of users
 // get(child(dbRef, `users/`)).then((snapshot) => {
 //   if (snapshot.exists()) {
@@ -64,7 +64,6 @@ import App from "./App";
 // }).catch((error) => {
 //   console.error(error);
 // });
-//
 // // get list of homes
 // get(child(dbRef, `homes/`)).then((snapshot) => {
 //   if (snapshot.exists()) {
@@ -75,8 +74,8 @@ import App from "./App";
 // }).catch((error) => {
 //   console.error(error);
 // });
-//
-//
+
+
 // // add user with a specific ID
 // function writeUserData(userId, name, email, imageUrl) {
 //   set(ref(db, 'users/' + userId), {
@@ -86,7 +85,6 @@ import App from "./App";
 //   });
 // }
 // writeUserData(5, "Leo555", "fdfd@sdsd.ru", null);
-//
 
 
 
