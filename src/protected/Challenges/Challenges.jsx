@@ -96,10 +96,11 @@ const Challenges = () => {
           .filter(challenge => !challenge.objectives.every(objective => objective.achieved))
           .map((challenge) => {
           return (
+          
             <div className="field-2" onClick={() => navigate(`/rooms/${challenge.roomId}/devices/${challenge.deviceId}/challenges/${challenge.id}`)}
                  key={challenge.roomId+challenge.deviceId+challenge.id}>
               <div className="percentage" style={{
-                flexBasis: `${challenge.objectives.filter(objective => objective.achieved).length / challenge.objectives.length * 100}%`
+                flexBasis: `${challenge.objectives.filter(objective => objective.achieved).length / challenge.objectives.length * 100 + 10}%`
               }}>
                 <span className="challenge-3">{challenge.name}</span>
               </div>

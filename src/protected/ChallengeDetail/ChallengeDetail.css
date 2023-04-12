@@ -92,8 +92,8 @@
 
 .challenge-detail .completed {
   align-self: flex-start;
-  margin-top: 30px;
-  margin-left: 45px;
+  margin-left: 46px;
+  line-height: 24px;
 }
 
 
@@ -308,4 +308,16 @@
   font-size: .938rem;
   transition: color 0.25s ease;
   margin-left: 6px;
+}
+
+.challenge-detail .challenges-1 {
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 1.05rem;
+}
+
+.challenge-detail .challenge-3 {
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 1.05rem;
 }

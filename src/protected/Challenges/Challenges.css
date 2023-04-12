@@ -84,6 +84,8 @@
 
 .challenges .challenges-1 {
   text-transform: uppercase;
+  position: absolute;
+  font-size: 1.05rem;
 }
 
 .challenges .not-completed-yet {
@@ -156,6 +158,8 @@
 
 .challenges .challenge-3 {
   text-transform: uppercase;
+  position: absolute;
+  font-size: 1.05rem;
 }
 
 .challenges .completed {

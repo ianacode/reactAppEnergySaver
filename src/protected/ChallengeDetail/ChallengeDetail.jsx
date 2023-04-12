@@ -82,7 +82,7 @@ const ChallengeDetail = () => {
 
         <div className="field">
           <div className="percentage" style={{
-            flexBasis: `${challenge.objectives.filter(objective => objective.achieved).length / challenge.objectives.length * 100}%`
+            flexBasis: `${challenge.objectives.filter(objective => objective.achieved).length / challenge.objectives.length * 100 + 10}%`
           }}>
             <span className="challenge-3">{ challenge.name }</span>
           </div>
