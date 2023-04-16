@@ -2,11 +2,49 @@ import * as React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import "./Registration.css";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from '../../firebase';
+
+import loginService from "../../services/LoginService";
 
 function Registration() {
 
   const navigate = useNavigate();
   const [hover, setHover] = useState('');
+
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const [user, setUser] = useState({});
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+
+  const register = async () => {
+    try {
+      const user = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      loginService.login(email, password).then((authenticated) => {
+        if (authenticated) {
+          navigate("/");
+        }
+      });
+      console.log(user);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  const logout = async () => {
+    await signOut(auth);
+  };
+
+
+
 
   return (
 
@@ -58,12 +96,18 @@ function Registration() {
         className="login-form-stroke"
         placeholder="Email"
         type="email"
+        onChange={(event) => {
+          setEmail(event.target.value);
+        }}
       />
 
       <input
         className="login-form-stroke"
         placeholder="Password"
         type="password"
+        onChange={(event) => {
+          setPassword(event.target.value);
+        }}
       />
 
       <input
@@ -72,7 +116,7 @@ function Registration() {
         type="password"
       />
 
-      <button className={`main-buttons main-buttons-instance-1 ${hover}`}>
+      <button className={`main-buttons main-buttons-instance-1 ${hover}`} onClick={register}>
         <div className="vector"
           onMouseEnter={() => setHover('active')}
           onMouseLeave={() => setHover('')}
@@ -88,6 +132,11 @@ function Registration() {
       <span className="dont-have-an-account">
         Do you have an account? <a className="dont-have-an-account-sign-up" onClick={() => navigate('/login')}>Log in</a>
       </span>
+
+      <h4> User Logged In: </h4>
+      {user?.email}
+
+      <button onClick={logout}> Sign Out </button>
 
     </div>
 
