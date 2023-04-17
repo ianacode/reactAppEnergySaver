@@ -7,12 +7,12 @@ import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import {useNavigate, useParams} from "react-router";
 import homeService from "../../services/HomeService";
-import loginService from "../../services/LoginService";
 import {useDispatch, useSelector} from "react-redux";
 import {setChallenge, setDevice, setHome, setRoom, updateChallenge} from "../../store/home-slice";
 
 const ChallengeDetail = () => {
 
+  const user = useSelector((state) => state.loggedUser.currentUser);
   const { roomId, deviceId, challengeId } = useParams();
   const navigate = useNavigate();
   const home = useSelector((state) => state.home.home);
@@ -21,7 +21,7 @@ const ChallengeDetail = () => {
 
   useEffect(() => {
     if (!home.id) {
-      homeService.getHome(loginService.userAuthenticated().home_id)
+      homeService.getHome(user.home_id)
         .then((home) => {
           dispatch(setHome(home));
         })

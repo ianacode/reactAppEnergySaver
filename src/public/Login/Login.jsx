@@ -5,8 +5,6 @@ import imagesLogin from "./assets/imagesLogin.svg";
 import loginService from "../../services/LoginService";
 import { useNavigate } from "react-router";
 
-import { signInWithGoogle } from '../../firebase';
-
 
 function Login() {
 
@@ -17,6 +15,14 @@ function Login() {
 
   function handleLogin() {
     loginService.login(email, password).then((authenticated) => {
+      if (authenticated) {
+        navigate("/");
+      }
+    })
+  }
+
+  function signInWithGoogle() {
+    loginService.loginWithGoogle().then((authenticated) => {
       if (authenticated) {
         navigate("/");
       }
@@ -56,11 +62,9 @@ function Login() {
         Don’t have an account? <a className="dont-have-an-account-sign-up" onClick={() => navigate('/registration')}>Sign up</a>
       </span>
 
-      <button className="login-with-google-btn" onClick={signInWithGoogle}>
+      <button className="login-with-google-btn" onClick={() => signInWithGoogle()}>
         Sign in with Google
       </button>
-
-
 
     </div>
   );

@@ -7,17 +7,18 @@ import { useNavigate } from "react-router";
 import userService from "../../services/UserService";
 import { useEffect } from "react";
 import Footer from "../../components/Footer/Footer";
+import {useSelector} from "react-redux";
 
 
 function Members() {
 
   let navigate = useNavigate();
-  function logout() {
-    loginService.logout();
+  async function logout() {
+    await loginService.logout();
     navigate("/loginreg");
   }
 
-  const user = loginService.userAuthenticated();
+  const user = useSelector((state) => state.loggedUser.currentUser);
   const [members, setMembers] = React.useState([]);
   useEffect(() => {
     userService.getMembers(user.home_id).then((data) => {
@@ -40,7 +41,7 @@ function Members() {
         </div>
 
 <div className="blockbtns">
-        {loginService.isAdult() && (
+        {user.role === 'adult' && (
           <button className={`main-buttons main-buttons-instance-1 ${hover}`}
             onClick={() => navigate('/addmember')} >
             <div className="members-vector"

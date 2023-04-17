@@ -6,11 +6,11 @@ import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import {useEffect, useState} from "react";
 import homeService from "../../services/HomeService";
-import loginService from "../../services/LoginService";
 import {useDispatch, useSelector} from "react-redux";
 import {setDevice, setHome, setRoom} from "../../store/home-slice";
 const Challenges = () => {
 
+  const user = useSelector((state) => state.loggedUser.currentUser);
   const { roomId, deviceId } = useParams();
   const navigate = useNavigate();
   const home = useSelector((state) => state.home.home);
@@ -19,7 +19,7 @@ const Challenges = () => {
 
   useEffect(() => {
     if (!home.id) {
-      homeService.getHome(loginService.userAuthenticated().home_id)
+      homeService.getHome(user.home_id)
         .then((home) => {
           dispatch(setHome(home));
         })
@@ -53,7 +53,7 @@ const Challenges = () => {
         } else {
           setRoom(room);
           // all challenges from all devices in room
-          setChallenges(room.devices.reduce((acc, device) => {
+          setChallenges((room.devices || []).reduce((acc, device) => {
             if (device.challenges){
               return [...acc, ...device.challenges.map(challenge => {
                 return {
@@ -69,7 +69,7 @@ const Challenges = () => {
       } else {
         // all challenges from all room and devices
         setChallenges(home.rooms.reduce((acc, room) => {
-          return [...acc, ...room.devices.reduce((acc, device) => {
+          return [...acc, ...(room.devices || []).reduce((acc, device) => {
             if (device.challenges){
               return [...acc, ...device.challenges.map(challenge => {
                 return {
@@ -96,7 +96,7 @@ const Challenges = () => {
           .filter(challenge => !challenge.objectives.every(objective => objective.achieved))
           .map((challenge) => {
           return (
-          
+
             <div className="field-2" onClick={() => navigate(`/rooms/${challenge.roomId}/devices/${challenge.deviceId}/challenges/${challenge.id}`)}
                  key={challenge.roomId+challenge.deviceId+challenge.id}>
               <div className="percentage" style={{

@@ -1,14 +1,14 @@
 import React from 'react';
 import {Navigate} from "react-router-dom";
-import loginService from "./services/LoginService";
+import {useSelector} from "react-redux";
 
 export const LoggedGuard = ({ Component, ...props }) => (
-  loginService.isAuthenticated()
+  useSelector((state) => state.loggedUser.currentUser) !== undefined
     ? <Component {...props} />
     : <Navigate to='/loginreg' replace />
 )
 export const NotLoggedGuard = ({ Component, ...props }) => (
-  !loginService.isAuthenticated()
+  useSelector((state) => state.loggedUser.currentUser) === undefined
     ? <Component {...props} />
     : <Navigate to='/' replace />
 )

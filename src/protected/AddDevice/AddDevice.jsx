@@ -6,7 +6,6 @@ import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import {useNavigate, useParams} from "react-router";
 import homeService from "../../services/HomeService";
-import loginService from "../../services/LoginService";
 import { v4 as uuidv4 } from 'uuid';
 import {addDevice, setDevice, setHome, setRoom} from "../../store/home-slice";
 import {useDispatch, useSelector} from "react-redux";
@@ -87,6 +86,7 @@ const NEW_DEVICE_CHALLENGES = [
 
 function AddDevice() {
 
+  const user = useSelector((state) => state.loggedUser.currentUser);
   const { roomId } = useParams();
   const navigate = useNavigate();
   const home = useSelector((state) => state.home.home);
@@ -95,7 +95,7 @@ function AddDevice() {
 
   useEffect(() => {
     if (!home.id) {
-      homeService.getHome(loginService.userAuthenticated().home_id)
+      homeService.getHome(user.home_id)
         .then((home) => {
           dispatch(setHome(home));
         })

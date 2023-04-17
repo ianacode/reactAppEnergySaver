@@ -17,13 +17,17 @@ class UserServiceFB {
     const snapshot = await get(query(this.users,
       orderByChild("email"),
       equalTo(email)));
+    if (!snapshot.exists()) {
+      console.log("No user exists");
+      return undefined;
+    }
     const results = Object.values(snapshot.val())
     if (results.length > 0) {
       console.log("getUserByEmail", results[0]);
       return results[0];
     }
     console.log("No data available");
-    return {};
+    return undefined;
   }
 
   async getMembers(homeId) {
@@ -41,6 +45,10 @@ class UserServiceFB {
   async getUser(id) {
     console.log("getUser", id);
     const snapshot = await this.getByID(id);
+    if (!snapshot.exists()) {
+      console.log("No user exists");
+      return {};
+    }
     const results = Object.values(snapshot.val())
     console.log(results)
     if (results.length > 0) {
@@ -50,7 +58,7 @@ class UserServiceFB {
     console.log("No data available");
     return {};
   }
-  
+
 
 
   async addUser(user) {

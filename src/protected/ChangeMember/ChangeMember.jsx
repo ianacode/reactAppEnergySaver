@@ -4,9 +4,12 @@ import "./ChangeMember.css";
 import Footer from "../../components/Footer/Footer";
 import userService from "../../services/UserService";
 import {useNavigate, useParams} from "react-router";
+import {useDispatch, useSelector} from "react-redux";
+import {loggedIn} from "../../store/logged-user-slice";
 
 
 function ChangeMember() {
+  const user = useSelector((state) => state.loggedUser.currentUser);
   const { memberId } = useParams();
   useEffect(() => {
     userService.getUser(memberId).then((member) => {
@@ -17,6 +20,7 @@ function ChangeMember() {
   const navigate = useNavigate()
   const [hover, setHover] = useState('');
   const [hover2, setHover2] = useState('');
+  const dispatch = useDispatch();
 
   const [member, setMember] = useState({
     first_name: "",
@@ -46,8 +50,11 @@ function ChangeMember() {
     // set adult if dateOfBird is before 18 years ago
     const dateOfBirth = new Date(member.dateOfBirth);
     const today = new Date();
-    member.role = today.getFullYear() - dateOfBirth.getFullYear() > 18 ? "adult" : "child";
+    member.role = today.getFullYear() - dateOfBirth.getFullYear() >= 18 ? "adult" : "child";
     userService.updateUser(member).then(() => {
+      if (member.id === user.id) {
+        dispatch(loggedIn(member));
+      }
       navigate("/members");
     });
   }

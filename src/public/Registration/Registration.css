@@ -16,6 +16,23 @@
   display: flex;
 }
 
+.registration .select-image {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.registration .imageProfile {
+  width: 40px;
+  height: 40px;
+  flex: 0;
+}
+
+.registration .labelProfile {
+  flex: 1;
+}
+
+
 .registration .images-login {
   width: 344px;
   height: 204px;
@@ -134,65 +151,10 @@
 
 
 
-
-::-webkit-calendar-picker-indicator{
-  /* background-color: #ffffff; */
-  padding: 25px;
-  cursor: pointer;
-  border-radius: 3px;
-  filter: invert(52%) sepia(69%) saturate(1472%) hue-rotate(360deg) brightness(102%) contrast(105%);
- 
-}
-
-
-input[type="file"] {
-  display: none;
- 
-}
-
-
- /* label {
-  text-transform: uppercase;
-} */
-
-
- .select-image {
-
-  text-align: left;
-  padding-left: 20px;
-  color: #ffffff;
-  background-color: #0000;
-  border: none;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  font-family: Montserrat, Arial;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 24px;
-  display: flex;
-  width: 327px;
-
-
-  background-color: #ff8a00 ;
-  border-radius: 25px;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 52px;
-  margin-top: 12px;
-  box-shadow: 0px 20px 25px rgb(0 0 0 / 10%);
-
-}
-
-
-
-input:focus {
-  /* outline: 0;
-  outline-offset: 0; */
-  /* outline-color: #ff8a00; */
-
-  outline: solid 2px #ff8a00;
-  outline-offset: -2px;
+.registration .error {
+  color: red;
+  font-size: 1em;
+  margin-top: 30px;
+  width: 50%;
+  margin-bottom: 0px;
 }

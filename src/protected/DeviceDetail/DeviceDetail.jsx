@@ -7,7 +7,6 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import SvgInfo from "./components/SvgInfo";
-import loginService from "../../services/LoginService";
 import homeService from "../../services/HomeService";
 import {useDispatch, useSelector} from "react-redux";
 import {deleteDevice, setDevice, setHome, setRoom} from "../../store/home-slice";
@@ -15,6 +14,7 @@ import {deleteDevice, setDevice, setHome, setRoom} from "../../store/home-slice"
 
 const DeviceDetail = () => {
 
+  const user = useSelector((state) => state.loggedUser.currentUser);
   const { roomId, deviceId } = useParams();
   const navigate = useNavigate();
   const home = useSelector((state) => state.home.home);
@@ -23,7 +23,7 @@ const DeviceDetail = () => {
 
   useEffect(() => {
     if (!home.id) {
-      homeService.getHome(loginService.userAuthenticated().home_id)
+      homeService.getHome(user.home_id)
         .then((home) => {
           dispatch(setHome(home));
         })
@@ -95,7 +95,7 @@ const DeviceDetail = () => {
         />
 
 
-        {loginService.isAdult() && (
+        {user.role === 'adult' && (
           <MainButtons
             className="main-buttons-2-instance"
             {...propsData.mainButtons2}

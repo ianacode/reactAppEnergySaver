@@ -20,14 +20,46 @@ import Login from "./public/Login/Login";
 import Registration from "./public/Registration/Registration";
 import NotFoundPage from "./public/NotFoundPage/NotFoundPage";
 import ChangeMember from "./protected/ChangeMember/ChangeMember";
-import React from "react";
+import React, {useEffect} from "react";
+import { onAuthStateChanged } from "firebase/auth";
 
 import {
   LoggedGuard,
   NotLoggedGuard,
 } from "./RoutesGuards";
+import {auth} from "./firebase";
+import {loggedIn, loggedOut} from "./store/logged-user-slice";
+import {useDispatch} from "react-redux";
+import userService from "./services/UserService";
+import {setHome} from "./store/home-slice";
 
 export default function Routes() {
+  const dispatch = useDispatch();
+  useEffect(()=>{
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        const uid = user.uid;
+        const email = user.email;
+        console.log("uid", uid)
+        userService.getUserByEmail(email).then((user)=>{
+          console.log("user", user)
+          dispatch(setHome({}));
+          dispatch(loggedIn(user));
+        });
+
+      } else {
+        // User is signed out
+        // ...
+        console.log("user is logged out")
+        dispatch(setHome({}));
+        dispatch(loggedOut());
+      }
+    });
+  }, [])
+
+
   return (
     <BaseRoutes>
       <Route path="login" element={<NotLoggedGuard Component={Login} />} />

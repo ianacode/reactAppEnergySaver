@@ -6,7 +6,6 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import AddRoom from "./components/AddRoom";
 import homeService from "../../services/HomeService";
-import loginService from "../../services/LoginService";
 import { useEffect } from "react";
 import EnergySaving from "../../components/EnergySaving/EnergySaving";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
@@ -14,11 +13,12 @@ import {setHome} from "../../store/home-slice";
 import {useDispatch, useSelector} from "react-redux";
 function Rooms() {
 
+  const user = useSelector((state) => state.loggedUser.currentUser);
   const home = useSelector((state) => state.home.home);
   const dispatch = useDispatch();
   useEffect(() => {
     if (!home.id) {
-      homeService.getHome(loginService.userAuthenticated().home_id)
+      homeService.getHome(user.home_id)
         .then((home) => {
           dispatch(setHome(home));
         })
@@ -45,7 +45,7 @@ function Rooms() {
                 {home && home.rooms && home.rooms.map((room) => (
                   <Room key={room.id} room={room} />
                 ))}
-              {loginService.isAdult() && (
+              {user.role === 'adult' && (
                 <AddRoom
                   className="component-15-instance-1"
                   {...propsData.component15}

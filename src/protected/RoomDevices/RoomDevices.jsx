@@ -8,12 +8,11 @@ import Footer from "../../components/Footer/Footer";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import {useNavigate, useParams} from "react-router";
 import homeService from "../../services/HomeService";
-import loginService from "../../services/LoginService";
 import {useDispatch, useSelector} from "react-redux";
 import {deleteDevice, setHome, setRoom} from "../../store/home-slice";
 
 const RoomDevices = () => {
-
+  const user = useSelector((state) => state.loggedUser.currentUser);
   const { roomId } = useParams();
   const navigate = useNavigate();
   const home = useSelector((state) => state.home.home);
@@ -22,7 +21,7 @@ const RoomDevices = () => {
 
   useEffect(() => {
     if (!home.id) {
-      homeService.getHome(loginService.userAuthenticated().home_id)
+      homeService.getHome(user.home_id)
         .then((home) => {
           dispatch(setHome(home));
         })
@@ -76,7 +75,7 @@ const RoomDevices = () => {
           </div>
         </div>
 
-        {loginService.isAdult() && (
+        {user.role === 'adult' && (
         <MainButtons
           className="main-buttons-instance-1"
           {...propsData.mainButtons}

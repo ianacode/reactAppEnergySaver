@@ -1,12 +1,13 @@
 import * as React from "react";
 import "./Person.css";
 import {useNavigate} from "react-router";
-import loginService from "../../../services/LoginService";
+import {useSelector} from "react-redux";
 const Person = ({ member }) => {
+  const user = useSelector((state) => state.loggedUser.currentUser);
   const navigate = useNavigate();
 
   function handleChangeMember() {
-    if (loginService.isAdult()) {
+    if (user.role === 'adult' || user.id === member.id) {
       navigate(`/changemember/${member.id}`)
     }
   }

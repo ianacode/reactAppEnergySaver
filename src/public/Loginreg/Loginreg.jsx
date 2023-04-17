@@ -2,10 +2,18 @@ import * as React from "react";
 import "./Loginreg.css";
 import group from "./assets/group.svg";
 import MainButtons from "./components/MainButtons";
-
-import { signInWithGoogle } from '../../firebase';
+import loginService from "../../services/LoginService";
+import {useNavigate} from "react-router";
 
 function Loginreg() {
+  const navigate = useNavigate();
+  function signInWithGoogle() {
+    loginService.loginWithGoogle().then((authenticated) => {
+      if (authenticated) {
+        navigate("/");
+      }
+    })
+  }
 
   const propsData = {
     mainButtons: {
@@ -34,10 +42,6 @@ function Loginreg() {
       <button className="login-with-google-btn" onClick={signInWithGoogle}>
         Sign in with Google
       </button>
-      <h1>{localStorage.getItem("name")}</h1>
-      <h1>{localStorage.getItem("email")}</h1>
-      <img src={localStorage.getItem("profilePic")} />
-
     </div>
   );
 }
