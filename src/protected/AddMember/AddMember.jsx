@@ -12,6 +12,7 @@ function AddMember() {
   const user = useSelector((state) => state.loggedUser.currentUser);
   const navigate = useNavigate()
   const [hover, setHover] = useState('');
+  const [error, setError] = useState('');
 
   const [member, setMember] = useState({
     first_name: "",
@@ -39,6 +40,12 @@ function AddMember() {
     // react will call this function when the form is submitted
     event.preventDefault();
     // set adult if dateOfBird is before 18 years ago
+    if (!member.first_name || !member.last_name || !member.dateOfBirth || !member.email) {
+      setError("Please fill all fields");
+      return;
+    } else {
+      setError("");
+    }
     const dateOfBirth = new Date(member.dateOfBirth);
     const today = new Date();
     member.role = today.getFullYear() - dateOfBirth.getFullYear() >= 18 ? "adult" : "child";
@@ -94,6 +101,8 @@ function AddMember() {
           value={member.email}
           onChange={(event) => setMember({ ...member, email: event.target.value })}
         />
+
+        {error && <div className="error">{error}</div>}
 
         <button className={`main-buttons main-buttons-instance-1 ${hover}`}
           onClick={submitForm}
