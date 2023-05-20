@@ -63,13 +63,12 @@ function Registration() {
         return
       }
       try{
-        const authenticated = await loginService.register(
+        const user = await loginService.register(
           member.email,
           member.password,
           member.first_name + " " + member.last_name,
           member.img);
-        if (authenticated) {
-          const user = await userService.getUserByEmail(member.email);
+        if (user) {
           user.first_name = member.first_name;
           user.last_name = member.last_name;
           user.dateOfBirth = member.dateOfBirth;

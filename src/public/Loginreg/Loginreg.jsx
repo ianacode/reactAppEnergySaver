@@ -4,12 +4,18 @@ import group from "./assets/group.svg";
 import MainButtons from "./components/MainButtons";
 import loginService from "../../services/LoginService";
 import {useNavigate} from "react-router";
+import {setHome} from "../../store/home-slice";
+import {loggedIn} from "../../store/logged-user-slice";
+import {useDispatch} from "react-redux";
 
 function Loginreg() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   function signInWithGoogle() {
-    loginService.loginWithGoogle().then((authenticated) => {
-      if (authenticated) {
+    loginService.loginWithGoogle().then((user) => {
+      if (user) {
+        dispatch(setHome({}));
+        dispatch(loggedIn(user));
         navigate("/");
       }
     })

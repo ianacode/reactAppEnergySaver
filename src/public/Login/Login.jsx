@@ -4,26 +4,32 @@ import "./Login.css";
 import imagesLogin from "./assets/imagesLogin.svg";
 import loginService from "../../services/LoginService";
 import { useNavigate } from "react-router";
+import {setHome} from "../../store/home-slice";
+import {loggedIn} from "../../store/logged-user-slice";
+import {useDispatch} from "react-redux";
 
 
 function Login() {
 
   let navigate = useNavigate();
+  const dispatch = useDispatch();
   const [email, setEmail] = React.useState("mattiew@ua.pt");
   const [password, setPassword] = React.useState("");
   const [hover, setHover] = useState('');
 
   function handleLogin() {
-    loginService.login(email, password).then((authenticated) => {
-      if (authenticated) {
+    loginService.login(email, password).then((user) => {
+      if (user) {
         navigate("/");
       }
     })
   }
 
   function signInWithGoogle() {
-    loginService.loginWithGoogle().then((authenticated) => {
-      if (authenticated) {
+    loginService.loginWithGoogle().then((user) => {
+      if (user) {
+        dispatch(setHome({}));
+        dispatch(loggedIn(user));
         navigate("/");
       }
     })

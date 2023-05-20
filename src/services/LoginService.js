@@ -67,7 +67,7 @@ class LoginService {
       }
       await userService.addUser(user);
     }
-    return true;
+    return user;
   }
 }
 

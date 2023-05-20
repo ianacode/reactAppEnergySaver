@@ -20,7 +20,7 @@ import Login from "./public/Login/Login";
 import Registration from "./public/Registration/Registration";
 import NotFoundPage from "./public/NotFoundPage/NotFoundPage";
 import ChangeMember from "./protected/ChangeMember/ChangeMember";
-import React, {useEffect} from "react";
+import React from "react";
 import { onAuthStateChanged } from "firebase/auth";
 
 import {
@@ -35,29 +35,28 @@ import {setHome} from "./store/home-slice";
 
 export default function Routes() {
   const dispatch = useDispatch();
-  useEffect(()=>{
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
-        const uid = user.uid;
-        const email = user.email;
-        console.log("uid", uid)
-        userService.getUserByEmail(email).then((user)=>{
-          console.log("user", user)
-          dispatch(setHome({}));
-          dispatch(loggedIn(user));
-        });
-
-      } else {
-        // User is signed out
-        // ...
-        console.log("user is logged out")
+  onAuthStateChanged(auth, (user) => {
+    console.log("onAuthStateChanged", user)
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/firebase.User
+      const uid = user.uid;
+      const email = user.email;
+      console.log("uid", uid)
+      userService.getUserByEmail(email).then((user)=>{
+        console.log("user", user)
         dispatch(setHome({}));
-        dispatch(loggedOut());
-      }
-    });
-  }, [])
+        dispatch(loggedIn(user));
+      });
+
+    } else {
+      // User is signed out
+      // ...
+      console.log("user is logged out")
+      dispatch(setHome({}));
+      dispatch(loggedOut());
+    }
+  });
 
 
   return (
